@@ -1,10 +1,91 @@
 # Select
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
 [Web URL](https://zeroheight.com/98bb1df01/v/latest/p/97d613-select)
 The select component allows users to choose a single option from a predefined list. It is commonly used in forms where a dropdown selection is required.
 
+## Interactive Example
 
-| [Storybook](https://penny.melio.com/?path=/story/selection-inputs-components-select-new--main) |
-| --- |
+:::tip[Interactive Testing]
+Use the interactive component below to test different states, props, and variations. Toggle between the live component and code examples to understand implementation details.
+:::
+
+<Tabs>
+<TabItem label="Live Component">
+<iframe
+  src="https://penny.melio.com/?path=/story/selection-inputs-components-select-new--main"
+  width="100%"
+  height="500px"
+  frameBorder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Select Interactive Example">
+</iframe>
+</TabItem>
+
+<TabItem label="Code Examples">
+```jsx
+// Basic Select
+<Select placeholder="Choose an option">
+  <SelectOption value="option1">Option 1</SelectOption>
+  <SelectOption value="option2">Option 2</SelectOption>
+  <SelectOption value="option3">Option 3</SelectOption>
+</Select>
+
+// With Form Field
+<FormField label="Country" required>
+  <Select placeholder="Select country">
+    <SelectOption value="us">United States</SelectOption>
+    <SelectOption value="ca">Canada</SelectOption>
+    <SelectOption value="uk">United Kingdom</SelectOption>
+  </Select>
+</FormField>
+
+// With Search Bar
+<Select placeholder="Select city" searchable>
+  <SelectOption value="ny">New York</SelectOption>
+  <SelectOption value="la">Los Angeles</SelectOption>
+  <SelectOption value="chicago">Chicago</SelectOption>
+  <SelectOption value="miami">Miami</SelectOption>
+</Select>
+```
+</TabItem>
+
+<TabItem label="Sizes & Variants">
+```jsx
+// Different Sizes
+<Select size="small" placeholder="Small select">
+  <SelectOption value="1">Option 1</SelectOption>
+  <SelectOption value="2">Option 2</SelectOption>
+</Select>
+
+<Select size="large" placeholder="Large select">
+  <SelectOption value="1">Option 1</SelectOption>
+  <SelectOption value="2">Option 2</SelectOption>
+</Select>
+
+// Custom Trigger Content
+<Select customTrigger>
+  <SelectTrigger>
+    <Avatar src="/user.jpg" />
+    <span>John Doe</span>
+  </SelectTrigger>
+  <SelectOption value="profile">View Profile</SelectOption>
+  <SelectOption value="settings">Settings</SelectOption>
+  <SelectOption value="logout">Logout</SelectOption>
+</Select>
+
+// Without Clear Button
+<Select hideClearButton placeholder="Select option">
+  <SelectOption value="1">Option 1</SelectOption>
+  <SelectOption value="2">Option 2</SelectOption>
+</Select>
+```
+</TabItem>
+</Tabs>
+
+[View Full Storybook Documentation →](https://penny.melio.com/?path=/story/selection-inputs-components-select-new--main)
 
 >👀 **Note:** For details on sizes, behaviors, and general guidelines applicable to all form components, refer to the[ ](https://zeroheight.com/98bb1df01/p/6854b6-form-field)**[Form Field](https://zeroheight.com/98bb1df01/p/6854b6-form-field)**[ ](https://zeroheight.com/98bb1df01/p/6854b6-form-field)documentation.
 

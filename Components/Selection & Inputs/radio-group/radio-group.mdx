@@ -1,10 +1,96 @@
 # Radio Group
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
 [Web URL](https://zeroheight.com/98bb1df01/v/latest/p/79a7b5-radio-group)
 The Radio Group component allows users to select a single option from a list. It follows standard radio button behavior but includes an option for customizable content.
 
+## Interactive Example
 
-| [Storybook](https://penny.melio.com/?path=/story/selection-inputs-components-radio-group--main) |
-| --- |
+:::tip[Interactive Testing]
+Use the interactive component below to test different states, props, and variations. Toggle between the live component and code examples to understand implementation details.
+:::
+
+<Tabs>
+<TabItem label="Live Component">
+<iframe
+  src="https://penny.melio.com/?path=/story/selection-inputs-components-radio-group--main"
+  width="100%"
+  height="500px"
+  frameBorder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Radio Group Interactive Example">
+</iframe>
+</TabItem>
+
+<TabItem label="Code Examples">
+```jsx
+// Basic Radio Group
+<RadioGroup name="payment-method" defaultValue="credit-card">
+  <RadioOption value="credit-card">Credit Card</RadioOption>
+  <RadioOption value="bank-transfer">Bank Transfer</RadioOption>
+  <RadioOption value="paypal">PayPal</RadioOption>
+</RadioGroup>
+
+// With Form Field
+<FormField label="Select Payment Method" required>
+  <RadioGroup name="payment" defaultValue="card">
+    <RadioOption value="card">Credit/Debit Card</RadioOption>
+    <RadioOption value="ach">ACH Transfer</RadioOption>
+    <RadioOption value="check">Check</RadioOption>
+  </RadioGroup>
+</FormField>
+
+// With Custom Content
+<RadioGroup name="subscription" orientation="vertical">
+  <RadioOption value="basic">
+    <div>
+      <h4>Basic Plan</h4>
+      <p>$9.99/month - Essential features</p>
+    </div>
+  </RadioOption>
+  <RadioOption value="pro">
+    <div>
+      <h4>Pro Plan</h4>
+      <p>$19.99/month - Advanced features + support</p>
+    </div>
+  </RadioOption>
+</RadioGroup>
+```
+</TabItem>
+
+<TabItem label="Variants">
+```jsx
+// Horizontal Orientation
+<RadioGroup name="size" orientation="horizontal">
+  <RadioOption value="small">Small</RadioOption>
+  <RadioOption value="medium">Medium</RadioOption>
+  <RadioOption value="large">Large</RadioOption>
+</RadioGroup>
+
+// With Icons and Descriptions
+<RadioGroup name="notification-method">
+  <RadioOption value="email" icon="email" badge="Recommended">
+    Email Notifications
+    <span slot="description">Get updates via email</span>
+  </RadioOption>
+  <RadioOption value="sms" icon="sms">
+    SMS Notifications
+    <span slot="description">Get text message alerts</span>
+  </RadioOption>
+</RadioGroup>
+
+// Disabled State
+<RadioGroup name="disabled-demo" disabled>
+  <RadioOption value="option1">Option 1</RadioOption>
+  <RadioOption value="option2">Option 2</RadioOption>
+</RadioGroup>
+```
+</TabItem>
+</Tabs>
+
+[View Full Storybook Documentation →](https://penny.melio.com/?path=/story/selection-inputs-components-radio-group--main)
 
 >👀 **Note:** For details on sizes, behaviors, and general guidelines applicable to all form components, refer to the[ ](https://zeroheight.com/98bb1df01/p/6854b6-form-field)**[Form Field](https://zeroheight.com/98bb1df01/p/6854b6-form-field)**[ ](https://zeroheight.com/98bb1df01/p/6854b6-form-field)documentation.
 

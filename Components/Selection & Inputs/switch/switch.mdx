@@ -1,10 +1,100 @@
 # Switch
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
 [Web URL](https://zeroheight.com/98bb1df01/v/latest/p/78000a-switch)
 The Switch (Toggle) component allows users to enable or disable a setting with a single tap or click. It represents a binary state (on/off) and is commonly used for preferences, settings, and feature toggles.
 
+## Interactive Example
 
-| [Storybook](https://penny.melio.com/?path=/story/selection-inputs-components-switch--main) |
-| --- |
+:::tip[Interactive Testing]
+Use the interactive component below to test different states, props, and variations. Toggle between the live component and code examples to understand implementation details.
+:::
+
+<Tabs>
+<TabItem label="Live Component">
+<iframe
+  src="https://penny.melio.com/?path=/story/selection-inputs-components-switch--main"
+  width="100%"
+  height="500px"
+  frameBorder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Switch Interactive Example">
+</iframe>
+</TabItem>
+
+<TabItem label="Code Examples">
+```jsx
+// Basic Switch
+<Switch 
+  name="notifications" 
+  defaultChecked={false}
+  onChange={(checked) => console.log('Switch toggled:', checked)}
+/>
+
+// With Label
+<Switch name="email-alerts" defaultChecked>
+  Enable email alerts
+</Switch>
+
+// With Form Field
+<FormField label="Privacy Settings">
+  <Switch name="profile-visible" defaultChecked>
+    Make profile visible to others
+  </Switch>
+</FormField>
+
+// Controlled Switch
+const [isEnabled, setIsEnabled] = useState(false);
+
+<Switch 
+  checked={isEnabled}
+  onChange={setIsEnabled}
+  name="feature-toggle"
+>
+  Enable new features
+</Switch>
+```
+</TabItem>
+
+<TabItem label="States & Sizes">
+```jsx
+// Different Sizes
+<Switch size="small" name="small-switch">
+  Small switch
+</Switch>
+
+<Switch size="medium" name="medium-switch">
+  Medium switch
+</Switch>
+
+// Different States
+<Switch name="enabled" defaultChecked>
+  Enabled switch
+</Switch>
+
+<Switch name="disabled" disabled>
+  Disabled switch (off)
+</Switch>
+
+<Switch name="disabled-on" disabled defaultChecked>
+  Disabled switch (on)
+</Switch>
+
+<Switch name="readonly" readOnly defaultChecked>
+  Read-only switch
+</Switch>
+
+// Full Width
+<Switch name="fullwidth" fullWidth>
+  Full width switch with longer description text
+</Switch>
+```
+</TabItem>
+</Tabs>
+
+[View Full Storybook Documentation →](https://penny.melio.com/?path=/story/selection-inputs-components-switch--main)
 
 >👀 **Note:** For details on sizes, behaviors, and general guidelines applicable to all form components, refer to the[ ](https://zeroheight.com/98bb1df01/p/6854b6-form-field)**[Form Field](https://zeroheight.com/98bb1df01/p/6854b6-form-field)**[ ](https://zeroheight.com/98bb1df01/p/6854b6-form-field)documentation.
 

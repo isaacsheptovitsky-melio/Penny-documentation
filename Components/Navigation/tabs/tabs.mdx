@@ -1,10 +1,150 @@
 # Tabs
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
 [Web URL](https://zeroheight.com/98bb1df01/v/latest/p/795906-tabs)
 Tabs let users switch between related content sections that are on the same level, helping organize information within a single view.
 
+## Interactive Example
 
-| [Storybook](https://penny.melio.com/?path=/story/navigation-components-tabs--main) |
-| --- |
+:::tip[Interactive Testing]
+Use the interactive component below to test different states, props, and variations. Toggle between the live component and code examples to understand implementation details.
+:::
+
+<Tabs>
+<TabItem label="Live Component">
+<iframe
+  src="https://penny.melio.com/?path=/story/navigation-components-tabs--main"
+  width="100%"
+  height="500px"
+  frameBorder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Tabs Interactive Example">
+</iframe>
+</TabItem>
+
+<TabItem label="Code Examples">
+```jsx
+// Basic Tabs
+<TabContainer>
+  <TabList>
+    <Tab>Vendors</Tab>
+    <Tab>Bills</Tab>
+    <Tab>Payments</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel>
+      <h3>Vendors</h3>
+      <p>Manage your vendor relationships and information.</p>
+    </TabPanel>
+    <TabPanel>
+      <h3>Bills</h3>
+      <p>View and manage all your bills and invoices.</p>
+    </TabPanel>
+    <TabPanel>
+      <h3>Payments</h3>
+      <p>Track and process your payments.</p>
+    </TabPanel>
+  </TabPanels>
+</TabContainer>
+
+// Controlled Tabs
+const [selectedTab, setSelectedTab] = useState(0);
+
+<TabContainer selectedIndex={selectedTab} onTabChange={setSelectedTab}>
+  <TabList>
+    <Tab>Dashboard</Tab>
+    <Tab>Reports</Tab>
+    <Tab>Settings</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel>Dashboard content</TabPanel>
+    <TabPanel>Reports content</TabPanel>
+    <TabPanel>Settings content</TabPanel>
+  </TabPanels>
+</TabContainer>
+```
+</TabItem>
+
+<TabItem label="Variants">
+```jsx
+// Full Width Tabs
+<TabContainer fullWidth>
+  <TabList>
+    <Tab>Tab 1</Tab>
+    <Tab>Tab 2</Tab>
+    <Tab>Tab 3</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel>Content 1</TabPanel>
+    <TabPanel>Content 2</TabPanel>
+    <TabPanel>Content 3</TabPanel>
+  </TabPanels>
+</TabContainer>
+
+// Neutral Variant
+<TabContainer variant="neutral">
+  <TabList>
+    <Tab>Overview</Tab>
+    <Tab>Details</Tab>
+    <Tab>History</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel>Overview content</TabPanel>
+    <TabPanel>Details content</TabPanel>
+    <TabPanel>History content</TabPanel>
+  </TabPanels>
+</TabContainer>
+
+// With Counters
+<TabContainer>
+  <TabList>
+    <Tab counter={5}>Pending</Tab>
+    <Tab counter={12}>Approved</Tab>
+    <Tab counter={3}>Rejected</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel>5 pending items</TabPanel>
+    <TabPanel>12 approved items</TabPanel>
+    <TabPanel>3 rejected items</TabPanel>
+  </TabPanels>
+</TabContainer>
+
+// With Pills
+<TabContainer>
+  <TabList>
+    <Tab pill="New">Features</Tab>
+    <Tab pill="Beta">Analytics</Tab>
+    <Tab>Settings</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel>New features content</TabPanel>
+    <TabPanel>Beta analytics content</TabPanel>
+    <TabPanel>Settings content</TabPanel>
+  </TabPanels>
+</TabContainer>
+
+// With Border Bottom Container
+<div style={{ borderBottom: '1px solid var(--semantic-border-static)' }}>
+  <TabContainer>
+    <TabList>
+      <Tab>Tab 1</Tab>
+      <Tab>Tab 2</Tab>
+      <Tab>Tab 3</Tab>
+    </TabList>
+  </TabContainer>
+</div>
+<TabPanels>
+  <TabPanel>Content 1</TabPanel>
+  <TabPanel>Content 2</TabPanel>
+  <TabPanel>Content 3</TabPanel>
+</TabPanels>
+```
+</TabItem>
+</Tabs>
+
+[View Full Storybook Documentation →](https://penny.melio.com/?path=/story/navigation-components-tabs--main)
 
 ## Usage
 

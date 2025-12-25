@@ -1,0 +1,180 @@
+# Pill
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+[Web URL](https://zeroheight.com/98bb1df01/v/latest/p/68afcb-pill)
+The **pill** component is a small, rounded UI element for indicating status, categorizing content, or highlighting key details.
+
+## Interactive Example
+
+:::tip[Interactive Testing]
+Use the interactive component below to test different states, props, and variations. Toggle between the live component and code examples to understand implementation details.
+:::
+
+<Tabs>
+<TabItem label="Live Component">
+<iframe
+  src="https://penny.melio.com/?path=/story/data-display-components-pill--main"
+  width="100%"
+  height="500px"
+  frameBorder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Pill Interactive Example">
+</iframe>
+</TabItem>
+
+<TabItem label="Code Examples">
+```jsx
+// Basic Pills
+<Pill>Default</Pill>
+<Pill variant="primary">Primary</Pill>
+<Pill variant="secondary">Secondary</Pill>
+
+// Status Pills
+<Pill status="success">Paid</Pill>
+<Pill status="warning">Pending</Pill>
+<Pill status="error">Failed</Pill>
+<Pill status="info">Processing</Pill>
+
+// With Icons
+<Pill leftIcon={<CheckIcon />} status="success">
+  Verified
+</Pill>
+
+<Pill rightIcon={<ExternalLinkIcon />}>
+  View Details
+</Pill>
+
+// User Roles
+<Pill leftIcon={<AdminIcon />} variant="primary">
+  Admin
+</Pill>
+
+<Pill leftIcon={<UserIcon />} variant="secondary">
+  User
+</Pill>
+```
+</TabItem>
+
+<TabItem label="Advanced Usage">
+```jsx
+// With Avatars
+<Pill leftElement={<Avatar size="small" src="/user.jpg" />}>
+  John Doe
+</Pill>
+
+// With Company Logos
+<Pill leftElement={<CompanyLogo size="small" />}>
+  Verified Partner
+</Pill>
+
+// Feature Tags
+<Pill variant="accent">New</Pill>
+<Pill variant="warning">Beta</Pill>
+<Pill variant="info">Limited Time</Pill>
+
+// Payment Status Examples
+<Pill status="success" leftIcon={<CheckIcon />}>
+  Payment Complete
+</Pill>
+
+<Pill status="warning" leftIcon={<ClockIcon />}>
+  Processing
+</Pill>
+
+<Pill status="error" leftIcon={<XIcon />}>
+  Payment Failed
+</Pill>
+
+// Country Flags
+<Pill leftElement={<FlagIcon country="US" />}>
+  United States
+</Pill>
+
+<Pill leftElement={<FlagIcon country="CA" />}>
+  Canada
+</Pill>
+
+// Clickable Pills
+<Pill 
+  clickable
+  onClick={() => handleUserClick()}
+  leftIcon={<UserIcon />}
+>
+  View Profile
+</Pill>
+```
+</TabItem>
+</Tabs>
+
+[View Full Storybook Documentation →](https://penny.melio.com/?path=/story/data-display-components-pill--main)
+
+## Usage
+
+* **Show status**: Warnings, errors, success, or general info
+* **Label content**: Users, companies, transactions
+* **Add recognition**: Highlight key details without clutter
+* **Use icons**: Add logos, avatars, or symbols for clarity
+
+## Variants
+
+### Types
+
+| [Storybook](https://penny.melio.com/?path=/story/data-display-components-pill--types) |
+| --- |
+
+### Statuses
+
+| [Storybook](https://penny.melio.com/?path=/story/data-display-components-pill--statuses) |
+| --- |
+
+### Left and right elements
+
+Left and right elements are custom (icons, logos, avatars) but must fit within the 20px pill height.
+
+| [Storybook](https://penny.melio.com/?path=/story/data-display-components-pill--left-and-right-elements) |
+| --- |
+
+## Do's and don'ts
+
+### ✅ Do
+**Use concise, clear labels**
+Use concise, clear labels.
+![](./assets/pill-image-1.png)
+
+### ❌ Don't
+**Don't overuse Pills in dense layouts**
+Overuse Pills in dense layouts.
+![](./assets/pill-image-2.png)
+
+---
+
+### ✅ Do
+**Use icons to add meaning or context**
+Use icons to add meaning or context.
+![](./assets/pill-image-3.png)
+
+### ❌ Don't
+**Don't use long text strings that break the design**
+Use long text strings that break the design.
+
+---
+
+## Mobile use
+
+* Avoid long text to maintain readability
+
+## Use cases
+
+* **User roles**: "Admin" "Viewer" etc
+* **Company status**: "Verified"
+* **Payments**: "Paid" "Pending" "Failed"
+* **Feature tags**: "Beta" "New" "Limited"
+* **Icons & logos**: Brand logos, country flags, status icons
+
+## Accessibility
+
+* Don't rely on color alone—use icons and text to ensure clarity for all users, including those with color blindness
+
+## Related components

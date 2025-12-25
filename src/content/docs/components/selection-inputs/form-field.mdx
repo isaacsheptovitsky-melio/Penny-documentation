@@ -3,13 +3,83 @@ title: Form field
 description: The **FormField** component is a wrapper that ensures form fields (like **TextField**) are consistent in structure, validation, and state management. It helps simplify form interactions while maintaining alignment with the design system.
 ---
 
-[Web URL](https://zeroheight.com/98bb1df01/v/latest/p/6854b6-form-field)
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+## Form Field
+
 The **FormField** component is a wrapper that ensures form fields (like **TextField**) are consistent in structure, validation, and state management. It helps simplify form interactions while maintaining alignment with the design system.
 
+:::tip[Interactive Component Testing]
+Test the FormField component with different validation states, helper text, and error messages to see how it enhances form usability.
+:::
 
-## Design guidelines
-| [Storybook](https://penny.melio.com/?path=/story/form-form-field--main&args=helperText:) |
-| --- |
+## Interactive Example
+
+<Tabs>
+<TabItem label="Live Component" icon="play">
+
+<iframe
+  src="https://penny.melio.com/?path=/story/form-form-field--main"
+  width="100%"
+  height="500px"
+  frameBorder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Form Field Interactive Example">
+</iframe>
+
+**Controls:** Experiment with different field states, labels, helper text, and error messages.
+
+</TabItem>
+<TabItem label="Code Examples" icon="code">
+
+```jsx
+// Basic Form Field
+<FormField label="Email Address" required>
+  <TextField type="email" placeholder="Enter your email" />
+</FormField>
+
+// Form Field with Helper Text
+<FormField 
+  label="Password" 
+  helperText="Must be at least 8 characters"
+  required>
+  <TextField type="password" />
+</FormField>
+
+// Form Field with Error State
+<FormField 
+  label="Username" 
+  error="Username is already taken"
+  hasError>
+  <TextField placeholder="Enter username" />
+</FormField>
+
+// Form Field with Success State
+<FormField 
+  label="Full Name" 
+  helperText="Name verified"
+  hasSuccess>
+  <TextField value="John Doe" />
+</FormField>
+```
+
+</TabItem>
+<TabItem label="Validation States" icon="warning">
+
+<iframe
+  src="https://penny.melio.com/iframe.html?args=&id=form-form-field--with-validation&viewMode=story"
+  width="100%"
+  height="400px"
+  frameBorder="0"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Form Field Validation States">
+</iframe>
+
+</TabItem>
+</Tabs>
+
+**Links:** [View in Full Storybook](https://penny.melio.com/?path=/story/form-form-field--main)
 
 ## Usage
 
