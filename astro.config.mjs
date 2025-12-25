@@ -4,15 +4,15 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://USERNAME.github.io',
-	// base: '/REPOSITORY_NAME', // Commented out for local development
+	site: 'https://isaacsheptovitsky-melio.github.io',
+	base: '/Penny-documentation', // For GitHub Pages deployment
 	integrations: [
 		starlight({
 			title: 'Penny Design System',
 			customCss: [
 				'./src/styles/custom.css',
 			],
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/USERNAME/REPOSITORY_NAME' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/isaacsheptovitsky-melio/Penny-documentation' }],
 			sidebar: [
 				{
 					label: 'Foundation',
