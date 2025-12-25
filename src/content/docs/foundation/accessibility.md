@@ -37,6 +37,19 @@ Accessibility in our Design system ensures that our product is usable by everyon
 
 >✅ **Melio is ADA-compliant**, meaning our digital experience meets accessibility requirements under U.S. law and follows **[WCAG 2.1 AA standards](https://www.w3.org/WAI/WCAG2AA-Conformance)**[ ](https://www.w3.org/WAI/WCAG2AA-Conformance)to ensure usability for all, including people with disabilities.
 
+# 📱 Viewport Requirements
+
+**WCAG 2.1 AA Success Criterion 1.4.10 (Reflow)** requires that content can be presented without loss of information or functionality when viewed at **320 CSS pixels width** for vertically scrolling content, and **256 CSS pixels height** for horizontally scrolling content.
+
+This ensures that users who need to zoom up to **400%** magnification can still access all functionality without requiring two-dimensional scrolling. Our design system must:
+
+✅ **Support 320px minimum viewport width** - All layouts and components must be functional at this width  
+✅ **Maintain readability** when content reflows at high zoom levels  
+✅ **Preserve all functionality** without requiring horizontal scrolling  
+✅ **Use responsive design patterns** that adapt gracefully to extreme viewport constraints
+
+>💡 Test your designs by setting your browser to 320px width or using 400% browser zoom to ensure compliance.
+
 # 📃The DOM structure 
 
 **DOM** stands for **"Document Object Model,"** and it represents the structure of a web document in a tree-like format. For webpages, the DOM is built from the HTML and starts with the `<html>` tag, followed by `<head>` and `<body>`, and then continues as a nested hierarchy of elements — such as headings, buttons, links, and forms.
