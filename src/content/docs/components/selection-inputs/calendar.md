@@ -23,10 +23,7 @@ The Calendar component allows users to select a date, while supporting additiona
 
 The min and max variants limit users to selecting a date within a specified range, preventing choices that are too early or too late.
 
-![calendar-image-3](assets/calendar-image-3.png)
-
-
-![Minimum-variant](assets/Components/Selection & Inputs/calendar/calendar-image-3.png)
+![calendar-image-3](/Penny-documentation/components/calendar/calendar-image-3.png)
 
 **Minimum variant**
 
