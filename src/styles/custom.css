@@ -1,58 +1,51 @@
-/* Penny Design System Brand Colors */
+/* Dark mode colors. */
 :root {
-	--sl-hue-purple: 264;
-	--sl-color-accent-low: #7849ff1a;
-	--sl-color-accent: #7849ff;
-	--sl-color-accent-high: #7849ff;
+    --sl-color-accent-low: #231a49;
+    --sl-color-accent: #6d36ee;
+    --sl-color-accent-high: #c5c0fd;
+    --sl-color-white: #ffffff;
+    --sl-color-gray-1: #e9eef9;
+    --sl-color-gray-2: #bcc2cf;
+    --sl-color-gray-3: #808ba5;
+    --sl-color-gray-4: #4d586f;
+    --sl-color-gray-5: #2e384d;
+    --sl-color-gray-6: #1d263b;
+    --sl-color-black: #141822;
 }
-
-/* Dark theme overrides */
-:root[data-theme='dark'] {
-	--sl-color-accent-low: #7849ff1a;
-	--sl-color-accent: #9575ff;
-	--sl-color-accent-high: #b49aff;
-}
-
-/* Light theme overrides */
+/* Light mode colors. */
 :root[data-theme='light'] {
-	--sl-color-accent-low: #7849ff1a;
-	--sl-color-accent: #7849ff;
-	--sl-color-accent-high: #6537e6;
+    --sl-color-accent-low: #d4d1ff;
+    --sl-color-accent: #6f38f0;
+    --sl-color-accent-high: #32206d;
+    --sl-color-white: #141822;
+    --sl-color-gray-1: #1d263b;
+    --sl-color-gray-2: #2e384d;
+    --sl-color-gray-3: #4d586f;
+    --sl-color-gray-4: #808ba5;
+    --sl-color-gray-5: #bcc2cf;
+    --sl-color-gray-6: #e9eef9;
+    --sl-color-gray-7: #f4f6fc;
+    --sl-color-black: #ffffff;
 }
 
 /* Additional brand color customizations */
 .hero > h1 {
-	background: linear-gradient(315deg, #7849ff, #b49aff);
+	background: linear-gradient(315deg, var(--sl-color-accent), var(--sl-color-accent-high));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-/* Custom link colors */
-a:not(.sl-link-card) {
-	color: #7849ff;
-}
-
-a:not(.sl-link-card):hover {
-	color: #6537e6;
-}
-
-/* Navigation accent */
-.sidebar .top-level > li[aria-current="page"] > .large {
-	background-color: #7849ff1a;
-	color: #7849ff;
-}
-
 /* Button styling */
 .sl-link-button {
-	background-color: #7849ff;
-	border-color: #7849ff;
+	background-color: var(--sl-color-accent);
+	border-color: var(--sl-color-accent);
 	color: white !important;
 }
 
 .sl-link-button:hover {
-	background-color: #6537e6;
-	border-color: #6537e6;
+	background-color: var(--sl-color-accent-high);
+	border-color: var(--sl-color-accent-high);
 	color: white !important;
 }
 
