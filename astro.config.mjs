@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
+// Configured for GitHub Pages deployment
 export default defineConfig({
 	site: 'https://isaacsheptovitsky-melio.github.io',
 	base: '/Penny-documentation', // For GitHub Pages deployment
