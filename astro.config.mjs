@@ -6,7 +6,9 @@ import starlight from '@astrojs/starlight';
 // Configured for GitHub Pages deployment
 export default defineConfig({
 	site: 'https://isaacsheptovitsky-melio.github.io',
-	base: '/Penny-documentation', // For GitHub Pages deployment
+	base: '/Penny-documentation',
+	output: 'static',
+	adapter: undefined,
 	integrations: [
 		starlight({
 			title: 'Penny Design System',
