@@ -18,7 +18,7 @@ Surface primary actions and deprioritize secondary ones using clear hierarchy an
 
 >Value: **⚙️ Efficiency**
 
-|   | ![](/foundation/mobile-patterns-assets/mobile-patterns-image-1.png)*Drawer actions are simplified into two buttons: Pay as the primary action, and all additional actions grouped under the More button.* |   |
+|   | ![](/foundation/assets/mobile-patterns-image-1.png)*Drawer actions are simplified into two buttons: Pay as the primary action, and all additional actions grouped under the More button.* |   |
 | --- | --- | --- |
 
 ## Progressive disclosure
@@ -27,7 +27,7 @@ Simplify layouts by progressively disclosing content with drawer—supporting a 
 
 >Value: **🧰 Scalability**
 
-|   | ![](/foundation/mobile-patterns-assets/mobile-patterns-image-2.png)*Table row information is condensed into key highlights; tapping a row reveals additional details in a drawer.* |   |
+|   | ![](/foundation/assets/mobile-patterns-image-2.png)*Table row information is condensed into key highlights; tapping a row reveals additional details in a drawer.* |   |
 | --- | --- | --- |
 
 ## Adapt to viewport
@@ -36,7 +36,7 @@ Adjust screen usage by hiding non-essential elements to maximize space when the 
 
 >Principle: **⛑️ Quality**
 
-|   | ![](/foundation/mobile-patterns-assets/mobile-patterns-image-3.png)*The combobox is triggered by a tap, rather than focus, and opens in full screen, allowing simultaneous keyboard input and option browsing.* |   |
+|   | ![](/foundation/assets/mobile-patterns-image-3.png)*The combobox is triggered by a tap, rather than focus, and opens in full screen, allowing simultaneous keyboard input and option browsing.* |   |
 | --- | --- | --- |
 
 ## Preserve focus and context
@@ -45,7 +45,7 @@ Ensure seamless transitions and focus management to maintain user orientation, p
 
 >Principle: **🌍 Accessible**
 
-|   | ![](/foundation/mobile-patterns-assets/mobile-patterns-image-4.png)*Focus is directed to the relevant content, even when a side sheet is opened.* |   |
+|   | ![](/foundation/assets/mobile-patterns-image-4.png)*Focus is directed to the relevant content, even when a side sheet is opened.* |   |
 | --- | --- | --- |
 
 ## Optimize for touch
@@ -66,7 +66,7 @@ Create mobile patterns that work across brands, screen sizes, and use cases, sup
 
 >Principle: **🤸 Flexible**
 
-|   | ![](/foundation/mobile-patterns-assets/mobile-patterns-image-6.png)*The Delete bill dialog appears as a bottom sheet rather than a modal.* |   |
+|   | ![](/foundation/assets/mobile-patterns-image-6.png)*The Delete bill dialog appears as a bottom sheet rather than a modal.* |   |
 | --- | --- | --- |
 
 # Use cases

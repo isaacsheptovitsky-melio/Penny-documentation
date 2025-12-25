@@ -17,7 +17,7 @@ We strive to offer the best layout for each screen's function, addressing variou
 
 To achieve this, we have consolidated the number of layouts into the following basic structure patterns:
 
-![](/foundation/layout-system-assets/layout-system-image-1.png)
+![](/foundation/assets/layout-system-image-1.png)
 
 # Dashboard layout
 
@@ -27,7 +27,7 @@ Used for the main dashboard, this layout is optimizes for system notification an
 * Pro-tips
 * Client table
 
->![](/foundation/layout-system-assets/layout-system-image-2.png)
+>![](/foundation/assets/layout-system-image-2.png)
 
 >#### 🖥️ Max width 
 >
@@ -42,7 +42,7 @@ Used for viewing a single resource screen, such as Vendors and Bills. It consist
 * Inline actions for items (e.g., edit, delete, view details)
 * Pagination for large datasets
 
->![](/foundation/layout-system-assets/layout-system-image-3.png)
+>![](/foundation/assets/layout-system-image-3.png)
 
 >#### 🖥️ Max width 
 >
@@ -52,7 +52,7 @@ Used for viewing a single resource screen, such as Vendors and Bills. It consist
 
 The table in the Resource layout is interpreted as a list of items on mobile
 
->![](/foundation/layout-system-assets/layout-system-image-4.png)
+>![](/foundation/assets/layout-system-image-4.png)
 
 # Resource details layout
 
@@ -63,7 +63,7 @@ For drilling down into information that cannot be displayed inline within a tabl
 * Action buttons for the main and additional actions
 * Light editing of entity's details
 
->![](/foundation/layout-system-assets/layout-system-image-5.png)
+>![](/foundation/assets/layout-system-image-5.png)
 
 >#### 🖥️ Drawer width 
 >
@@ -83,7 +83,7 @@ This layout is used for creating new information and includes:
 * Clear section headers for complex forms
 * Action button for completing or canceling the task
 
->![](/foundation/layout-system-assets/layout-system-image-6.png)
+>![](/foundation/assets/layout-system-image-6.png)
 
 >#### 🖥️ Container width 
 >
@@ -99,7 +99,7 @@ This layout is used for creating new information and includes:
 
 This layout is designed for complex tasks that span multiple domains and pages.
 
->![](/foundation/layout-system-assets/layout-system-image-7.png)
+>![](/foundation/assets/layout-system-image-7.png)
 
 >#### 🖥️ Max width 
 >
@@ -116,7 +116,7 @@ This layout is dedicated to system configuration and includes:
 * Sidebar navigation for different settings categories
 * Form fields or toggles for adjusting preferences
 
->![](/foundation/layout-system-assets/layout-system-image-8.png)
+>![](/foundation/assets/layout-system-image-8.png)
 
 >#### 🖥️ Max width 
 >
@@ -126,7 +126,7 @@ This layout is dedicated to system configuration and includes:
 
 This layout is for external users, and is viewed by customers of our users.
 
->![](/foundation/layout-system-assets/layout-system-image-9.png)
+>![](/foundation/assets/layout-system-image-9.png)
 
 >#### 🖥️ Max width 
 >
@@ -136,7 +136,7 @@ This layout is for external users, and is viewed by customers of our users.
 
 Unlike other layouts, the split layout doesn't convey a specific function or meaning. Instead, it simply organizes elements into two horizontally arranged panels.
 
->![](/foundation/layout-system-assets/layout-system-image-10.png)
+>![](/foundation/assets/layout-system-image-10.png)
 >*1:1 split layout*
 
 >👉 Read more about the Split layout [here](https://zeroheight.com/98bb1df01/p/9191e9).
@@ -145,7 +145,7 @@ Unlike other layouts, the split layout doesn't convey a specific function or mea
 
 When designing new screens that are without an existing layout, use the **12 col grid** style, provided by Penny.
 
->![](/foundation/layout-system-assets/layout-system-image-11.png)
+>![](/foundation/assets/layout-system-image-11.png)
 >*Desktop layout with the main container using the 12 col grid.*
 
 The grid is a standard 12-column layout with 24px gutters and no margins, used for designing on desktop.

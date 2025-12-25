@@ -10,27 +10,27 @@ Icons help communicate actions, statuses, and information at a glance.
 
 Melio has an icon bank with about 300 custom pixel-perfect icons
 
-![](/foundation/icons-assets/icons-image-1.png)
+![](/foundation/assets/icons-image-1.png)
 
 # Grid & Sizes
 
 Each icon has two versions–on a 16px and on a 24px grid
 
-![](/foundation/icons-assets/icons-image-2.png)
+![](/foundation/assets/icons-image-2.png)
 
 ## Large: 24px Grid
 
 On the large 24px grid, the stroke width will be 2px with rounded ends, the round corners will usually be 2px (except in exceptional cases), with a 1px margin (frame).
 
-![](/foundation/icons-assets/icons-image-3.png)
+![](/foundation/assets/icons-image-3.png)
 
 ## Small: 16px Grid
 
 On the small 16px grid, the stroke width will be 1.5px with rounded ends, the round corners will usually be 1.5px (except in exceptional cases), with a 1px margin (frame).
 
-![](/foundation/icons-assets/icons-image-4.png)
+![](/foundation/assets/icons-image-4.png)
 
-![](/foundation/icons-assets/icons-image-5.png)
+![](/foundation/assets/icons-image-5.png)
 
 # Color
 
@@ -100,15 +100,15 @@ We have color tokens family for icons
 }
 ```
 
-![](/foundation/icons-assets/icons-image-6.png)
+![](/foundation/assets/icons-image-6.png)
 
 # Adding icons to Penny
 
 [How to add a new icon to Penny](https://www.notion.so/meliopayments/How-to-add-a-new-icon-to-Penny-16c66d69640a807580e2d0eaaf0f6d33)
 
-![](/foundation/icons-assets/icons-image-7.png)
+![](/foundation/assets/icons-image-7.png)
 
-![](/foundation/icons-assets/icons-image-8.png)
+![](/foundation/assets/icons-image-8.png)
 
 # Accessibility 
 

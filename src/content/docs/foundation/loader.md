@@ -35,7 +35,7 @@ The Loader is used in two scenarios: when a screen is waiting for data to load, 
 
 Saving or paying a bill is an asynchronous action that requires a server response for confirmation.
 
->![](/foundation/loader-assets/loader-image-1.png)
+>![](/foundation/assets/loader-image-1.png)
 >
 >
 
@@ -43,7 +43,7 @@ Saving or paying a bill is an asynchronous action that requires a server respons
 
 Saving or paying a bill is an asynchronous action that requires a server response for confirmation.
 
->![](/foundation/loader-assets/loader-image-2.png)
+>![](/foundation/assets/loader-image-2.png)
 >
 >
 
