@@ -8,7 +8,7 @@ description: This page outlines Melio's mobile UI patterns and adaptations; How 
 This page outlines Melio's mobile UI patterns and adaptations; How core components and layouts transition from desktop to mobile, ensuring consistency, usability, and responsiveness across viewports.
 
 
-# Core principles
+## Core principles
 
 Our mobile adaptations are rooted in [Penny's values and principles](https://zeroheight.com/98bb1df01/p/96fdb6)—**Scalability**, **Efficiency**, and **Quality**—and guided by the actionable principles of being **Consistent**, **Accessible**, and **Flexible**.
 
@@ -69,7 +69,7 @@ Create mobile patterns that work across brands, screen sizes, and use cases, sup
 |   | ![](/Penny-documentation/foundation/assets/mobile-patterns-image-6.png)*The Delete bill dialog appears as a bottom sheet rather than a modal.* |   |
 | --- | --- | --- |
 
-# Use cases
+## Use cases
 
 For details on each component's mobile guidelines and behavior, visit its dedicated documentation page:
 

@@ -19,7 +19,7 @@ To achieve this, we have consolidated the number of layouts into the following b
 
 ![](/Penny-documentation/foundation/assets/layout-system-image-1.png)
 
-# Dashboard layout
+## Dashboard layout
 
 Used for the main dashboard, this layout is optimizes for system notification and high-level system overview, and it includes:
 
@@ -33,7 +33,7 @@ Used for the main dashboard, this layout is optimizes for system notification an
 >
 >The dashboard layout has a max width of 1600px, utilizing the full screen space to maximize information display.
 
-# Resources layout
+## Resources layout
 
 Used for viewing a single resource screen, such as Vendors and Bills. It consists of: 
 
@@ -54,7 +54,7 @@ The table in the Resource layout is interpreted as a list of items on mobile
 
 >![](/Penny-documentation/foundation/assets/layout-system-image-4.png)
 
-# Resource details layout
+## Resource details layout
 
 For drilling down into information that cannot be displayed inline within a table, data is displayed in a drawer:
 
@@ -75,7 +75,7 @@ For drilling down into information that cannot be displayed inline within a tabl
 >
 >[Read more](https://zeroheight.com/98bb1df01/p/63ec5f-layout/t/06e9b87f5c) about the drawer component.
 
-# Job layout
+## Job layout
 
 This layout is used for creating new information and includes:
 
@@ -93,7 +93,7 @@ This layout is used for creating new information and includes:
 > * **900px**: A broader layout with elements arranged horizontally, commonly used for form fields
 > * **1200px:** For content and actions that need additional width, such as side-by-side element comparison.
 
-# Job: Multiple steps layout
+## Job: Multiple steps layout
 
 >🚨 Deprecated
 
@@ -109,7 +109,7 @@ This layout is designed for complex tasks that span multiple domains and pages.
 > * **900px**: A wider layout for more complex forms
 > * **1200px:** For content and actions that require extra space
 
-# Settings layout
+## Settings layout
 
 This layout is dedicated to system configuration and includes:
 
@@ -122,7 +122,7 @@ This layout is dedicated to system configuration and includes:
 >
 >The Settings screen uses a max width of 100%, utilizing the full screen space to maximize information display.
 
-# Vendor Experience
+## Vendor Experience
 
 This layout is for external users, and is viewed by customers of our users.
 
@@ -132,7 +132,7 @@ This layout is for external users, and is viewed by customers of our users.
 >
 >The Vendor experience layout uses a max width of 600px, utilizing the full screen space to maximize information display.
 
-# Split layouts
+## Split layouts
 
 Unlike other layouts, the split layout doesn't convey a specific function or meaning. Instead, it simply organizes elements into two horizontally arranged panels.
 
@@ -141,7 +141,7 @@ Unlike other layouts, the split layout doesn't convey a specific function or mea
 
 >👉 Read more about the Split layout [here](https://zeroheight.com/98bb1df01/p/9191e9).
 
-# Grid
+## Grid
 
 When designing new screens that are without an existing layout, use the **12 col grid** style, provided by Penny.
 

@@ -8,7 +8,7 @@ description: Our design system uses a structured approach to color tokens to sup
 Our design system uses a structured approach to color tokens to support consistency, scalability, and white-label theming. Our token system is divided into three levels: **Global, Semantic, and Component-Based**. 
 
 
-# Semantic tokens
+## Semantic tokens
 Semantic tokens map global tokens to a functional meaning, defining usage intent rather than specific colors. These tokens help unify visual language across the system while allowing controlled customization.
 
 | Token | Value | Description |
@@ -738,7 +738,7 @@ Semantic tokens map global tokens to a functional meaning, defining usage intent
 ```
 ---
 
-# Component based tokens
+## Component based tokens
 Component-based tokens are the most specific level, defining colors for individual components. These tokens reference semantic tokens to maintain a clear relationship between design and function.
 
 | Token | Value | Description |
@@ -881,7 +881,7 @@ Component-based tokens are the most specific level, defining colors for individu
 ```
 ---
 
-# Global tokens
+## Global tokens
 Global tokens are the foundational values of our color system. These are raw color values that are not tied to a specific meaning or usage. They serve as the core palette from which all other tokens derive.
 
 | Token | Value | Description |

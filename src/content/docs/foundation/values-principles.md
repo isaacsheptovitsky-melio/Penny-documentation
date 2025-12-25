@@ -7,7 +7,7 @@ description: Our values and principles guide system-wide and use-case-specific d
 
 Our values and principles guide system-wide and use-case-specific design decisions. Layouts, components, and copy are all designed to align with them.
 
-# Our values
+## Our values
 
 > **Value** (noun)
 >
@@ -45,7 +45,7 @@ Standardized components ensure a high level of quality across products. Quality 
 
 ---
 
-# Our principles
+## Our principles
 
 > **Principle** (noun)
 >

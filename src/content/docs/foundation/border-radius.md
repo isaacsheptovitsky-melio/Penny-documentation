@@ -8,7 +8,7 @@ description: Our design system applies a structured approach to border radius to
 Our design system applies a structured approach to border radius tokens to ensure consistency, scalability, and support for theming. The token system is organized into three levels: Global, Semantic, and Component.
 
 
-# Global tokens
+## Global tokens
 The following are the global border radius tokens applied across components for consistent border radius:
 
 | Token | Value |
@@ -22,7 +22,7 @@ The following are the global border radius tokens applied across components for 
 | `border-radius.600` | 24px |
 ---
 
-# Semantic tokens
+## Semantic tokens
 The following are semantic border radius tokens, used to define the default border radius of component categories:
 
 | Token | Value | Use cases |
@@ -30,7 +30,7 @@ The following are semantic border radius tokens, used to define the default bord
 | `border-radius.action.default` | `border-radius.200` | Most action components |
 | `border-radius.input.default` | `border-radius.200` | Most inputs components |
 
-# Action components
+## Action components
 
 The following component use the `border-radius.action.default` token:
 
@@ -38,7 +38,7 @@ The following component use the `border-radius.action.default` token:
 * [Date picker](https://zeroheight.com/98bb1df01/p/901cd4)
 * [Icon button ](https://zeroheight.com/98bb1df01/p/42635f)
 
-# Selection & Inputs components
+## Selection & Inputs components
 
 The following component use the `border-radius.input.default` token:
 
@@ -59,7 +59,7 @@ The following component use the `border-radius.input.default` token:
 * **[Verification code field](https://zeroheight.com/98bb1df01/p/31f1cb)**
 ---
 
-# Component tokens
+## Component tokens
 The following are component-specific border radius tokens:
 
 | Token | Value | Component |

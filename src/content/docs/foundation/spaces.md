@@ -8,7 +8,7 @@ description: Spaces are size tokens used throughout the design system to define 
 Spaces are size tokens used throughout the design system to define consistent spacing - including padding, margin, gaps, and more.
 
 
-# Usage
+## Usage
 
 * **Apply spacing tokens** for margins, paddings, layout gaps, grid gutters, etc.
 * **Avoid arbitrary pixel values** unless justified by a special case.
@@ -16,7 +16,7 @@ Spaces are size tokens used throughout the design system to define consistent sp
 * Use **smaller tokens** inside compact components or dense UI areas.
 
 
-# Spaces tokens
+## Specifications
 
 | Token | Value | Use cases |
 | --- | --- | --- |
@@ -33,7 +33,7 @@ Spaces are size tokens used throughout the design system to define consistent sp
 | `spacing.xxl` | 48px | Ideal for separating large content blocks or for generous page margins.  Examples: Form sections. |
 | `spacing.xxxl` | 72px | - |
 
-# Use cases 
+## Examples 
 
 ![spacing.xxxs](/foundation/spaces-assets/spacing.xxxs.png)
 

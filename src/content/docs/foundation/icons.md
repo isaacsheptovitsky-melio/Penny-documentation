@@ -12,7 +12,7 @@ Melio has an icon bank with about 300 custom pixel-perfect icons
 
 ![](/Penny-documentation/foundation/assets/icons-image-1.png)
 
-# Grid & Sizes
+## Grid & Sizes
 
 Each icon has two versions–on a 16px and on a 24px grid
 
@@ -32,7 +32,7 @@ On the small 16px grid, the stroke width will be 1.5px with rounded ends, the ro
 
 ![](/Penny-documentation/foundation/assets/icons-image-5.png)
 
-# Color
+## Color
 
 Icons are used exclusively in the following colors depending on the context of use.
 
@@ -102,7 +102,7 @@ We have color tokens family for icons
 
 ![](/Penny-documentation/foundation/assets/icons-image-6.png)
 
-# Adding icons to Penny
+## Adding icons to Penny
 
 [How to add a new icon to Penny](https://www.notion.so/meliopayments/How-to-add-a-new-icon-to-Penny-16c66d69640a807580e2d0eaaf0f6d33)
 
@@ -110,7 +110,7 @@ We have color tokens family for icons
 
 ![](/Penny-documentation/foundation/assets/icons-image-8.png)
 
-# Accessibility 
+## Accessibility 
 
 When choosing or naming an icon, focus on **what it does**, not just what it looks like.
 

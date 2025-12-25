@@ -16,7 +16,7 @@ We use **Poppins** in two weights:
 
 >ℹ️ Currently, we only have tokens for the Font family 
 
-# Accessibility & DOM Structure
+## Accessibility & DOM Structure
 
 Visual hierarchy is not the same as document structure.
 

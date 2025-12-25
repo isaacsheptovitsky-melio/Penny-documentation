@@ -5,7 +5,7 @@ description: Common user experience patterns and interaction guidelines for the 
 
 # UX Patterns Overview
 
-UX Patterns are reusable solutions to common design problems that help create consistent and intuitive user experiences across Melio Payments' products. These patterns provide guidance on how users interact with our interfaces and help ensure predictable behavior.
+Patterns are best-practice solutions that combine Penny components to solve common, high-frequency user problems. These patterns provide guidance on how users interact with our interfaces and help ensure predictable behavior across Melio Payments' products.
 
 ## What are UX Patterns?
 

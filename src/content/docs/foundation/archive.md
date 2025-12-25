@@ -9,7 +9,7 @@ Archived sections and content that might be useful later
 
 ---
 
-# 1600px container width 
+## 1600px container width 
 
 * Might be used for the Dashboard layout
 * All other layouts that use it for their table width, should be reconsidered and might benefit from 100%.

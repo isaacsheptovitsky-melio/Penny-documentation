@@ -14,14 +14,14 @@ Provides a prominent visual status (like success or warning) within a modal head
 
 ---
 
-# Usage
+## Usage
 
 * Use in the header of a modal to immediately communicate the outcome or nature of the content.
 * Use the **'success'** variant for modals confirming a completed action, like "Payment Sent" or "Vendor Added."
 * Use **'warning'** or **'issues'** for modals that report an error or a problem requiring attention, like "Payment Failed" or "Bank Account Disconnected."
 * Use **'informative'** or **'help'** for standard confirmation dialogues or modals that require user input, like "Confirm Payment Details."🤓 **Tip**: 
 
-# Variants
+## Variants
 
 ## Status variant
 
@@ -41,6 +41,6 @@ You can set the icon size using four different values:
 | --- | --- |
 | [Storybook](https://61716025a5ae25003ac448af-kxatgdwswo.chromatic.com/?path=/story/foundations-status-icon-solid--disabled)  | ****Disabled**** Sets the icon to a disabled state. This visually indicates the status is not currently relevant or active and makes it non-interactive. |
 
-# Use cases
+## Use cases
 
-# Related components
+## Related components

@@ -7,7 +7,7 @@ description: Accessibility in our Design system ensures that our product is usab
 
 Accessibility in our Design system ensures that our product is usable by everyone, including people with disabilities.
 
-# Why accessibility matters
+## Why accessibility matters
 
 **Ethical**: Designing for accessibility means respecting the full spectrum of human diversity.
 
@@ -17,7 +17,7 @@ Accessibility in our Design system ensures that our product is usable by everyon
 
 >✅ We've got you covered with a [Design system accessibility checklist!](https://drive.google.com/file/d/1JX0UIcpHpXNbXescO8OjA_Sta7ADAOuD/view?usp=sharing)
 
-# 📚Terms
+## 📚Terms
 
 **WCAG (Web Content Accessibility Guidelines)** is a technical standard created by the W3C to guide web accessibility. It outlines how to make digital experiences perceivable, operable, understandable, and robust (the four POUR principles). WCAG has three levels of compliance:
 
@@ -37,7 +37,7 @@ Accessibility in our Design system ensures that our product is usable by everyon
 
 >✅ **Melio is ADA-compliant**, meaning our digital experience meets accessibility requirements under U.S. law and follows **[WCAG 2.1 AA standards](https://www.w3.org/WAI/WCAG2AA-Conformance)**[ ](https://www.w3.org/WAI/WCAG2AA-Conformance)to ensure usability for all, including people with disabilities.
 
-# 📱 Viewport Requirements
+## 📱 Viewport Requirements
 
 **WCAG 2.1 AA Success Criterion 1.4.10 (Reflow)** requires that content can be presented without loss of information or functionality when viewed at **320 CSS pixels width** for vertically scrolling content, and **256 CSS pixels height** for horizontally scrolling content.
 
@@ -50,7 +50,7 @@ This ensures that users who need to zoom up to **400%** magnification can still 
 
 >💡 Test your designs by setting your browser to 320px width or using 400% browser zoom to ensure compliance.
 
-# 📃The DOM structure 
+## 📃The DOM structure 
 
 **DOM** stands for **"Document Object Model,"** and it represents the structure of a web document in a tree-like format. For webpages, the DOM is built from the HTML and starts with the `<html>` tag, followed by `<head>` and `<body>`, and then continues as a nested hierarchy of elements — such as headings, buttons, links, and forms.
 
@@ -66,7 +66,7 @@ Every element becomes a node in this tree. Web browsers use the DOM to render th
 
 You can read more about HTML tags [here.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
 
-# 🎯 Focus Order
+## 🎯 Focus Order
 
 Focus order is the sequence in which interactive elements (like links, buttons, and form fields) are accessed when navigating with a keyboard (usually by pressing `Tab`).
 
@@ -85,7 +85,7 @@ Focus order is the sequence in which interactive elements (like links, buttons, 
 ![Focus order navigation example](/foundation/accessibility-assets/focus-order-navigation.gif)
 *While switching focus using the Tab key, the focus ring indicates where the focus is right now.*
 
-# 🎨 Color & Contrast
+## 🎨 Color & Contrast
 
 To ensure content is readable for everyone — including users with visual impairments or color blindness — you must meet **minimum contrast ratios**:
 
@@ -101,7 +101,7 @@ Exception: Disabled elements do not need to meet minimum contrast.
 
 ![Color contrast example](/foundation/accessibility-assets/color-contrast-example.png)
 
-# 🖼️ Images & Alt Text
+## 🖼️ Images & Alt Text
 
 Images must have **descriptive alternative text** (alt text) so that screen reader users can understand their purpose.
 
@@ -119,7 +119,7 @@ Images must have **descriptive alternative text** (alt text) so that screen read
 | Complex Images | Provide a short description on the page and link to a full explanation if needed. | "Chart showing sales trend" with link to full data | Relying on alt text alone |
 | Images of Text | Avoid. If used, ensure all content is also available as real text. | Real text placed below the image | Only text inside the image |
 
-# 🧠 Alt Text vs. ARIA: What's the Difference?
+## 🧠 Alt Text vs. ARIA: What's the Difference?
 
 * **Alt text** is used on `<img>` elements to describe what the image conveys.
 * **ARIA** (Accessible Rich Internet Applications) is a broader set of attributes that enhance accessibility across all types of HTML elements, especially **non-semantic** or **custom UI components** (e.g., modals, tabs, dropdowns).
@@ -134,7 +134,7 @@ Images must have **descriptive alternative text** (alt text) so that screen read
 
 `aria-live`: Used to notify screen readers of **dynamic content changes** (like form errors or toast notifications).
 
-# 🧩 Interactive Elements:
+## 🧩 Interactive Elements:
 
 Interactive elements — like buttons, links, inputs, and select — are core to user interaction. To ensure they are usable by **everyone**, including people using screen readers, keyboard navigation, or touch devices, follow these key accessibility guidelines:
 
@@ -209,7 +209,7 @@ All interactive elements should include **non-color** and **color-based feedback
 | Hover/Focus | Visible and non-color based cue | 3:1 for outlines |
 | Disabled states | Legible but visually distinct | Should not be pure gray on white |
 
-# 🌳 Nested Interactive Elements
+## 🌳 Nested Interactive Elements
 
 Avoid placing interactive elements inside other interactive elements. This is a common accessibility and usability mistake that leads to conflicts in behavior and confusion for screen readers, keyboard users, and browsers.
 
@@ -227,7 +227,7 @@ Design and code components so that **only one interactive element wraps the inte
 ![Nested interactive elements example](/foundation/accessibility-assets/nested-interactive-elements.png)
 *On the left, an icon button within a selectable card; On the right, the selectable card is the only interactive element.*
 
-# 📋 Forms & Inputs
+## 📋 Forms & Inputs
 
 Forms are one of the most critical parts of a product — and often the most prone to accessibility issues. A well-designed, accessible form ensures **all users** can understand what's being asked, fill it out confidently, and correct mistakes when needed.
 
@@ -241,7 +241,7 @@ Forms are one of the most critical parts of a product — and often the most pro
 |  **Helper text and placeholder** Avoid using placeholder text whenever possible. Make sure any critical information is communicated either in the field label or using helper text below the field.Don't show placeholder and help at the same time, unless when hinting the right format is needed.  **Avoid placeholders** for essential information because they disappear when typing, making it hard to reference. Also, screen readers may not always announce them properly.  **Help text overflow** When the help text is too long for the available horizontal space, it wraps to form another line.  | ![Helper text example](/foundation/accessibility-assets/helper-text-example.png) **Helper text example**  |
 | ****Disabled vs read-only** **   **Disabled:** The control is inoperable. It is removed from tab order and skipped by keyboard navigation and form interactions. Its value is not submitted. **Use disabled** when the control is irrelevant or gated and should be skipped entirely until it becomes relevant.  **Read-only:** The control remains operable for navigation but not editing. It stays in tab order, can receive focus, be announced by screen readers. **Use read-only** when the value is relevant, must be perceivable/copyable, and may need to be included in submission but should not be edited.  | ![Disabled state example](/foundation/accessibility-assets/disabled-state.png) **Disabled** ![Read-only state example](/foundation/accessibility-assets/read-only-state.png) **Read only** |
 
-# 📚 Lists
+## 📚 Lists
 
 Screen readers interpret lists as groups of items, so using proper HTML list structure helps users understand how many items are in a list, and whether the order matters.
 
@@ -252,7 +252,7 @@ Screen readers interpret lists as groups of items, so using proper HTML list str
 | Unordered List (`<ul>`) | Items have no particular order (e.g., tags, filter chips, navigation). |
 | Ordered List (`<ol>`) | Sequence matters (e.g., steps in a process, rankings, instructions). |
 
-# 🔍 Zoom and viewport support
+## 🔍 Zoom and viewport support
 
 Supporting zoom is a core requirement in [WCAG 2.2.](https://www.w3.org/TR/WCAG22/?utm_source=chatgpt.com#reflow) It ensures that users with low vision or visual impairments can scale content without losing access to information or functionality.
 

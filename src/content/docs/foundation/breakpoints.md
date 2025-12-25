@@ -8,7 +8,7 @@ description: Breakpoints represent how the screen resolution is broken down so w
 Breakpoints represent how the screen resolution is broken down so we could support the responsiveness of the application across different devices.
 
 
-# Usage
+## Usage
 
 * **Apply spacing tokens** for margins, paddings, layout gaps, grid gutters, etc.
 * **Avoid arbitrary pixel values** unless justified by a special case.
@@ -16,7 +16,7 @@ Breakpoints represent how the screen resolution is broken down so we could suppo
 * Use **smaller tokens** inside compact components or dense UI areas.
 
 
-# Breakpoints 
+## Specifications 
 
 | Breakpoint | Range | Device |
 | --- | --- | --- |
@@ -28,14 +28,14 @@ Breakpoints represent how the screen resolution is broken down so we could suppo
 
 >📌  We primarily design for two device types: mobile and desktop. Our main breakpoint is 1240px, meaning that at 1239px and below, components and layouts adapt to a mobile-friendly format.
 
-# Container width
+## Container width
 
 >🖥️ The max-width setting allows containers to expand up to the specified width (e.g., 900px) when there is enough space. For example, a container with a max-width of 900px will grow to fill the screen but will stop expanding once it reaches 600px.
 
 ![](/Penny-documentation/foundation/assets/breakpoints-image-1.png)
 *Expanding the viewport to let the container increase in width, up to its maximum width of 900px.*
 
-# Variants
+## Examples
 
 We use several container width variants:
 

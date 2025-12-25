@@ -8,17 +8,17 @@ description: Melio partners with other companies through full-screen and iframe 
 Melio partners with other companies through **full-screen** and **iframe** integrations. We adapt to different partner needs, ensuring a seamless experience while driving business growth.
 
 
-# Use cases
+## Use cases
 
 ---
 
-# Integrations
+## Integrations
 Melio integrates with partners via two methods: **full-screen** and **iframe**. These integrations allow the partner's users to access Melio's payment features.
 
 >![](/Penny-documentation/foundation/assets/partnerships-image-1.png)
 >*The two types of integration with partners: full-screen and iframe.*
 
-# Full-screen integration
+## Full-screen integration
 
 The full-screen experience is one where Melio owns the entire screen (both code and design). Users reach this experience via a **redirect**, meaning they click a button or link that either **changes the URL** or **opens a new tab**.
 
@@ -38,7 +38,7 @@ The full-screen integration is typically accessed through a redirect, by clickin
 
 ❌ **Con**: Switching to a new URL creates a **context shift** for the user, as the experience is visually different from the partner's environment.
 
-# iframe experience
+## iframe experience
 
 Melio can also be embedded **within the partner's interface** using an **iframe**. There are two common layouts.
 
@@ -68,7 +68,7 @@ Users access the iframe experience by clicking a tab in the partner's menu.
 
 ❌ **Con:** Since the iframe is constrained within the partner's design, Melio must **adapt** to UI restrictions, which may limit flexibility.
 
-# Exceptions to the rule
+## Exceptions to the rule
 
 Some partners require unique integration methods tailored to their needs.
 
@@ -86,7 +86,7 @@ A **custom solution** developed by Melio's engineers and designers. This integra
 >![](/Penny-documentation/foundation/assets/partnerships-image-8.png)
 >*QuickBooks Desktop*
 
-# Partners
+## Partners
 
 All partners and their current implementation method ([view visual reference here](https://www.figma.com/design/NPZXYKU4SvuSubB8RVvHVh/Dashboard-mapping?node-id=1-4498&p=f&t=mEget5dkIqIKwssQ-11)):
 
@@ -105,14 +105,14 @@ All partners and their current implementation method ([view visual reference her
 | ADP | iframe experience |
 ---
 
-# Org structure
-# Overview
+## Org structure
+## Overview
 
 Penny Design System serves three main audiences: **Melio, Financial Institutions, and Non-Financial Institutions**. Each has distinct needs and interacts with the design system in different ways.
 
 ![](/Penny-documentation/foundation/assets/partnerships-image-9.png)
 
-# Melio
+## Melio
 
 Penny supports multiple domains within Melio, ensuring a cohesive experience across different product areas:
 
@@ -133,14 +133,14 @@ Penny supports multiple domains within Melio, ensuring a cohesive experience acr
 
 **Accounts** – Manages user profiles, billing, and account settings.
 
-# Financial institutions
+## Financial institutions
 
 Financial Institutions are **regulated entities** that provide financial services such as banking, lending, and payment processing. Penny supports these institutions by ensuring their integration with Melio's payment infrastructure is seamless and ADA compliant.
 
 ![](/Penny-documentation/foundation/assets/partnerships-image-11.png)
 *Current partnerships with financial institutions, April 2025*
 
-# Non financial institutions
+## Non financial institutions
 
 Non-Financial Institutions are **business platforms** that integrate financial services but do not primarily function as banks or lenders. They use Melio's financial infrastructure, while Penny ensures a smooth and branded experience for these platforms.
 
