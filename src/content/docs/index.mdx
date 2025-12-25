@@ -1,40 +1,62 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Penny Design System
+description: Melio Payments' comprehensive design system for building consistent, accessible digital experiences.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  title: "Penny Design System"
+  tagline: "Building consistent, accessible digital experiences for Melio Payments"
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Foundations
+      link: /foundation/accessibility/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+      variant: primary
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from "@astrojs/starlight/components";
 
-## Next steps
+## Get Started
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <Card title="Foundation" icon="star">
+    Design tokens, typography, colors, and core principles that form the
+    foundation of our design system. [Explore Foundation
+    →](/foundation/accessibility/)
+  </Card>
+  <Card title="UX Patterns" icon="lightbulb">
+    Common user experience patterns and interactions across our products.
+    [Explore UX Patterns →](/ux-patterns/overview/)
+  </Card>
+  <Card title="Components" icon="puzzle">
+    Reusable UI components built with accessibility and consistency in mind.
+    [Explore Components →](#)
+  </Card>
+</CardGrid>
+
+## Foundation Categories
+
+<CardGrid>
+  <Card title="Accessibility" icon="heart">
+    Guidelines and standards for creating inclusive experiences for all users.
+    [Explore Accessibility →](/foundation/accessibility/)
+  </Card>
+  <Card title="Typography" icon="pen">
+    Font families, scales, and text styling guidelines. [Explore Typography
+    →](/foundation/typography/)
+  </Card>
+  <Card title="Color Tokens" icon="swatch">
+    Color palette, semantic tokens, and usage guidelines. [Explore Color Tokens
+    →](/foundation/color-tokens/)
+  </Card>
+  <Card title="Layout System" icon="bars">
+    Grid systems, spacing, and layout principles. [Explore Layout System
+    →](/foundation/layout-system/)
+  </Card>
+  <Card title="Spacing" icon="random">
+    Consistent spacing scale and layout principles. [Explore Spacing
+    →](/foundation/spaces/)
+  </Card>
+  <Card title="Breakpoints" icon="laptop">
+    Responsive design breakpoints and device targeting. [Explore Breakpoints
+    →](/foundation/breakpoints/)
+  </Card>
 </CardGrid>

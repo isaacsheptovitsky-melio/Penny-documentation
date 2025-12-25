@@ -1,0 +1,66 @@
+/* Penny Design System Brand Colors */
+:root {
+	--sl-hue-purple: 264;
+	--sl-color-accent-low: #7849ff1a;
+	--sl-color-accent: #7849ff;
+	--sl-color-accent-high: #7849ff;
+}
+
+/* Dark theme overrides */
+:root[data-theme='dark'] {
+	--sl-color-accent-low: #7849ff1a;
+	--sl-color-accent: #9575ff;
+	--sl-color-accent-high: #b49aff;
+}
+
+/* Light theme overrides */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #7849ff1a;
+	--sl-color-accent: #7849ff;
+	--sl-color-accent-high: #6537e6;
+}
+
+/* Additional brand color customizations */
+.hero > h1 {
+	background: linear-gradient(315deg, #7849ff, #b49aff);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* Custom link colors */
+a:not(.sl-link-card) {
+	color: #7849ff;
+}
+
+a:not(.sl-link-card):hover {
+	color: #6537e6;
+}
+
+/* Navigation accent */
+.sidebar .top-level > li[aria-current="page"] > .large {
+	background-color: #7849ff1a;
+	color: #7849ff;
+}
+
+/* Button styling */
+.sl-link-button {
+	background-color: #7849ff;
+	border-color: #7849ff;
+	color: white !important;
+}
+
+.sl-link-button:hover {
+	background-color: #6537e6;
+	border-color: #6537e6;
+	color: white !important;
+}
+
+/* Action buttons in hero */
+.hero .action {
+	color: white !important;
+}
+
+.hero .action:hover {
+	color: white !important;
+}

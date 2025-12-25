@@ -1,0 +1,60 @@
+---
+title: Spaces
+description: Spaces are size tokens used throughout the design system to define consistent spacing - including padding, margin, gaps, and more.
+---
+
+# Spaces
+
+Spaces are size tokens used throughout the design system to define consistent spacing - including padding, margin, gaps, and more.
+
+
+# Usage
+
+* **Apply spacing tokens** for margins, paddings, layout gaps, grid gutters, etc.
+* **Avoid arbitrary pixel values** unless justified by a special case.
+* Use **larger tokens** to separate sections or create breathing room.
+* Use **smaller tokens** inside compact components or dense UI areas.
+
+
+# Spaces tokens
+
+| Token | Value | Use cases |
+| --- | --- | --- |
+| `spacing.none` | 0px | Used to reset spacing or eliminate gaps |
+| `spacing.xxxs` | 2px | - |
+| `spacing.xxs` | 4px | Used in spacing small, related elements, usually within a component, such as Pill. |
+| `spacing.xs` | 8px | Commonly used between form elements, icons, and label gaps, and as padding for extra-small components like Tooltips and Pills. |
+| `spacing.xs-s` | 12px | Used as vertical padding for smaller components such as Inputs. |
+| `spacing.s` | 16px | Standard padding for medium-sized components like the Calendar, Tabs, and Section banner.Gaps between medium sized elements such as section banner. |
+| `spacing.s-m` | 20px | - |
+| `spacing.m` | 24px | Commonly used as padding for Modal and Card components, and as spacing between form fields.  Examples: Form fields. |
+| `spacing.l` | 32px | Used as padding for the Drawer component or as larger layout spacing between major sections. |
+| `spacing.xl` | 40px | Used as padding for Container components or outer layout margins. |
+| `spacing.xxl` | 48px | Ideal for separating large content blocks or for generous page margins.  Examples: Form sections. |
+| `spacing.xxxl` | 72px | - |
+
+# Use cases 
+
+![spacing.xxxs](/foundation/spaces-assets/spacing.xxxs.png)
+
+**spacing.xxxs**
+
+---
+
+![spacing.xs](/foundation/spaces-assets/spacing.xs.png)
+
+**spacing.xs**
+
+---
+
+![spacing.s](/foundation/spaces-assets/spacing.s.png)
+
+**spacing.s**
+
+---
+
+![Spacing - spacing.m](/foundation/spaces-assets/Spacing-spacing.m.png)
+
+**Spacing - spacing.m**
+
+---
