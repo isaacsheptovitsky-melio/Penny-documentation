@@ -12,7 +12,7 @@ Our illustration system includes a default set of illustrations. These are desig
 
 Melio has a default Illustration suite for Melio & partners with a refined style and a simplified palette of just two fixed & customized colors.  Each illustration comes in three sizes- 144 / 120 / 96 px.
 
-![](/foundation/assets/illustrations-image-1.png)
+![](/Penny-documentation/foundation/assets/illustrations-image-1.png)
 
 # Grid
 
