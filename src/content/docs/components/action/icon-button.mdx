@@ -3,9 +3,18 @@ title: Icon Button
 description: The Icon button is a compact button that displays only an icon, without a text label. It is typically used for less prominent actions, such as editing, deleting, or closing.
 ---
 
-import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+import {
+  Aside,
+  Badge,
+  LinkCard,
+  Card,
+  CardGrid,
+} from "@astrojs/starlight/components";
 
-The Icon button is a compact button that displays only an icon, without a text label. It is typically used for less prominent actions, such as editing, deleting, or closing.
+<Badge text="Not up to date" variant="caution" />
+
+The Icon button is a compact button that displays only an icon, without a text label.
+It is typically used for less prominent actions, such as editing, deleting, or closing.
 
 <iframe
   src="https://penny.melio.com/iframe.html?id=action-components-icon-button--main&viewMode=story"
@@ -35,7 +44,8 @@ The Icon button is a compact button that displays only an icon, without a text l
 - Avoid using for primary actions (e.g., form submissions)
 
 <Aside type="tip">
-  Use icon buttons to declutter interfaces, especially in dense areas like tables or cards.
+  Use icon buttons to declutter interfaces, especially in dense areas like
+  tables or cards.
 </Aside>
 
 ## Variants
@@ -47,17 +57,21 @@ The Icon button component has several levels of hierarchy:
 ![Primary](/Penny-documentation/components/icon-button/icon-button-image-1.png)
 **Primary**
 
+For clear but non-essential emphasis.
+
 &nbsp;
 
 ![Naked](/Penny-documentation/components/icon-button/icon-button-image-2.png)
 **Naked**
+
+Minimal styling, typically used in place of the Primary variant when a more subdued visual presence is needed.
 
 &nbsp;
 
 ![Brand](/Penny-documentation/components/icon-button/icon-button-image-3.png)
 **Brand**
 
-&nbsp;
+Use with caution — this variant is only used on mobile as the omni-action button.
 
 ### States
 

@@ -55,11 +55,11 @@ export default defineConfig({
 							label: 'Action Components',
 							collapsed: true,
 							items: [
+								{ label: 'Action Bar', slug: 'components/action/action-bar' },
 								{ label: 'Button', slug: 'components/action/button' },
 								{ label: 'Icon Button', slug: 'components/action/icon-button' },
 								{ label: 'Naked Button', slug: 'components/action/naked-button' },
 								{ label: 'Split Button', slug: 'components/action/split-button' },
-								{ label: 'Action Bar', slug: 'components/action/action-bar' },
 							],
 						},
 						{
