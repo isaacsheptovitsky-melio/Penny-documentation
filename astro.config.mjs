@@ -64,6 +64,7 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								{ label: 'Button', slug: 'components/action/button' },
+								{ label: 'Button V02', slug: 'components/action/button-backup' },
 								{ label: 'Icon Button', slug: 'components/action/icon-button' },
 								{ label: 'Naked Button', slug: 'components/action/naked-button' },
 								{ label: 'Split Button', slug: 'components/action/split-button' },
