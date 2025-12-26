@@ -42,17 +42,9 @@ export default defineConfig({
 				{
 					label: 'UX Patterns',
 					items: [
-						{ label: 'Overview', slug: 'ux-patterns/overview' },
 						{ label: 'Buttons vs. Links', slug: 'ux-patterns/buttons-vs-links' },
 						{ label: 'Delete', slug: 'ux-patterns/delete' },
-						{ label: 'Resource Creation', slug: 'ux-patterns/resource-creation' },
-						{ label: 'Navigation Patterns', slug: 'ux-patterns/navigation' },
-						{ label: 'Form Patterns', slug: 'ux-patterns/forms' },
-						{ label: 'Data Display', slug: 'ux-patterns/data-display' },
-						{ label: 'Feedback Patterns', slug: 'ux-patterns/feedback' },
-						{ label: 'Loading States', slug: 'ux-patterns/loading-states' },
-						{ label: 'Empty States', slug: 'ux-patterns/empty-states' },
-						{ label: 'Error Handling', slug: 'ux-patterns/error-handling' },
+						{ label: 'Feedback', slug: 'ux-patterns/feedback' },
 					],
 				},
 				{
