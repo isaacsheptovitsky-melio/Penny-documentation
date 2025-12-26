@@ -1,0 +1,143 @@
+---
+title: Tracker
+description: The Tracker shows progress through a multi-step process.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+The Tracker shows progress through a multi-step process.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-tracker-tracker--steps-atoms&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Tracker Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://www.figma.com/design/X7oG85653Gwwg7eDTrDUYW/%F0%9F%A4%8D-DS-Components-%F0%9F%A4%8D"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/docs/data-display-components-tracker-tracker--docs"
+  />
+</CardGrid>
+
+## Usage
+
+- Use the Tracker to visualize progress through a linear process (e.g., onboarding, form completion, approval flows)
+- Choose between **horizontal** and **vertical** layouts depending on the space and context
+- Each step is represented by the `Tracker.Step` subcomponent
+- Status colors communicate the nature of the process or its current state (e.g., success, warning)
+
+<Aside type="tip">
+  Pair the Tracker with **clear** **and concise** **copy** for extra clarity.
+</Aside>
+
+## Variants
+
+### Layout
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-tracker-tracker--variants&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Tracker Layout Variants Example"
+></iframe>
+
+### Statuses
+
+Combine statuses logically to provide a clear, at-a-glance overview:
+
+1. **Clarity first:** Ensure users instantly understand their current position, past progress, and any required actions.
+2. **Mark completed steps:** Use 'Success' for all successfully finished steps.
+3. **Signal future issues:** Use 'Warning' or 'Critical' for upcoming steps if known issues exist. 
+4. **Keep it simple:** Avoid using too many different statuses in a single tracker; prioritize essential information and prevent visual clutter.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-tracker-tracker--statuses&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Tracker Statuses Example"
+></iframe>
+
+### Critical status
+
+Indicate a failed/erroneous state using the `critical` fill color and the `error` icon:
+
+![Tracker - Critical status](/Penny-documentation/components/tracker/tracker-image-5.png)
+**Tracker - Critical status**
+
+&nbsp;
+
+### Width
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-tracker-tracker--width&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Tracker Width Example"
+></iframe>
+
+### Custom indicator
+
+Use for unique or branded step indicators when custom visuals are needed.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-tracker-tracker--custom-indicator&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Tracker Custom Indicator Example"
+></iframe>
+
+## Do's and don'ts
+
+| ✅ **Do** | ❌ **Don't** |
+| --- | --- |
+| ![](/Penny-documentation/components/tracker/tracker-image-1.png) <br/> **Use clear, concise labels for each step** <br/> Use clear, concise labels for each step. | ![](/Penny-documentation/components/tracker/tracker-image-2.png) <br/> **Don't overload steps with too much text** <br/> Overload steps with too much text—use supporting descriptions sparingly. |
+
+| ✅ **Do** | ❌ **Don't** |
+| --- | --- |
+| ![](/Penny-documentation/components/tracker/tracker-image-3.png) <br/> **Align the step order logically and sequentially** <br/> Align the step order logically and sequentially. | ![](/Penny-documentation/components/tracker/tracker-image-4.png) <br/> **Don't use critical statuses without user guidance** <br/> Use critical or warning statuses without clear user guidance or resolution. |
+
+## Use cases
+
+- **Vendor onboarding:** Display steps like "Add Company Info", "Verify Bank Account", "Set Payment Preferences"
+- **Bill approval flow:** Show where a bill is in the review, approval, and payment stages
+- **User signup journey:** Visualize profile completion steps, such as "Create Account", "Verify Email", "Add Details"
+- **Payout process:** Guide users through stages like "Request Sent", "Processing", "Payout Completed"
+
+## Accessibility
+
+- Use status colors with accompanying icons or text to ensure colorblind users can understand progress
+- Use ARIA attributes like `aria-current` to indicate step status for screen readers
+
+## Desktop usage and treatment
+
+Trackers work well in onboarding flows, multi-step forms, and progress dashboards. Use horizontal layouts for wider screens and ensure steps are clearly labeled with appropriate status indicators.
+
+## Mobile usage and treatment
+
+Consider stacking the Tracker vertically on smaller screens for better readability
+
+![Tracker](/Penny-documentation/components/tracker/tracker-image-6.png)
+**Tracker**
+
+&nbsp;

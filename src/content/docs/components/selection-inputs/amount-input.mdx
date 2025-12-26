@@ -1,0 +1,97 @@
+---
+title: Amount input
+description: The Amount Input component allows users to enter or edit the amount to be paid. It supports different currencies, and enforces a limit to prevent users from entering an amount exceeding the bill's total
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+The Amount Input component allows users to enter or edit the amount to be paid. It supports different currencies, and enforces a limit to prevent users from entering an amount exceeding the bill's total.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-amount-input--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Amount Input Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/8944b3-amount-input"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-amount-input--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Used for entering or editing a payment amount
+* Enforces an amount limit, preventing overpayment
+* Supports error states with validation messaging
+* Allows helper text to provide context (e.g., remaining balance)
+* Can include an edit button tooltip for additional guidance
+* Offers alignment options for description placement
+
+## States
+
+### Default state
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-amount-input--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Amount Input Default State"
+></iframe>
+
+### Edit mode
+
+While editing the amount, the Pay CTA is temporarily disabled.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-amount-input--disabled-cta-while-editing&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Amount Input Edit Mode"
+></iframe>
+
+### Error state
+
+The error state is triggered when:
+
+* The entered amount exceeds the bill total
+* The entered amount is 0
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-amount-input--invalid&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Amount Input Error State"
+></iframe>
+
+## Use cases
+
+The Amount input appears when making a bill payment.
+
+![](/Penny-documentation/components/amount-input/amount-input-image-1.png)
+
+## Desktop usage and treatment
+
+Amount inputs on desktop should provide clear visual feedback during edit states and maintain consistent spacing with other form elements. Error states should be prominently displayed to prevent user confusion.
+
+## Mobile usage and treatment
+
+On mobile devices, amount inputs should accommodate touch interactions and ensure the numeric keypad is automatically triggered. Edit mode should be clearly distinguishable and error messages should be easily readable on smaller screens.

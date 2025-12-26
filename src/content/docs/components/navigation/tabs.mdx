@@ -1,0 +1,116 @@
+---
+title: Tabs
+description: Tabs let users switch between related content sections that are on the same level, helping organize information within a single view.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+Tabs let users switch between related content sections that are on the same level, helping organize information within a single view.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=navigation-components-tabs--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Tabs Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/795906-tabs"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/navigation-components-tabs--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Use Tabs to switch between views or categories that are conceptually related and parallel in hierarchy (e.g., Vendors, Bills, Payments)
+* Ideal when the number of tabs is limited and all options are important enough to be visible.
+* Tab labels should be short, clear, and ideally one or two words.
+* Avoid nesting tabs within tabs to prevent confusion and cognitive overload.
+
+<Aside type="tip">
+  Use Tabs when content changes without refreshing or routing the page. If navigation causes a full page refresh, consider using a [navigation bar](https://zeroheight.com/98bb1df01/p/271b02) instead.
+</Aside>
+
+## Applying a bottom border to Tabs
+
+To achieve this visual separation, the Tabs component must be enclosed within a parent container element. Apply a `border-bottom` style to this container to ensure the boundary spans the full width of the component, providing a complete and professional delineation for the navigation bar.
+
+The border-bottom style should be 1px and using the `semantic.border.static` color.
+
+![Default](/Penny-documentation/components/tabs/tabs-default.png)
+**Default**
+
+&nbsp;
+
+![Manually wrapped with a div with a border-bottom](/Penny-documentation/components/tabs/tabs-with-border.png)
+**Manually wrapped with a div with a border-bottom**
+
+&nbsp;
+
+## Variants
+
+### Full width
+
+Tabs stretch across the full width of their container. **Use when** tabs need to be evenly spaced or when you have fewer tabs and want a balanced layout.
+
+### Neutral
+
+A low-emphasis style that avoids using the Melio purple brand color. **Use when** tabs are part of a secondary or less prominent navigation section.
+
+### With counters
+
+Shows item counts in each tab [counters](https://zeroheight.com/98bb1df01/p/597fd1). **Use when** it's helpful for users to see how many items are in each category at a glance (e.g., unread, pending).
+
+### With pills
+
+Adds status indicators like "New" or "Pending Approval" as pills next to tab labels. **Use when** you want to highlight urgent or special attention items without showing exact counts.
+
+### With pills and counter by breakpoints
+
+Pills are shown on larger screens and automatically collapse into counters on mobile.**Use when** you want rich tab labels on desktop while keeping things compact and readable on mobile.
+
+## Do's and don'ts
+
+### ✅ Do
+**Use clear, short, and descriptive labels**
+
+![Do example](/Penny-documentation/components/tabs/tabs-do-example.png)
+
+### ❌ Don't
+**Nest tabs inside other tabs**
+
+![Don't example](/Penny-documentation/components/tabs/tabs-dont-example.png)
+
+## Use cases
+
+### **AP dashboard navigation**
+
+Sepearates key accounts payable sections (**Vendors**, **Bills**, **Approvals**, **Payments**, and **Financing**) within the same dashboard view.
+
+![](/Penny-documentation/components/tabs/tabs-ap-dashboard.png)
+
+### Accounts Receivable (Get Paid) workflows
+
+Separates key views (**Invoices**, **Customers**, and **Payments)** to help users manage each AR function independently.
+
+![](/Penny-documentation/components/tabs/tabs-ar-dashboard.png)
+
+## Desktop usage and treatment
+
+On desktop, tabs should display horizontally with clear hover states and adequate spacing. Consider the available width when deciding how many tabs to show.
+
+## Mobile usage and treatment
+
+Avoid using too many tabs on mobile; consider collapsing into a dropdown if space is too limited.
+
+## Accessibility
+
+Use short, descriptive tab labels that clearly indicate purpose; avoid ambiguity like "Other" or "More".

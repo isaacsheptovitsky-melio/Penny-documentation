@@ -1,0 +1,144 @@
+---
+title: Switch
+description: The Switch (Toggle) component allows users to enable or disable a setting with a single tap or click. It represents a binary state (on/off) and is commonly used for preferences, settings, and feature toggles.
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+The Switch (Toggle) component allows users to enable or disable a setting with a single tap or click. It represents a binary state (on/off) and is commonly used for preferences, settings, and feature toggles.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-switch--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Switch Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/78000a-switch"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-switch--main"
+  />
+</CardGrid>
+
+## Usage
+
+Switches are best used to adjust settings and other standalone options. They make a binary selection, like on and off or true and false.
+
+The effects of a switch should start immediately, without needing to save.
+
+Use a Switch to:
+
+* Toggle a single item on or off
+* Immediately activate or deactivate something
+
+> **Note:** For details on sizes, behaviors, and general guidelines applicable to all form components, refer to the [Form Field](https://zeroheight.com/98bb1df01/p/6854b6-form-field) documentation.
+
+> **Tip**: Switches control binary options, not opposing ones. A light can be turned OR off, however the AC can't be set on hot OR cold, but rather a range of degrees.
+
+## Variants
+
+### Sizes
+
+The switch is available in 2 sizes: 16px and 20px high, however both have a 24px target area, in order to adhere to accessibility guidelines.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-switch--sizes&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Switch Sizes"
+></iframe>
+
+### States
+
+#### Off
+
+![Enabled](/Penny-documentation/components/switch/switch-image-5.png)
+**Enabled**
+
+&nbsp;
+
+![Read only](/Penny-documentation/components/switch/switch-image-6.png)
+**Read only**
+
+&nbsp;
+
+![Disabled](/Penny-documentation/components/switch/switch-image-7.png)
+**Disabled**
+
+&nbsp;
+
+#### On
+
+![Enabled](/Penny-documentation/components/switch/switch-image-8.png)
+**Enabled**
+
+&nbsp;
+
+![Read only](/Penny-documentation/components/switch/switch-image-9.png)
+**Read only**
+
+&nbsp;
+
+![Disabled](/Penny-documentation/components/switch/switch-image-10.png)
+**Disabled**
+
+&nbsp;
+
+### Full width
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-switch--full-width&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Switch Full Width"
+></iframe>
+
+## Do's and Don'ts
+
+### ✅ Do
+**Use a switch when the option is binary**
+Use a checkbox when the option is binary.
+
+![](/Penny-documentation/components/switch/switch-image-1.png)
+
+### ❌ Don't
+**Don't use radio for binary options**
+Don't use radio for binary options.
+
+![](/Penny-documentation/components/switch/switch-image-2.png)
+
+---
+
+### ✅ Do
+**Use checkboxes for multiple selections**
+Use checkboxes (not switches) to let users select one or more options from a list.
+
+![](/Penny-documentation/components/switch/switch-image-3.png)
+
+### ❌ Don't
+**Avoid switches for options requiring save actions**
+Avoid using a switch to select multiple options that require people to save. Switches should be immediate. Use checkboxes instead.
+
+![](/Penny-documentation/components/switch/switch-image-4.png)
+
+## Desktop usage and treatment
+
+Switches on desktop should provide clear visual feedback for state changes and support both click and keyboard interactions. The toggle animation should be smooth and the current state should be immediately obvious.
+
+## Mobile usage and treatment
+
+On mobile devices, switches should have adequate touch targets and provide clear haptic feedback when toggled. The visual state should be immediately apparent and the switch should respond appropriately to touch gestures.

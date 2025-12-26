@@ -1,0 +1,61 @@
+---
+title: Floating
+description: A container for floating content, connected to a trigger element.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+A container for floating content, connected to a trigger element.
+
+<iframe
+  src="https://61716025a5ae25003ac448af-kxatgdwswo.chromatic.com/iframe.html?id=containers-floating-new--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Floating Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/11c0dc-floating"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://61716025a5ae25003ac448af-kxatgdwswo.chromatic.com/?path=/story/containers-floating-new--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Use when additional context or actions need to appear relative to a specific UI element
+* Leverages dynamic placement to ensure content remains visible within the viewport, adjusting automatically if screen space is limited.
+
+## Trigger
+
+While buttons are the standard trigger, the component supports any element as its trigger.
+
+![Button trigger](/Penny-documentation/components/floating/floating-image-1.png)
+**Button trigger**
+
+&nbsp;
+
+![Custom trigger](/Penny-documentation/components/floating/floating-image-2.png)
+**Custom trigger**
+
+<Aside type="note">
+  Ensure a minimum of 24*24px target for the custom trigger
+</Aside>
+
+## Desktop usage and treatment
+
+On desktop, floating components should position intelligently based on available viewport space and provide clear visual connection to their trigger element.
+
+## Mobile usage and treatment
+
+On mobile devices, screen real estate is limited. While the Floating component attempts to adjust placement, consider if a **Bottom Sheet** or full-screen adaptation is a better experience for complex forms (like linking a bank account) on small screens.
+
+![Floating - Mobile interpretattion](/Penny-documentation/components/floating/floating-image-3.png)
+**Floating - Mobile interpretattion**

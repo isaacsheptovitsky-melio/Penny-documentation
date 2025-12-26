@@ -1,0 +1,67 @@
+---
+title: Date field
+description: The Date Field component serves as an input for selecting dates, providing a user-friendly way to trigger and control the Calendar component. It allows users to manually enter a date or open the Calendar for selection.
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+The Date Field component serves as an input for selecting dates, providing a user-friendly way to trigger and control the Calendar component. It allows users to manually enter a date or open the Calendar for selection.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-date-field--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Date Field Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/731e70-date-field"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-date-field--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Clicking the input field triggers the [Calendar](https://zeroheight.com/98bb1df01/v/latest/p/48d510-calendar) component for date selection
+* In order to allow typing date, use the Typable variant
+* After a selection is made:
+    * The Calendar menu is closed
+    * The date is set
+
+> **Note:** For details on sizes, behaviors, and general guidelines applicable to all form components, refer to the [Form Field](https://zeroheight.com/98bb1df01/p/6854b6-form-field) documentation.
+
+## Do's and Don'ts
+
+### ✅ Do
+**Display expected format**
+Display a placeholder or helper text indicating the expected format (e.g., "MM/DD/YYYY").
+
+![](/Penny-documentation/components/date-field/date-field-image-1.png)
+
+### ❌ Don't
+**Don't pre-fill dates unless necessary**
+Don't assume a default date unless necessary: Pre-filling a date can lead to accidental selections.
+
+![](/Penny-documentation/components/date-field/date-field-image-2.png)
+
+## Content guidelines
+
+[This is a placeholder for Avi and his team]
+
+* What should be the label's verb?
+
+## Desktop usage and treatment
+
+Date fields on desktop should provide clear visual indicators for the calendar trigger and support both click and keyboard interactions. The calendar popup should be properly positioned relative to the input field.
+
+## Mobile usage and treatment
+
+On mobile devices, date fields should accommodate touch interactions and potentially trigger native date pickers when appropriate. The calendar component should adapt to smaller screen sizes while maintaining usability.

@@ -1,0 +1,166 @@
+---
+title: Radio Group
+description: The Radio Group component allows users to select a single option from a list. It follows standard radio button behavior but includes an option for customizable content.
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+The Radio Group component allows users to select a single option from a list. It follows standard radio button behavior but includes an option for customizable content.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-radio-group--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Radio Group Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/79a7b5-radio-group"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-radio-group--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Use when a user must choose one option from a predefined set.
+* Ensure all options are clearly labeled and easy to understand.
+* Use the customizable content to provide additional context when needed.
+* Group related radio buttons together with a clear heading
+
+> **Note:** For details on sizes, behaviors, and general guidelines applicable to all form components, refer to the [Form Field](https://zeroheight.com/98bb1df01/p/6854b6-form-field) documentation.
+
+## Variants
+
+### Within a Form Field
+
+Nesting the Radio Group within a Form Field enables helper text and improves form organization.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-radio-group--with-form-field&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Radio Group with Form Field"
+></iframe>
+
+### Orientation
+
+The Radio Group is available in two orientations: horizontal and vertical:
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-radio-group--variants&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Radio Group Orientations"
+></iframe>
+
+### States
+
+Both the Selected and Unselected variants share the same states:
+
+#### Unselected
+
+![Rest](/Penny-documentation/components/radio-group/radio-group-image-1.png)
+**Rest**
+
+&nbsp;
+
+![Hover](/Penny-documentation/components/radio-group/radio-group-image-2.png)
+**Hover**
+
+&nbsp;
+
+![Read only](/Penny-documentation/components/radio-group/radio-group-image-3.png)
+**Read only**
+
+&nbsp;
+
+![Disabled](/Penny-documentation/components/radio-group/radio-group-image-4.png)
+**Disabled**
+
+&nbsp;
+
+![Invalid](/Penny-documentation/components/radio-group/radio-group-image-5.png)
+**Invalid**
+
+&nbsp;
+
+#### Selected
+
+![Rest](/Penny-documentation/components/radio-group/radio-group-image-6.png)
+**Rest**
+
+&nbsp;
+
+![Hover](/Penny-documentation/components/radio-group/radio-group-image-7.png)
+**Hover**
+
+&nbsp;
+
+![Read only](/Penny-documentation/components/radio-group/radio-group-image-8.png)
+**Read only**
+
+&nbsp;
+
+![Disabled](/Penny-documentation/components/radio-group/radio-group-image-9.png)
+**Disabled**
+
+&nbsp;
+
+![Invalid](/Penny-documentation/components/radio-group/radio-group-image-10.png)
+**Invalid**
+
+&nbsp;
+
+### With Badge, Icon and Description
+
+The Radio component allows you to enhance the label with an icon, badge, and an additional description line to provide better context and clarity for the user.
+
+![Radio - with Description + icon + badge](/Penny-documentation/components/radio-group/radio-group-image-11.png)
+**Radio - with Description + icon + badge**
+
+&nbsp;
+
+### Custom Option Content
+
+The Radio group uses a slot to render its content, allowing you to customize it as needed.
+
+![🤍Radio [ Custom ]](/Penny-documentation/components/radio-group/radio-group-image-12.png)
+**🤍Radio [ Custom ]**
+
+&nbsp;
+
+## Do's and Dont's
+
+### ✅ Do
+**Use radio buttons for mutually exclusive options**
+Use radio buttons for mutually exclusive options
+
+![](/Penny-documentation/components/radio-group/radio-group-image-13.png)
+
+### ❌ Don't
+**Don't nest radio buttons**
+Don't nest radio buttons
+
+![](/Penny-documentation/components/radio-group/radio-group-image-14.png)
+
+## Desktop usage and treatment
+
+Radio groups on desktop should provide clear visual feedback for hover and focus states. The options should be well-spaced and easily clickable, with consistent alignment and clear visual hierarchy.
+
+## Mobile usage and treatment
+
+On mobile devices, radio groups should have adequate touch targets and clear visual feedback for selection states. Consider the reduced screen space when laying out options and ensure they remain easily accessible for touch interactions.

@@ -1,0 +1,145 @@
+---
+title: Select
+description: The select component allows users to choose a single option from a predefined list. It is commonly used in forms where a dropdown selection is required.
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+The select component allows users to choose a single option from a predefined list. It is commonly used in forms where a dropdown selection is required.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-select-new--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Select Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/97d613-select"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-select-new--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Select is typically used when you have 5-8 items to choose from
+* Users can either choose a new value or clear the current selection
+* When organizing menu items, sort the list in a logical order by putting the most selected option at the top
+
+> **Note:** For details on sizes, behaviors, and general guidelines applicable to all form components, refer to the [Form Field](https://zeroheight.com/98bb1df01/p/6854b6-form-field) documentation.
+
+> **Tip**: If server calls are necessary, consider using the [Combobox](https://zeroheight.com/98bb1df01/p/063a89-combobox) component instead
+
+## Variants
+
+### Sizes
+
+Small - 40px height | Large - 48px height
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-select-new--sizes&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Select Sizes"
+></iframe>
+
+### Empty state
+
+Empty state can be customised based on your needs
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-select-new--empty-state&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Select Empty State"
+></iframe>
+
+### Clear button 
+
+On default, clear button will appear after a value is selected. There's an option to hide it if needed.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-select-new--hide-clear-button&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Select Clear Button"
+></iframe>
+
+### Search bar 
+
+* For cases where the **Select** component contains a large number of options, consider adding a search bar inside the floating menu.
+
+* This allows users to quickly filter and find the relevant option without excessive scrolling. 
+
+* The search field should be positioned at the top of the menu.
+
+*  If the list is dynamic, ensure that filtering updates the visible options in real time. However, if users need more advanced search capabilities, a **[Combobox](https://zeroheight.com/98bb1df01/p/063a89-combobox)** may be a better alternative.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-select-new--with-search-bar&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Select with Search Bar"
+></iframe>
+
+### Custom trigger content 
+
+The Select component supports customization for both the trigger and menu options. Instead of a standard button, the trigger can be customized to include elements like avatars, icons or brand symbols. 
+
+Similarly, menu options can be enhanced with multi-line descriptions, additional metadata, or visual elements such as icons or images.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-select-new--multi-line-custom-trigger-and-option-content&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Select Custom Content"
+></iframe>
+
+## Do's and don'ts
+
+### ✅ Do
+**Use a Select when there are multiple predefined options**
+Use a Select when there are multiple predefined options.
+
+![](/Penny-documentation/components/select/select-image-1.png)
+
+### ❌ Don't
+**Use Radio Buttons for very few options**
+Don't use a Select when there are very few options—consider Radio Buttons instead.
+
+![](/Penny-documentation/components/select/select-image-2.png)
+
+## Am I using the right component?
+
+![](/Penny-documentation/components/select/select-image-3.png)
+
+## Desktop usage and treatment
+
+Select components on desktop should provide clear visual feedback for dropdown interactions and support keyboard navigation. The dropdown menu should be properly positioned and sized to accommodate the options without overwhelming the interface.
+
+## Mobile usage and treatment
+
+On mobile devices, select components should adapt to touch interactions and may benefit from using native mobile select controls when appropriate. Consider full-screen overlays or optimized list presentations for better mobile user experience.

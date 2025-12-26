@@ -1,0 +1,103 @@
+---
+title: Calendar
+description: The Calendar component allows users to select a date, while supporting additional functionalities such as marking primary and secondary selected dates, disabling holidays, and customizing selectable weekdays.
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+The Calendar component allows users to select a date, while supporting additional functionalities such as marking primary and secondary selected dates, disabling holidays, and customizing selectable weekdays.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-calendar--main&viewMode=story"
+  width="100%"
+  height="400px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Calendar Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/48d510-calendar"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-calendar--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Click any enabled date to select the primary date.
+* The secondary date, shown with a simple gray outline, provides additional context, such as the vendor's payment receival date.
+* Click the header to open the year list and select a different year.
+* By default, the Calendar component includes an optional footer with a slot that can be replaced with a custom footer
+
+## Variants
+
+### Min-max date
+
+The min and max variants limit users to selecting a date within a specified range, preventing choices that are too early or too late.
+
+![calendar-image-3](/Penny-documentation/components/calendar/calendar-image-3.png)
+**Minimum variant**
+
+&nbsp;
+
+![Calendar - Max](/Penny-documentation/components/calendar/calendar-image-4.png)
+**Calendar - Max**
+
+&nbsp;
+
+### Date indications
+
+The calendar component has 3 different date indications:
+
+1. The Today indicator (July 9th), indicates the current day
+2. The Secondary indicator (July 21st), indicates the vendor's payment receival date
+3. The Primary indicator (July 29th), indicates the user's selected date
+
+![Calendar - Show today](/Penny-documentation/components/calendar/calendar-image-5.png)
+**Calendar - Show today**
+
+&nbsp;
+
+### Year & date selection
+
+Clicking the month and year indicator (December 2023), opens a selection menu for quickly choosing a different month and year.
+
+![User selection variant](/Penny-documentation/components/calendar/calendar-image-6.png)
+**User selection variant**
+
+&nbsp;
+
+### With legend
+
+This variant shows a legend that explains the different date indicators to the user.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-calendar--with-legend&viewMode=story"
+  width="100%"
+  height="400px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Calendar with Legend"
+></iframe>
+
+## Use cases
+
+![](/Penny-documentation/components/calendar/calendar-image-2.png)
+*When creating a new Bill, the Calendar component is used to set up the Invoice date and the Due date*
+
+## Desktop usage and treatment
+
+The Calendar component on desktop provides hover states for better interactivity and clear visual feedback. Month and year navigation should be easily accessible, and the legend (when present) should be positioned to not interfere with date selection.
+
+## Mobile usage and treatment
+
+The component opens in the same manner as desktop on mobile devices, but with touch-optimized interactions.
+
+![](/Penny-documentation/components/calendar/calendar-image-1.png)

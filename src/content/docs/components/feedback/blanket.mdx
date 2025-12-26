@@ -1,0 +1,83 @@
+---
+title: Blanket
+description: The Blanket component is an overlay used to obscure background content.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+The Blanket component is an overlay used to obscure background content.
+
+<iframe
+  src="https://61716025a5ae25003ac448af-kxatgdwswo.chromatic.com/iframe.html?id=feedback-components-blanket--main&args=isOpen:!true;variant:dark;icon:null;isFullScreen:!false;isLoading:!false;data-testid:blanket&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Blanket Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/2365d6-blanket"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://61716025a5ae25003ac448af-kxatgdwswo.chromatic.com/?path=/story/feedback-components-blanket--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Use the overlay to help focus user attention on a specific task
+* Use with the `isLoading` prop to mask a screen / component while data is being fetched, such as verifying a vendor's bank details
+
+## Variants
+
+### Appearance
+
+#### Light
+
+A subtle white obscuring, best for disabling specific items like a form field or table row.
+
+#### Dark
+
+A dark overlay, typically used for full-screen overlays like Modals
+
+#### Darker
+
+A darker overlay color, rarely used.
+
+## Props
+
+### Loading
+
+Displays the Loader component centered within the blanket.
+
+### With Icon
+
+Displays a specific icon centered in the blanket, useful for upload states or empty states.
+
+## Use cases
+
+### Component blanket
+
+The blanket with an icon covers the file attachment, indicating it requires an image file.
+
+### Table blanket
+
+The blanket in its Light variant, over the first 3 rows.
+
+![Blanket over first 3 rows](/Penny-documentation/components/blanket/blanket-image-1.png)
+**Blanket over first 3 rows**
+
+&nbsp;
+
+## Desktop usage and treatment
+
+The Blanket component can be used both as a full-screen overlay or to cover specific components. When used as a full-screen overlay, it typically employs the dark variant to create proper focus on modal dialogs or other overlays.
+
+## Mobile usage and treatment
+
+On mobile devices, the Blanket component functions identically to desktop, providing the same overlay functionality to obscure background content and focus user attention.

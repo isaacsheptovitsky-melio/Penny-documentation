@@ -1,0 +1,78 @@
+---
+title: Currency
+description: Displays monetary values with consistent formatting.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+Displays monetary values with consistent formatting.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-currency--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Currency Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://www.figma.com/design/X7oG85653Gwwg7eDTrDUYW/%F0%9F%A4%8D-DS-Components-%F0%9F%A4%8D"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/docs/data-display-components-currency--docs"
+  />
+</CardGrid>
+
+## Usage
+
+- Use this component to display monetary figures
+- Use the `currency` prop to automatically display the correct symbol (e.g., $, €, £) for the specific region.
+
+## Variants
+
+### Sizes
+
+There are 2 sizes available:
+
+- Small (default)
+- Large
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-currency--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Currency Sizes Example"
+></iframe>
+
+### Variations
+
+There are 2 variants:
+
+- **Default:** Standard dark text for use on white or light gray backgrounds.
+- **Inverse:** White text for use on dark backgrounds, such as a dark sidebar or a specialized branding banner.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-currency--variations&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Currency Variations Example"
+></iframe>
+
+## Desktop usage and treatment
+
+Currency components should maintain consistent formatting across the application. Use larger sizes for prominent financial displays and smaller sizes for detailed lists and tables.
+
+## Mobile usage and treatment
+
+On mobile devices, ensure currency values remain legible and properly formatted. Consider responsive sizing to maintain readability on smaller screens while preserving the financial context.

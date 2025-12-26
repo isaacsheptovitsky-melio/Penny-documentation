@@ -1,0 +1,96 @@
+---
+title: Header Cells
+description: Header cells provide column labels and interactive functionality for table columns, including sorting, filtering, and other column-specific actions.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+Header cells provide column labels and interactive functionality for table columns, including sorting, filtering, and other column-specific actions.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=table-table-header-cells--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Header Cells Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/99c661-header-cells-wip"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/docs/table-table-header-cells--docs"
+  />
+</CardGrid>
+
+## Usage
+
+- Provide clear labels for table columns
+- Enable sorting functionality for data columns
+- Support filtering and search capabilities
+- Display column-specific actions and controls
+- Indicate column data types through appropriate styling
+
+## Variants
+
+### Basic header
+
+Simple text labels for columns that don't require interaction.
+
+### Sortable header
+
+Headers with sorting indicators that allow users to order data in ascending or descending order.
+
+### Interactive header
+
+Headers with additional controls like filters, menus, or action buttons.
+
+### Icon headers
+
+Compact headers using icons instead of text, typically for narrow columns or action columns.
+
+## States
+
+### Default
+
+The standard appearance when no interaction is taking place.
+
+### Hover
+
+Visual feedback when users hover over sortable or interactive headers.
+
+### Active
+
+Indicates the current sort column or selected filter state.
+
+### Loading
+
+Shows when column data is being processed or refreshed.
+
+## Desktop usage and treatment
+
+### Text alignment
+
+- Left-align text headers for consistency
+- Center-align numeric column headers when appropriate
+- Right-align headers for currency or numerical data when needed
+
+### Interactive elements
+
+- Provide clear visual indicators for sortable columns
+- Use consistent spacing for header controls
+- Ensure adequate touch targets for interactive elements
+
+## Mobile usage and treatment
+
+### Responsive considerations
+
+- Maintain readable header text on smaller screens
+- Ensure interactive elements remain accessible
+- Consider abbreviated labels or icons for narrow columns
+- Provide alternative interaction methods for complex headers

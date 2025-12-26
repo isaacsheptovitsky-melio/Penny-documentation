@@ -1,0 +1,116 @@
+---
+title: File upload
+description: A file uploader is a form element used to upload one file
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+A file uploader is a form element used to upload one file.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-file-upload--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="File Upload Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/51202c-file-upload"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-file-upload--main"
+  />
+</CardGrid>
+
+## Usage
+
+Use the File upload component when:
+
+* When users need to upload one file
+* When drag-and-drop functionality enhances the experience
+* When uploading a file that requires a user-visible preview, use the Large file uploader.
+* After a file has been uploaded, the user is allowed to:
+    * Delete uploaded file
+    * Replace uploaded file
+
+> **Note:** For details on sizes, behaviors, and general guidelines applicable to all form components, refer to the [Form Field](https://zeroheight.com/98bb1df01/p/6854b6-form-field) documentation.
+
+## Variants
+
+### Empty and filled states
+
+![Empty state](/Penny-documentation/components/file-upload/file-upload-image-1.png)
+**Empty state**
+
+&nbsp;
+
+![Filled state](/Penny-documentation/components/file-upload/file-upload-image-2.png)
+**Filled state**
+
+&nbsp;
+
+### States
+
+![Empty - Rest](/Penny-documentation/components/file-upload/file-upload-image-3.png)
+**Empty - Rest**
+
+&nbsp;
+
+![Filled - Rest](/Penny-documentation/components/file-upload/file-upload-image-4.png)
+**Filled - Rest**
+
+&nbsp;
+
+![Empty - Hover](/Penny-documentation/components/file-upload/file-upload-image-5.png)
+**Empty - Hover**
+
+&nbsp;
+
+![Filled - Hover](/Penny-documentation/components/file-upload/file-upload-image-2.png)
+**Filled - Hover**
+
+&nbsp;
+
+![Empty - Disabled](/Penny-documentation/components/file-upload/file-upload-image-7.png)
+**Empty - Disabled**
+
+&nbsp;
+
+![Filled - Disabled](/Penny-documentation/components/file-upload/file-upload-image-8.png)
+**Filled - Disabled**
+
+&nbsp;
+
+![Empty - Invalid](/Penny-documentation/components/file-upload/file-upload-image-9.png)
+**Empty - Invalid**
+
+&nbsp;
+
+![Filled - Invalid](/Penny-documentation/components/file-upload/file-upload-image-10.png)
+**Filled - Invalid**
+
+&nbsp;
+
+![Filled - Loading](/Penny-documentation/components/file-upload/file-upload-image-11.png)
+**Filled - Loading**
+
+&nbsp;
+
+![Empty - Loading](/Penny-documentation/components/file-upload/file-upload-image-12.png)
+**Empty - Loading**
+
+&nbsp;
+
+## Desktop usage and treatment
+
+File upload components on desktop should provide clear visual feedback for drag-and-drop operations, hover states, and loading progress. The drop zone should be clearly defined and provide appropriate visual cues for valid file types.
+
+## Mobile usage and treatment
+
+On mobile devices, file upload components should adapt to touch interactions and consider the limitations of mobile file access. The interface should clearly guide users through the upload process with appropriate progress indicators and error handling.

@@ -1,0 +1,53 @@
+---
+title: Stacked Container
+description: A container component that creates a layered visual effect to represent depth.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+A container component that creates a layered visual effect to represent depth.
+
+<iframe
+  src="https://61716025a5ae25003ac448af-kxatgdwswo.chromatic.com/iframe.html?id=containers-stacked-container--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Stacked Container Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/15f6f3-stacked-container"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://61716025a5ae25003ac448af-kxatgdwswo.chromatic.com/?path=/story/containers-stacked-container--main"
+  />
+</CardGrid>
+
+## Usage
+
+Use this component to visually represent a group of containers, stacked on top of one another.
+
+## **Stacks To Display**
+
+**Stacks to Display** controls the visual depth by adding "layers" behind the main container.
+
+* **0:** A single, flat container with no background layers.
+* **1:** Adds one visual layer behind the main container (creates a "double" stack effect).
+* **2:** Adds two visual layers behind the main container (creates a "triple" stack effect).
+
+## Padding
+
+Adjust `paddingX` and `paddingY` independently to accommodate dense data grids (smaller padding) or airy marketing content (larger padding).
+
+## Desktop usage and treatment
+
+On desktop, stacked containers provide visual depth cues to indicate grouped content or hierarchical relationships. The stack effect should be subtle enough not to interfere with content readability.
+
+## Mobile usage and treatment
+
+On mobile, the stacked effect adapts to smaller screens while maintaining visual hierarchy. Consider reducing the stack depth on very small screens to avoid visual clutter.

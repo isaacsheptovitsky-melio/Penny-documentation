@@ -1,0 +1,85 @@
+---
+title: Verification code field
+description: The Verification Code Field is a component designed for entering short numeric codes, such as one-time passwords (OTPs).
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+The Verification Code Field is a component designed for entering short numeric codes, such as one-time passwords (OTPs).
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-verification-code-field--success-on-complete&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Verification Code Field Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/31f1cb-verification-code-field"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-verification-code-field--success-on-complete"
+  />
+</CardGrid>
+
+## Usage
+
+* Use for entering short numeric verification codes (e.g., OTPs)
+* Verification code support 4-6 digits
+* For passwords use the Secured Text Field component
+
+## Variants
+
+### 4-6 digits
+
+Verification code support 4-6 digits entry
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-verification-code-field--verification-code-length&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Verification Code Field Lengths"
+></iframe>
+
+### Success state
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-verification-code-field--success-on-complete&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Verification Code Field Success State"
+></iframe>
+
+### Invalid on complete state
+
+The invalid state displays an error message.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-verification-code-field--invalid-on-complete&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Verification Code Field Invalid State"
+></iframe>
+
+## Desktop usage and treatment
+
+Verification code fields on desktop should provide clear visual feedback for each digit input and support keyboard navigation between fields. The component should handle paste operations intelligently and provide clear error states when validation fails.
+
+## Mobile usage and treatment
+
+On mobile devices, verification code fields should automatically trigger the numeric keypad and support auto-fill from SMS when possible. The individual input fields should be appropriately sized for touch interactions and provide clear visual feedback for the current input position.

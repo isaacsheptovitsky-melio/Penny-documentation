@@ -1,0 +1,97 @@
+---
+title: Search bar
+description: The search bar component allows users to quickly find relevant information within an application. It provides an intuitive and efficient way to filter data, improving the overall user experience.
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+The search bar component allows users to quickly find relevant information within an application. It provides an intuitive and efficient way to filter data, improving the overall user experience.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-search-bar--on-search&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Search Bar Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/243ebd-search-bar"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-search-bar--on-search"
+  />
+</CardGrid>
+
+## Usage
+
+* **Primary Use:** When users need to search for specific items in a large dataset or navigate content efficiently.
+* **Placement:** Typically positioned at the top of a page, inside a navigation bar, or within a filtering panel.
+* **Behavior:** Supports live search, autocomplete suggestions, and filtering options, depending on implementation.
+* Allow users to clear the search input easily with a clear button (✖️)
+
+> **Note:** For details on sizes, behaviors, and general guidelines applicable to all form components, refer to the [Form Field](https://zeroheight.com/98bb1df01/p/6854b6-form-field) documentation.
+
+## Variants
+
+| **Default**  | **On Search** |
+| :--- | :--- |
+| Search icon is decorative <iframe src="https://penny.melio.com/iframe.html?id=selection-inputs-components-search-bar--main&viewMode=story" width="100%" height="200px" frameborder="0" style="border: 1px solid #e1e5e9; border-radius: 8px;" title="Search Bar Default"></iframe> | Search icon is an icon button <iframe src="https://penny.melio.com/iframe.html?id=selection-inputs-components-search-bar--on-search&viewMode=story" width="100%" height="200px" frameborder="0" style="border: 1px solid #e1e5e9; border-radius: 8px;" title="Search Bar On Search"></iframe> |
+| Use this variant when the search field is used **only for filtering** content within a predefined list or menu. Example: A search field inside a dropdown menu that filters available options as the user types. | Use this variant when the search field requires a user action to **submit a search query**. Example: A global search bar in a navigation header where the user types a term and clicks the button to initiate a search. The search button is interactive and executes a search function when clicked. |
+
+### Size
+
+Search bar has default width, but can get full width if needed.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-search-bar--full-width&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Search Bar Full Width"
+></iframe>
+
+### With label
+
+Search bar can appear with prefix of label, or not.
+
+Ensure proper `aria-labels` for the input label.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-search-bar--with-label&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Search Bar with Label"
+></iframe>
+
+## Do's and don'ts
+
+### ✅ Do
+**Allow users to clear the search input easily**
+Allow users to clear the search input easily with a clear button (✖️)
+
+![](/Penny-documentation/components/search-bar/search-bar-image-1.png)
+
+### ❌ Don't
+**Don't reset user input unexpectedly**
+Don't reset user input unexpectedly when navigating or refreshing the page.
+
+![](/Penny-documentation/components/search-bar/search-bar-image-2.png)
+
+## Desktop usage and treatment
+
+Search bars on desktop should provide instant feedback for search queries and clear visual indicators for active states. Auto-complete and suggestions should be properly positioned and easily navigable with keyboard shortcuts.
+
+## Mobile usage and treatment
+
+On mobile devices, search bars should trigger appropriate keyboards (text input) and provide touch-friendly clear buttons. Consider using full-screen search overlays for better mobile user experience when dealing with complex search functionality.

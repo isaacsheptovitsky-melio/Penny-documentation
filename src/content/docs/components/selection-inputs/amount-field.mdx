@@ -1,0 +1,90 @@
+---
+title: Amount field
+description: The Amount Field component is an input field designed for entering monetary values in different currencies. It supports left and right text alignment and can include an optional End Element, typically used for currency selection.
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+The Amount Field component is an input field designed for entering monetary values in different currencies. It supports left and right text alignment and can include an optional End Element, typically used for currency selection.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-amount-field--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Amount Field Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/30ad65-amount-field"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-amount-field--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Used to input monetary values in a structured and formatted manner.
+* Supports **left or right text alignment** based on user preference or localization needs.
+* Can include an **End Element** (e.g., a dropdown) for selecting a currency.
+* This component includes built-in formatting, optional unit display, and validation to prevent incorrect entries.
+
+> **Note:** For details on sizes, behaviors, and general guidelines applicable to all form components, refer to the [Form Field](https://zeroheight.com/98bb1df01/p/6854b6-form-field) documentation.
+
+## Variants
+
+### End element
+
+The end element allows selecting a different currency for the amount.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-amount-field--end-element&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Amount Field with End Element"
+></iframe>
+
+## Do's and Don'ts
+
+### ✅ Do
+**Use for monetary values with currency selection**
+Use for monetary values where currency selection may be required.
+
+![](/Penny-documentation/components/amount-field/amount-field-image-1.png)
+
+### ❌ Don't
+**Don't use for generic numerical input**
+Don't use for generic numerical input unrelated to currency
+
+![](/Penny-documentation/components/amount-field/amount-field-image-2.png)
+
+---
+
+### ✅ Do
+**Align text according to context**
+Align the text according to the context. Usually to the right when in tables.
+
+![](/Penny-documentation/components/amount-field/amount-field-image-3.png)
+
+### ❌ Don't
+**Avoid inconsistent alignment**
+Avoid inconsistent alignment within a form or application.
+
+![](/Penny-documentation/components/amount-field/amount-field-image-4.png)
+
+## Desktop usage and treatment
+
+Amount fields should maintain consistent alignment patterns across desktop interfaces. When used in tables or forms, right-alignment is typically preferred for better visual scanning of monetary values.
+
+## Mobile usage and treatment
+
+On mobile devices, amount fields should adapt to smaller screen sizes while maintaining usability. Consider the touch target size and ensure the End Element (if present) remains easily accessible.

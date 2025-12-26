@@ -1,0 +1,100 @@
+---
+title: Link
+description: The **Link** component navigates users to another page or location when they click on it.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+The **Link** component navigates users to another page or location when they click on it.
+
+<iframe
+  src="https://61716025a5ae25003ac448af-kxatgdwswo.chromatic.com/iframe.html?id=navigation-components-link--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Link Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/921cd5-link"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://61716025a5ae25003ac448af-kxatgdwswo.chromatic.com/?path=/story/navigation-components-link--main"
+  />
+</CardGrid>
+
+## Usage
+
+Use a link when you want to:
+
+* Navigate to a different page within the Melio app (e.g., from the dashboard to the "Payables" page)
+* Direct users to an external URL, such as a help article or a partner website
+
+<Aside type="tip">
+  To prevent user confusion, always make sure link text clearly describes its destination. For example, use "View invoice details" instead of a generic "Click here."
+</Aside>
+
+## Variants
+
+### Type
+
+Links come in two main types:
+
+* **Standalone**: Used for navigation that stands on its own, such as in a navigation menu or as a primary call to action. It has more styling options like size and boldness.
+* **Inline**: Used within a sentence or a block of text to link specific words without disrupting the flow of the content. For example: "Please review the `Terms of Service` before proceeding."
+
+### Color
+
+You can apply different colors to a link to fit its context:
+
+* **Default**: The standard link color for most use cases
+* **Secondary**: The brand color for more prominent links
+* **Inverse**: For use on dark backgrounds to ensure high contrast
+* **Inherit**: The link will inherit the color of its parent text element
+
+### Size
+
+Standalone links can be set to two sizes:
+
+* **Medium**: The default size for most standalone links (Using `Body3` style)
+* **Large**: Used for more prominent navigational links that need to draw more attention (Using `Body2` style)
+
+![Link sizes](/Penny-documentation/components/link/link-image-1.png)
+**Link sizes**
+
+&nbsp;
+
+### Bold
+
+Make a standalone link bold to give it more visual weight.
+
+### Disabled
+
+A disabled link is not clickable and appears grayed out.
+
+### Ellipsis
+
+Use the ellipsis style when the link text might be too long for its container. It will truncate the text and add "..." to the end.
+
+<Aside type="caution">
+  Truncated links can pose an accessibility challenge. Prioritize clear and concise link labels that fit the available space whenever possible.
+</Aside>
+
+## Desktop usage and treatment
+
+On desktop, links should have clear hover states and sufficient spacing for easy interaction. Ensure proper color contrast and readable font sizes.
+
+## Mobile usage and treatment
+
+On mobile, ensure links have adequate touch targets (minimum 44px) and maintain readability across different screen sizes. Consider the context of surrounding content when designing mobile link layouts.
+
+## Accessibility
+
+**Descriptive labels**: Ensure the link's text accurately describes its purpose. For screen reader users, avoid vague text like "Learn More."
+
+**Truncated Links**: If a link label must be truncated, ensure a tooltip displays the full text on hover and focus. Most importantly, the link's accessible name must be the full, untruncated text so a screen reader announces its complete purpose. Use the `title` attribute or a custom tooltip for this.

@@ -1,0 +1,87 @@
+---
+title: Columns
+description: Columns define the structure and layout of table data, organizing information into vertical sections for easy comparison and scanning.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+Columns define the structure and layout of table data, organizing information into vertical sections for easy comparison and scanning.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=table-table-columns--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Columns Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/9519a3-columns-wip"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/docs/table-table-columns--docs"
+  />
+</CardGrid>
+
+## Usage
+
+- Define the structural layout of table data
+- Organize related information into vertical sections
+- Enable horizontal scrolling for tables with many columns
+- Support resizing and reordering for user customization
+
+## Column types
+
+### Data columns
+
+Standard columns that display table content such as text, numbers, or other data types.
+
+### Action columns
+
+Specialized columns that contain interactive elements like buttons, checkboxes, or dropdown menus.
+
+### Pinned columns
+
+Columns that remain visible when the table scrolls horizontally, typically used for key identifiers or primary actions.
+
+## Column features
+
+### Resizing
+
+Allows users to adjust column widths to better fit content or personal preference.
+
+### Sorting
+
+Enables users to order table data by column values in ascending or descending order.
+
+### Filtering
+
+Provides the ability to show or hide rows based on column-specific criteria.
+
+## Desktop usage and treatment
+
+### Width management
+
+- Use appropriate minimum and maximum widths for each column type
+- Allow columns to grow or shrink based on content where appropriate
+- Consider the overall table width and available space
+
+### Column ordering
+
+- Place the most important information in leftmost columns
+- Group related columns together logically
+- Consider user workflow when determining column sequence
+
+## Mobile usage and treatment
+
+### Responsive behavior
+
+- Hide less critical columns on smaller screens
+- Implement horizontal scrolling for essential columns
+- Consider stacking or card-based layouts for very narrow viewports
+- Prioritize the most important columns for mobile display

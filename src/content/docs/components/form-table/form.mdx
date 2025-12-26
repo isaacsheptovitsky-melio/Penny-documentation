@@ -1,0 +1,94 @@
+---
+title: Form
+description: A form is a container that groups related input fields, guiding users to submit information efficiently and accurately.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+A form is a container that groups related input fields, guiding users to submit information efficiently and accurately.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=form-form--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Form Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/339d31-form"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/docs/form-form--docs"
+  />
+</CardGrid>
+
+## Usage
+
+- **Group related information:** Use a form to collect a set of related data from a user, such as adding a new vendor's contact and payment details.
+- **Structure complex tasks:** Break down complex processes like scheduling a payment into logical steps contained within a form.
+
+<Aside type="note">
+Check out the [Feedback](https://zeroheight.com/98bb1df01/p/2752a5) UX pattern for Form validation
+</Aside>
+
+![Form in the Pay flow](/Penny-documentation/components/form/form-image-1.png)
+**Form in the Pay flow**
+
+&nbsp;
+
+## Variants
+
+### Global states
+
+The Form propagates these states to all nested form fields:
+
+- **Default:** Standard interactive state for data entry.
+- **Disabled (`isDisabled`):** Greys out all fields and prevents interaction. Use this when a user does not have permission to edit payment settings.
+- **Read-Only (`isReadOnly`):** Allows users to select and copy text but prevents editing. Useful for reviewing past transactions.
+- **View Mode (`isViewMode`):** Renders the values as plain text rather than input boxes, ideal for summary screens.
+- **Loading (`isLoading`):** Indicates that form data is being refreshed or fetched.
+- **Error State (`errorState`):** Forces an error state on all fields, typically used when a backend validation fails for the entire group.
+
+## Layout
+
+**Columns** define how child elements are arranged (e.g., 1 column for a simple stack, 2+ columns for wider screens).
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=form-form--colspan&viewMode=story"
+  width="100%"
+  height="400px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Form Column Layout Example"
+></iframe>
+
+## Desktop usage and treatment
+
+### Layout considerations
+
+- Use appropriate column layouts to organize related fields
+- Maintain logical grouping of form elements
+- Ensure adequate spacing between form sections
+- Consider the natural reading flow and tab order
+
+### Field organization
+
+- Group related fields together visually and semantically
+- Use consistent spacing and alignment
+- Provide clear visual hierarchy through typography and spacing
+
+## Mobile usage and treatment
+
+### Responsive behavior
+
+- Stack form fields vertically on narrow screens
+- Maintain touch-friendly input sizes and spacing
+- Ensure form elements remain easily accessible
+- Consider reducing columns to single-column layout on mobile devices

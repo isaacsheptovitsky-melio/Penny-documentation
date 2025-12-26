@@ -1,0 +1,82 @@
+---
+title: Brand
+description: A visual representation of a product or organization, often including a logo and name
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+A visual representation of a product or organization, often including a logo and name
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-brand--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Brand Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://www.figma.com/design/X7oG85653Gwwg7eDTrDUYW/%F0%9F%A4%8D-DS-Components-%F0%9F%A4%8D"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/docs/data-display-components-brand--docs"
+  />
+</CardGrid>
+
+## Usage
+
+Use the Brand component to show partner, product, or payment logos
+
+<Aside type="tip">
+  Use the **Neutral** variant when you want to de-emphasize the logo without losing its brand recognition, such as in non-prominent UI elements.
+</Aside>
+
+## Variants
+
+### Types
+
+![Default](/Penny-documentation/components/brand/brand-image-3.png)
+**Default**
+
+&nbsp;
+
+![Neutral](/Penny-documentation/components/brand/brand-image-4.png)
+**Neutral**
+
+&nbsp;
+
+![Invert](/Penny-documentation/components/brand/brand-image-5.png)
+**Invert**
+
+&nbsp;
+
+## Do's and Don'ts
+
+| ✅ **Do** | ❌ **Don't** |
+| --- | --- |
+| ![](/Penny-documentation/components/brand/brand-image-1.png) <br/> **Ensure adequate spacing around logos** <br/> Ensure adequate spacing around logos. | ![](/Penny-documentation/components/brand/brand-image-2.png) <br/> **Don't use logos on busy backgrounds** <br/> Use logos on busy backgrounds. |
+
+## Use cases
+
+- **Product pages**: Display partner or payment method logos for credibility
+- **Checkout flow**: Show payment method logos for clear options
+- **Partner listings**: Highlight partner logos to emphasize collaborations
+
+## Accessibility
+
+- Ensure color contrast
+- Provide alt text when logos are not decorative
+- Do not rely solely on logos to convey information
+
+## Desktop usage and treatment
+
+Brand components should be prominently displayed where brand recognition and trust are important. Maintain appropriate spacing and sizing to ensure logos are clearly visible and recognizable.
+
+## Mobile usage and treatment
+
+On mobile devices, consider the reduced screen space and prioritize the most important brand elements. Ensure logos remain legible at smaller sizes while maintaining their brand integrity.

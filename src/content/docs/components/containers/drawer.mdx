@@ -1,0 +1,118 @@
+---
+title: Drawer
+description: The Drawer component is a side panel for extra context, mainly supporting **Resources** and **Job** layouts
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+The Drawer component is a side panel for extra context, mainly supporting **Resources** and **Job** layouts
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=containers-drawer--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Drawer Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/179ec6-drawer"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/containers-drawer--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Commonly used in the [Resources layout](https://zeroheight.com/98bb1df01/p/63ec5f) to display additional information
+* It is also used in the [Job layout](https://zeroheight.com/98bb1df01/p/63ec5f) to support the user's workflow by enabling the completion of a smaller supplementary task
+
+## Drawer sizes
+
+Drawers are available in 3 sizes: 
+
+![Drawer sizes comparison](/Penny-documentation/components/drawer/drawer-sizes-comparison.png)
+
+### Small: 480px
+
+For minimal content, such as bill details.
+
+![Small drawer - bill details](/Penny-documentation/components/drawer/drawer-small-bill-details.png)
+*Bill details drawer*
+
+&nbsp;
+
+### Medium: 708px
+
+Used to display additional information for complex entities such as Vendor details:
+
+![Medium drawer - vendor details](/Penny-documentation/components/drawer/drawer-medium-vendor-details.png)
+*Vendor details drawer*
+
+&nbsp;
+
+### Large: 1216px
+
+Used to display additional information alongside an attachment, such as Bill with the PDF file attached:
+
+![Large drawer - bill details with attachment](/Penny-documentation/components/drawer/drawer-large-bill-with-attachment.png)
+*Bill details with attachment drawer*
+
+## When to use the Drawer
+
+The Drawer component supports two primary use cases:
+
+1. Complementing the **Resources** layout by displaying additional details, enabling limited editing, and providing relevant actions.
+2. Enhancing the **Job layout** by allowing users to edit the secondary job alongside the primary one.
+
+### Complementing the **Resources layout**
+
+A good example would be the Vendor details drawer:
+
+* It shows additional details that can't be displayed in the Vendors table
+* It allows for minor edits and triggering simple actions
+* It preserves the context of the Vendors table in the background
+
+![Medium drawer - vendor details](/Penny-documentation/components/drawer/drawer-medium-vendor-details.png)
+*Vendor details drawer*
+
+&nbsp;
+
+### Enhancing the **Job layout**
+
+Within a Job layout flow, the user may need to complete a smaller task to finalize the process
+
+![Medium drawer - vendor details](/Penny-documentation/components/drawer/drawer-medium-vendor-details.png)
+*EXAMPLE NEEDED HERE*
+
+&nbsp;
+
+## Guidelines
+
+The decision to use a Drawer depends on the complexity and focus required for the task. Here's a framework to determine when a **drawer is sufficient** and when a **new page layout is needed**:
+
+| ✅ **Use a drawer when:** | ❌ **Move to a dedicated Job layout when:** |
+| --- | --- |
+| The user is performing a **secondary task** while keeping context from the main screen. | The task is **primary and demands full attention** (completing a workflow, filling out a complex form) |
+| The task is **quick and lightweight**, such as making minor edits, viewing details, or triggering simple actions. | The amount of information **overflows the drawer's space**, requiring excessive scrolling. |
+| The layout remains **readable and scannable**, even in a narrower panel. | Multiple steps or **progressive disclosure** are necessary (e.g., tabs, accordions). |
+
+<Aside type="note">
+  While the guidelines recommend using the Drawer for quick and lightweight secondary tasks, it can also accommodate more complex experiences when such complexity is the exception rather than the norm.
+</Aside>
+
+## Desktop usage and treatment
+
+On desktop, drawers provide a side panel experience that maintains context while displaying additional information. They should be sized appropriately for the content and not overwhelm the main interface.
+
+## Mobile usage and treatment
+
+In mobile, an open drawer is displayed over the entire viewport:
+
+![Mobile drawer example](/Penny-documentation/components/drawer/drawer-mobile-example.png)

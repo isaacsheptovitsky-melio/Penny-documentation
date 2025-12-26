@@ -3,74 +3,30 @@ title: Checkbox
 description: Checkboxes are most commonly used to give users a way to make a range of selections (zero, one, or multiple).
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
-
-## Checkbox
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
 
 Checkboxes are most commonly used to give users a way to make a range of selections (zero, one, or multiple).
-
-:::tip[Interactive Component Testing]
-Explore the Checkbox component below with different states, labels, and configurations to understand its behavior before implementation.
-:::
-
-## Interactive Example
-
-<Tabs>
-<TabItem label="Live Component" icon="play">
 
 <iframe
   src="https://penny.melio.com/iframe.html?id=selection-inputs-components-checkbox--main&viewMode=story"
   width="100%"
-  height="500px"
-  frameBorder="0"
+  height="300px"
+  frameborder="0"
   allow="clipboard-write"
   style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
-  title="Checkbox Interactive Example">
-</iframe>
+  title="Checkbox Interactive Example"
+></iframe>
 
-**Controls:** Use the Controls panel to test different checkbox states, labels, and configurations.
-
-</TabItem>
-<TabItem label="Code Examples" icon="code">
-
-```jsx
-// Basic Checkbox
-<Checkbox id="basic" name="preferences">
-  Enable notifications
-</Checkbox>
-
-// Checkbox with description
-<Checkbox id="marketing" name="communications" description="Receive updates about new features">
-  Marketing emails
-</Checkbox>
-
-// Disabled Checkbox
-<Checkbox id="disabled" name="options" disabled>
-  Unavailable option
-</Checkbox>
-
-// Indeterminate Checkbox (for parent/child relationships)
-<Checkbox id="selectAll" name="bulk" indeterminate>
-  Select all items
-</Checkbox>
-```
-
-</TabItem>
-<TabItem label="Form Integration" icon="list">
-
-<iframe
-  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-checkbox--with-form-field&viewMode=story"
-  width="100%"
-  height="400px"
-  frameBorder="0"
-  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
-  title="Checkbox with Form Field">
-</iframe>
-
-</TabItem>
-</Tabs>
-
-**Links:** [View in Full Storybook](https://penny.melio.com/?path=/story/selection-inputs-components-checkbox--main)
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://www.figma.com/design/X7oG85653Gwwg7eDTrDUYW/%F0%9F%A4%8D-DS-Components-%F0%9F%A4%8D?node-id=31133-792&p=f&t=sxxXCKjrP8C819vO-11"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-checkbox--main"
+  />
+</CardGrid>
 
 ## Usage
 
@@ -84,76 +40,65 @@ Explore the Checkbox component below with different states, labels, and configur
 ### Size
 
 ![Default](/Penny-documentation/components/checkbox/checkbox-image-2.png)
-
 **Default**
 
----
+&nbsp;
 
 ![Small](/Penny-documentation/components/checkbox/checkbox-image-3.png)
-
 **Small**
 
----
+&nbsp;
 
 ### States
 
 ![Rest](/Penny-documentation/components/checkbox/checkbox-image-2.png)
-
 **Rest**
 
----
+&nbsp;
 
 ![Hover](/Penny-documentation/components/checkbox/checkbox-image-5.png)
-
 **Hover**
 
----
+&nbsp;
 
 ![Read only](/Penny-documentation/components/checkbox/checkbox-image-6.png)
-
 **Read only**
 
----
+&nbsp;
 
 ![Disabled](/Penny-documentation/components/checkbox/checkbox-image-7.png)
-
 **Disabled**
 
----
+&nbsp;
 
 ![Invalid](/Penny-documentation/components/checkbox/checkbox-image-8.png)
-
 **Invalid**
 
----
+&nbsp;
 
 ### Selection
 
 ![Empty](/Penny-documentation/components/checkbox/checkbox-image-9.png)
-
 **Empty**
 
----
+&nbsp;
 
 ![Intermediate](/Penny-documentation/components/checkbox/checkbox-image-10.png)
-
 **Intermediate**
 
----
+&nbsp;
 
 ![Checked](/Penny-documentation/components/checkbox/checkbox-image-2.png)
-
 **Checked**
 
----
+&nbsp;
 
 ### Show label
 
 ![Show label](/Penny-documentation/components/checkbox/checkbox-image-12.png)
-
 **Show label**
 
----
+&nbsp;
 
 ## Do's and Dont's
 
@@ -173,4 +118,10 @@ Allows the user to select a single option, such as accepting terms of use.
 
 ![](/Penny-documentation/components/checkbox/checkbox-image-1.png)
 
-## Related components
+## Desktop usage and treatment
+
+Checkboxes on desktop should provide clear visual feedback for hover and focus states. They should be easily identifiable and maintain consistent spacing within forms or lists. The clickable area should extend to the label for better usability.
+
+## Mobile usage and treatment
+
+On mobile devices, checkboxes should have adequate touch target sizes (minimum 44px) and clear visual feedback for selection states. Consider the reduced screen space when positioning labels and ensure they remain easily readable.

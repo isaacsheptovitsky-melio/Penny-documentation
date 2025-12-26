@@ -1,0 +1,146 @@
+---
+title: Large file upload
+description: Allows users to upload large files by either dragging and dropping them into a designated area on the page or clicking a button. Uploaded files are displayed with a preview.
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+Allows users to upload large files by either dragging and dropping them into a designated area on the page or clicking a button. Uploaded files are displayed with a preview.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-large-file-upload--main&viewMode=story"
+  width="100%"
+  height="400px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Large File Upload Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/248e54-large-file-upload"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/selection-inputs-components-large-file-upload--main"
+  />
+</CardGrid>
+
+## Usage
+
+* The component accepts files of specific formats and either displays a preview or not, depending on the file format
+* Supported files:
+    * CSV
+    * JPEG (Preview)
+    * JSON
+    * PDF (Preview)
+    * PNG (Preview)
+    * SVG (Preview)
+* After a file has been uploaded, the user is allowed to:
+    * Delete uploaded file
+    * Replace uploaded file
+
+## Variants
+
+### No attachment
+
+![No attachement](/Penny-documentation/components/large-file-upload/large-file-upload-image-1.png)
+**No attachment**
+
+&nbsp;
+
+### With attachment
+
+#### Types
+
+There are 2 main variants to the Large file upload attachment state:
+
+![Preview](/Penny-documentation/components/large-file-upload/large-file-upload-image-2.png)
+**Preview**
+
+&nbsp;
+
+![No preview](/Penny-documentation/components/large-file-upload/large-file-upload-image-3.png)
+**No preview**
+
+&nbsp;
+
+#### States
+
+![Preview - Enabled](/Penny-documentation/components/large-file-upload/large-file-upload-image-4.png)
+**Preview - Enabled**
+
+&nbsp;
+
+![No preview - Enabled](/Penny-documentation/components/large-file-upload/large-file-upload-image-5.png)
+**No preview - Enabled**
+
+&nbsp;
+
+![Preview - Read only](/Penny-documentation/components/large-file-upload/large-file-upload-image-6.png)
+**Preview - Read only**
+
+&nbsp;
+
+![No preview - Read only](/Penny-documentation/components/large-file-upload/large-file-upload-image-7.png)
+**No preview - Read only**
+
+&nbsp;
+
+![Preview - Disabled](/Penny-documentation/components/large-file-upload/large-file-upload-image-8.png)
+**Preview - Disabled**
+
+&nbsp;
+
+![No preview - Disabled](/Penny-documentation/components/large-file-upload/large-file-upload-image-9.png)
+**No preview - Disabled**
+
+&nbsp;
+
+![Preview - Loading](/Penny-documentation/components/large-file-upload/large-file-upload-image-10.png)
+**Preview - Loading**
+
+&nbsp;
+
+![No preview - Loading](/Penny-documentation/components/large-file-upload/large-file-upload-image-11.png)
+**No preview - Loading**
+
+&nbsp;
+
+![Preview - Error](/Penny-documentation/components/large-file-upload/large-file-upload-image-12.png)
+**Preview - Error**
+
+&nbsp;
+
+![No preview - Error](/Penny-documentation/components/large-file-upload/large-file-upload-image-13.png)
+**No preview - Error**
+
+&nbsp;
+
+## Custom content
+
+You can customize both the Asset and the Text:
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=selection-inputs-components-large-file-upload--custom-placeholder&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Large File Upload Custom Content"
+></iframe>
+
+## Accessibility
+
+Displaying the full filename isn't required to meet accessibility guidelines, but we have chosen to include it.
+
+## Desktop usage and treatment
+
+Large file upload components on desktop should provide clear visual feedback for drag-and-drop operations and support various file formats with appropriate preview capabilities. The interface should clearly communicate file size limitations and supported formats.
+
+## Mobile usage and treatment
+
+On mobile devices, large file upload components should adapt to touch interactions and consider the constraints of mobile file access. The preview functionality should be optimized for smaller screens while maintaining clear visual hierarchy.

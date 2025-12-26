@@ -1,0 +1,44 @@
+---
+title: Pagination
+description: Pagination helps users navigate large data sets, such as tables of payments or invoices, by dividing content into manageable pages.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+Pagination helps users navigate large data sets, such as tables of payments or invoices, by dividing content into manageable pages.
+
+<iframe
+  src="https://61716025a5ae25003ac448af-kxatgdwswo.chromatic.com/iframe.html?id=navigation-components-pagination-pattern--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Pagination Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/69239c-pagination"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://61716025a5ae25003ac448af-kxatgdwswo.chromatic.com/?path=/story/navigation-components-pagination-pattern--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Use pagination at the **bottom of a table or list** when the total number of items exceeds the page size (e.g., 25, 50, or 100)
+* Display page numbers when there are multiple pages to help users understand their current location
+* Include next/previous buttons for sequential navigation
+* Consider showing total number of items and current range for context
+
+## Desktop usage and treatment
+
+On desktop, pagination should display multiple page numbers with clear navigation controls. Use adequate spacing and hover states to improve usability.
+
+## Mobile usage and treatment
+
+On mobile, consider simplified pagination with just previous/next buttons or showing fewer page numbers to conserve space. Ensure touch targets are appropriately sized.

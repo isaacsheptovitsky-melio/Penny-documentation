@@ -3,83 +3,30 @@ title: Form field
 description: The **FormField** component is a wrapper that ensures form fields (like **TextField**) are consistent in structure, validation, and state management. It helps simplify form interactions while maintaining alignment with the design system.
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
-
-## Form Field
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
 
 The **FormField** component is a wrapper that ensures form fields (like **TextField**) are consistent in structure, validation, and state management. It helps simplify form interactions while maintaining alignment with the design system.
-
-:::tip[Interactive Component Testing]
-Test the FormField component with different validation states, helper text, and error messages to see how it enhances form usability.
-:::
-
-## Interactive Example
-
-<Tabs>
-<TabItem label="Live Component" icon="play">
 
 <iframe
   src="https://penny.melio.com/iframe.html?id=form-form-field--main&viewMode=story"
   width="100%"
-  height="500px"
-  frameBorder="0"
+  height="300px"
+  frameborder="0"
   allow="clipboard-write"
   style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
-  title="Form Field Interactive Example">
-</iframe>
+  title="Form Field Interactive Example"
+></iframe>
 
-**Controls:** Experiment with different field states, labels, helper text, and error messages.
-
-</TabItem>
-<TabItem label="Code Examples" icon="code">
-
-```jsx
-// Basic Form Field
-<FormField label="Email Address" required>
-  <TextField type="email" placeholder="Enter your email" />
-</FormField>
-
-// Form Field with Helper Text
-<FormField 
-  label="Password" 
-  helperText="Must be at least 8 characters"
-  required>
-  <TextField type="password" />
-</FormField>
-
-// Form Field with Error State
-<FormField 
-  label="Username" 
-  error="Username is already taken"
-  hasError>
-  <TextField placeholder="Enter username" />
-</FormField>
-
-// Form Field with Success State
-<FormField 
-  label="Full Name" 
-  helperText="Name verified"
-  hasSuccess>
-  <TextField value="John Doe" />
-</FormField>
-```
-
-</TabItem>
-<TabItem label="Validation States" icon="warning">
-
-<iframe
-  src="https://penny.melio.com/iframe.html?id=form-form-field--with-validation&viewMode=story"
-  width="100%"
-  height="400px"
-  frameBorder="0"
-  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
-  title="Form Field Validation States">
-</iframe>
-
-</TabItem>
-</Tabs>
-
-**Links:** [View in Full Storybook](https://penny.melio.com/?path=/story/form-form-field--main)
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://www.figma.com/design/X7oG85653Gwwg7eDTrDUYW/%F0%9F%A4%8D-DS-Components-%F0%9F%A4%8D?node-id=31133-792&p=f&t=sxxXCKjrP8C819vO-11"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/form-form-field--main"
+  />
+</CardGrid>
 
 ## Usage
 
@@ -90,10 +37,9 @@ Test the FormField component with different validation states, helper text, and 
 ## Anatomy
 
 ![Anatomy](/Penny-documentation/components/form-field/form-field-image-3.png)
-
 **Anatomy**
 
----
+&nbsp;
 
 ## Variants
 
@@ -108,10 +54,9 @@ Large- 48px height
 ### States
 
 ![Asset States](/Penny-documentation/components/form-field/form-field-image-4.png)
-
 **Asset States**
 
----
+&nbsp;
 
 ## Props
 
@@ -166,16 +111,10 @@ Within the input, all of these can be form field type:
 * [Text field ](https://zeroheight.com/98bb1df01/p/84d686-text-field)
 
 
-## Related components 
----
+## Desktop usage and treatment
 
-## Content guidelines
-Text 
+Form fields on desktop should provide clear visual feedback for focus and validation states. Labels should be properly positioned and helper text should be easily readable. The layout should accommodate various field widths while maintaining consistent spacing.
 
-| Rule | Image | Caption | Description |
-| :--- | :--- | :--- | :--- |
-| Do |   |   | Do |
-| Don't |   |   | Don't |
-| Do |   |   |   |
-| Don't |   |   |   |
----
+## Mobile usage and treatment
+
+On mobile devices, form fields should have adequate touch targets and clear visual hierarchy. Error messages should be prominent and actionable, while helper text should remain accessible without overwhelming the interface. Consider the mobile keyboard context for different input types.

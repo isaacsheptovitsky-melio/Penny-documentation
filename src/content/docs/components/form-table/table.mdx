@@ -1,0 +1,142 @@
+---
+title: Table
+description: The Table component is used to display structured data in rows and columns, enabling users to scan, compare, and interact with information efficiently.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+The Table component is used to display structured data in rows and columns, enabling users to scan, compare, and interact with information efficiently.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=table-table--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Table Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/01a9ff-table-wip"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/docs/table-table--docs"
+  />
+</CardGrid>
+
+## Usage
+
+- Use for presenting structured, comparable information 
+- Display data that users need to scan, sort, or filter
+- Organize complex datasets into digestible formats
+- Enable bulk actions on multiple data entries
+
+## Table anatomy
+
+Tables are comprised of several parts:
+
+![Table anatomy diagram](/Penny-documentation/components/table/table-image-1.png)
+**Table anatomy showing header, rows, columns, and cells**
+
+&nbsp;
+
+Read more about the different parts that make up a table:
+
+- [Header cells](/components/form-table/header-cells)
+- [Rows](/components/form-table/rows) 
+- [Columns](/components/form-table/columns)
+- [Row cells](/components/form-table/row-cells)
+
+## Patterns of use
+
+We have different patterns of use for the table, where we use different features to achieve the best UX for our users.
+
+### Pinned columns
+
+Pinned columns stay fixed to one side of the table when it scrolls horizontally, ensuring they remain visible to the user.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=table-table-columns--pinned-columns&viewMode=story"
+  width="100%"
+  height="400px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Pinned Columns Example"
+></iframe>
+
+#### Guidelines:
+
+- Pin only 1–2 columns when possible
+- Avoid pinning columns on both sides of the table
+
+<Aside type="tip">
+Pin columns that provide key context to help users interpret the data in other cells.
+</Aside>
+
+### Expandable rows
+
+Expandable rows let you group related information under a single row, allowing users to reveal additional details without cluttering the main UI.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=table-table-rows--expandable&viewMode=story"
+  width="100%"
+  height="400px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Expandable Rows Example"
+></iframe>
+
+### Pagination
+
+Pagination divides content into multiple pages, helping prevent excessively long scrolling and improving performance for large datasets.
+
+### Sticky header
+
+Sticky headers remain visible when users scroll through long tables, providing constant reference to column labels.
+
+## Content guidelines
+
+### Data formatting
+
+- Use consistent formatting for similar data types
+- Align numerical data appropriately for easy comparison
+- Provide clear, descriptive column headers
+- Use appropriate date and time formats
+
+### Text treatment
+
+- Keep cell content concise and scannable
+- Use truncation with tooltips for long content
+- Maintain consistent capitalization and terminology
+
+## Desktop usage and treatment
+
+### Layout and spacing
+
+- Use appropriate column widths for content types
+- Maintain consistent row heights for visual rhythm
+- Provide adequate padding within cells
+- Consider horizontal scrolling for wide tables
+
+### Interaction patterns
+
+- Enable sorting on relevant columns
+- Provide clear selection mechanisms
+- Support keyboard navigation
+- Use hover states to indicate interactive elements
+
+## Mobile usage and treatment
+
+### Responsive strategies
+
+- Consider card layouts for complex data on small screens
+- Hide less critical columns on narrow viewports
+- Maintain essential data visibility
+- Use horizontal scrolling strategically for key columns
+- Ensure touch targets meet accessibility requirements

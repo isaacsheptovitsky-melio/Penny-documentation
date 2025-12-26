@@ -1,0 +1,127 @@
+---
+title: Avatar
+description: The Avatar component is used to represent a user or an entity. It can display a custom image, the user's initials, or a generic icon as a fallback.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+The Avatar component is used to represent a user or an entity. It can display a custom image, the user's initials, or a generic icon as a fallback.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-avatar--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Avatar Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://www.figma.com/design/X7oG85653Gwwg7eDTrDUYW/%F0%9F%A4%8D-DS-Components-%F0%9F%A4%8D"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/docs/data-display-components-avatar--docs"
+  />
+</CardGrid>
+
+## Usage
+
+- Use an avatar to visually identify a user or company in the interface
+- If an image source is not provided or fails to load, the component will display the initials derived from the `name` prop.
+- Avatars can include a `badge` to convey status, such as online presence or notifications.
+- They are available in multiple sizes to fit various layout contexts, from compact lists to prominent profile headers.
+
+## Variants
+
+### Shape
+
+- **Circle** (Default): The standard circular shape
+- **Square**: A squared shape with rounded corners
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-avatar--variants&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Avatar Variants Example"
+></iframe>
+
+### Sizes
+
+The `size` prop adjusts the dimensions of the avatar for different contexts.
+
+- extra-small: 16px
+- small: 24px
+- medium (Default): 32px
+- large: 56px 
+- extra-large: 120px
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-avatar--sizes&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Avatar Sizes Example"
+></iframe>
+
+### State
+
+Avatars can have different visual states to reflect their status.
+
+#### Selected
+
+The `isSelected` prop applies a visual indicator (like a ring or border) to show the avatar has been selected.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-avatar--selected&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Avatar Selected Example"
+></iframe>
+
+#### Disabled
+
+The `isDisabled` prop applies a grayscale filter and disables pointer events, making the avatar non-interactive.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-avatar--disabled&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Avatar Disabled Example"
+></iframe>
+
+### Background Color
+
+When no image `src` is provided, a background color can be set using the `bgColor` prop. This helps in visually distinguishing between different users based on a consistent color. Options include `avatar1`, `avatar2`, etc.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-avatar--background-colors&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Avatar Background Colors Example"
+></iframe>
+
+## Desktop usage and treatment
+
+Avatars are commonly used in headers, user profiles, and lists to provide quick visual identification. Use appropriate sizes based on the importance and context of the user information being displayed.
+
+## Mobile usage and treatment
+
+On mobile devices, ensure avatars maintain adequate touch targets while considering screen space constraints. Smaller sizes may be more appropriate for list items, while larger sizes work well for profile headers.

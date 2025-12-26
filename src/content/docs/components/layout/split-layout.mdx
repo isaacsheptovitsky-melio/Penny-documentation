@@ -1,0 +1,81 @@
+---
+title: Split layout
+description: Unlike other layouts, the split layout doesn't convey a specific function or meaning. Instead, it simply organizes elements into two horizontally arranged panels
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+Unlike other layouts, the split layout doesn't convey a specific function or meaning. Instead, it simply organizes elements into two horizontally arranged panels
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=layouts-split-layout--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Split Layout Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/9191e9-split-layout"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/layouts-split-layout--main"
+  />
+</CardGrid>
+
+## Usage
+
+- Use to organize content into two distinct, horizontally arranged panels
+- Most commonly used to pair a job with an asset, such as displaying an invoice alongside actions
+- Choose appropriate split ratios based on content importance and screen real estate needs
+
+![](/Penny-documentation/components/split-layout/split-layout-image-1.png)
+*1:1 split layout*
+
+&nbsp;
+
+## Variants
+
+There are 3 types for the Split layout:
+
+![](/Penny-documentation/components/split-layout/split-layout-image-2.png)
+
+### Container width
+
+Each panel has its own container, and each container can have its own max-width.
+
+![](/Penny-documentation/components/split-layout/split-layout-image-3.gif)
+
+Learn more about container widths [here](https://zeroheight.com/98bb1df01/p/63ec5f-layout/t/7f7c9f8fd3).
+
+### Common use
+
+The most common use of the Split layout is pairing a job with an asset, such as sharing an invoice, where the invoice appears on the left and actions on the right.
+
+![](/Penny-documentation/components/split-layout/split-layout-image-4.png)
+*Share invoice screen using the 1:1 variant*
+
+&nbsp;
+
+![](/Penny-documentation/components/split-layout/split-layout-image-5.png)
+*Bill screen using the 1:2 variant*
+
+&nbsp;
+
+## Desktop usage and treatment
+
+On desktop displays, the split layout maintains its horizontal arrangement, allowing users to view and interact with both panels simultaneously. This is particularly effective for workflows that require comparing information or maintaining context while performing actions.
+
+## Mobile usage and treatment
+
+On mobile devices, the split layout is rearranged to a vertical layout:
+
+![](/Penny-documentation/components/split-layout/split-layout-image-6.png)
+*The panels are rearranged to be stacked vertically*
+
+&nbsp;

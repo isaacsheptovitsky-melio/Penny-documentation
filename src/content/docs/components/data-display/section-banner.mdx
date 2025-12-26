@@ -1,0 +1,278 @@
+---
+title: Section Banner
+description: The Section Banner surfaces key information and status changes within a page section.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+The Section Banner surfaces key information and status changes within a page section.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=data-display-components-section-banner--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Section Banner Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://www.figma.com/design/X7oG85653Gwwg7eDTrDUYW/%F0%9F%A4%8D-DS-Components-%F0%9F%A4%8D"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/docs/data-display-components-section-banner--docs"
+  />
+</CardGrid>
+
+## Usage
+
+Section banners provide key information or alerts within a specific part of a page. They are used to call attention to:
+
+- Additional information
+- Critical messages 
+- Actions relevant to the current context
+
+<Aside type="tip">
+  Replace toasts with section banners for short, dismissible system notifications.
+</Aside>
+
+## Variants
+
+### Types
+
+![Outline](/Penny-documentation/components/section-banner/section-banner-image-5.png)
+**Outline**
+
+&nbsp;
+
+![Neutral](/Penny-documentation/components/section-banner/section-banner-image-6.png)
+**Neutral**
+
+&nbsp;
+
+![Informative](/Penny-documentation/components/section-banner/section-banner-image-7.png)
+**Informative**
+
+&nbsp;
+
+![Warning](/Penny-documentation/components/section-banner/section-banner-image-8.png)
+**Warning**
+
+&nbsp;
+
+![Critical](/Penny-documentation/components/section-banner/section-banner-image-9.png)
+**Critical**
+
+&nbsp;
+
+![Success](/Penny-documentation/components/section-banner/section-banner-image-10.png)
+**Success**
+
+&nbsp;
+
+![Brand](/Penny-documentation/components/section-banner/section-banner-image-11.png)
+**Brand**
+
+&nbsp;
+
+### Sizes
+
+Section banners come in 2 sizes: Large and Compact.
+
+#### Large
+
+Large (default) size is used for:
+
+- Critical information requiring immediate attention
+- Detailed instructions
+- Warnings
+- Urgent updates
+
+![Large](/Penny-documentation/components/section-banner/section-banner-image-12.png)
+**Large**
+
+&nbsp;
+
+<Aside type="caution">
+  Use the Large variant for mobile, as the action button is positioned at the bottom of the banner rather than on the right, providing more horizontal space.
+</Aside>
+
+#### Compact
+
+Compact size is used for:
+
+- Brief feedback or minor updates
+- Non-intrusive notifications
+- Confirmations or simple acknowledgments
+
+![Compact](/Penny-documentation/components/section-banner/section-banner-image-13.png)
+**Compact**
+
+&nbsp;
+
+### Width
+
+Section banners are typically displayed in a fill-container layout.
+
+- Default width: 476px
+- Max content width: 920px
+
+### Banner asset
+
+The banner asset can be any of the following assets:
+
+![Icon asset](/Penny-documentation/components/section-banner/section-banner-image-14.png)
+**Icon asset**
+
+&nbsp;
+
+![Brand symbol asset](/Penny-documentation/components/section-banner/section-banner-image-15.png)
+**Brand symbol asset**
+
+&nbsp;
+
+![Flag icon asset](/Penny-documentation/components/section-banner/section-banner-image-16.png)
+**Flag icon asset**
+
+&nbsp;
+
+#### Illustration asset
+
+| ✅ **Do** | ❌ **Don't** |
+| --- | --- |
+| ![](/Penny-documentation/components/section-banner/section-banner-image-17.png) <br/> **Use the illustration only in the outline variant** <br/> Use the illustration only in the outline variant, letting its colors stand out. | ![](/Penny-documentation/components/section-banner/section-banner-image-18.png) <br/> **Don't place illustration on colored backgrounds** <br/> Place the illustration on colored backgrounds to avoid clashing colors. |
+
+#### When to use an icon
+
+Use an icon when it adds clarity to the message (e.g., status or attention). Avoid icons when the message is already clear and additional visual cues would be redundant.
+
+| ✅ **Do** | ❌ **Don't** |
+| --- | --- |
+| ![The switch plan modal is a feature, while the section banner shows a system failure message.](/Penny-documentation/components/section-banner/section-banner-image-19.png) <br/> **Use icon when not tied to primary context** <br/> Use an icon when the section banner icon is not directly tied to the primary purpose of the context. | ![Don't use an icon when it might be redundant](/Penny-documentation/components/section-banner/section-banner-image-20.png) <br/> **Don't use redundant icons** <br/> Use if the message is already very clear and easy to understand without the need for additional visual cues, an icon might be redundant. |
+
+<Aside type="note">
+  **Important**: Use only icons provided by Penny.
+</Aside>
+
+### Action
+
+Include an action when the user must resolve an issue or improve system performance. Other valid actions include contextual shortcuts relevant to the banner's message.
+
+![Link (default)](/Penny-documentation/components/section-banner/section-banner-image-21.png)
+**Link (default)**
+
+&nbsp;
+
+![Naked button](/Penny-documentation/components/section-banner/section-banner-image-22.png)
+**Naked button**
+
+&nbsp;
+
+![Tertiary button](/Penny-documentation/components/section-banner/section-banner-image-23.png)
+**Tertiary button**
+
+&nbsp;
+
+### Dismiss
+
+Allow dismissing of the banner when:
+
+- The message is not critical
+- The user isn't required to perform an action
+
+![Dismiss](/Penny-documentation/components/section-banner/section-banner-image-24.png)
+**Dismiss**
+
+&nbsp;
+
+## Layout
+
+Placement of the section banner is dependent on the context of the message it conveys. There are 2 types of placements for the section banner:
+
+- Global placement
+- Local placement
+
+### Global placement
+
+For important issues that impact the entire screen or process, position the message at the top of the screen, blocking the user's flow and demanding immediate attention.
+
+![Global placement in the Pay flow](/Penny-documentation/components/section-banner/section-banner-image-25.png)
+**Global placement in the Pay flow**
+
+&nbsp;
+
+<Aside type="tip">
+  If you want to display Account or Organization level messages, use the Panel component.
+</Aside>
+
+### Local placement
+
+Positioned directly above the section or element where the issue occurs, in order to highlight a localized issue within a specific section, field, or action on the page.
+
+![Local placement in a modal](/Penny-documentation/components/section-banner/section-banner-image-26.png)
+**Local placement in a modal**
+
+&nbsp;
+
+### Stacking
+
+When placing section banners on top of each other, maintain a 12px gap between them.
+
+![Stacked section banners of different types](/Penny-documentation/components/section-banner/section-banner-image-27.png)
+**Stacked section banners of different types**
+
+&nbsp;
+
+## Use cases
+
+### Substituting Toasts
+
+Because toasts rely on transient, ephemeral messages that are often missed and can be inaccessible to assistive technologies, Penny replaces them with Section Banners.
+
+Here are the guidelines for using the Section Banner as a substitute for a traditional toast:
+
+- **Use the** **`compact`** **variant** of the Section Banner to better mimic the size of a toast.
+- **Placement is critical:** Always position the Section Banner at the **very top of the page** content to ensure it's noticed immediately.
+- **Stacking (if necessary):** If multiple notifications are required, stack the Section Banners. The **newest alert** (the latest change to the UI) must be placed on **top** to alert the user first.
+
+![](/Penny-documentation/components/section-banner/section-banner-image-1.png)
+*The success section banner indicates that the new vendor was added successfully.*
+
+### Validating forms
+
+Place a Section Banner above the form heading to summarize validation errors. Use a single banner to list multiple issues. Avoid showing more than one banner per section—especially of the same type (e.g., multiple critical banners). 
+
+In the example below, the warning section banner notifies the user that additional details are needed. After submission, a critical banner appears, indicating that both vendor details and the payment amount are missing.
+
+![](/Penny-documentation/components/section-banner/section-banner-image-2.gif)
+*The warning section banner notifies the user that additional details are needed. After submission, a critical banner appears, indicating that both vendor details and the payment amount are missing.*
+
+### Widget
+
+When using section banners within a widget, it is alright to display them locally under the section's heading, since they inform about the action that happens in that widget.
+
+![](/Penny-documentation/components/section-banner/section-banner-image-3.gif)
+*The section banner appears under the Taxpayer info heading, informing the user the file upload was successful.*
+
+### Destructive pattern
+
+When an item is deleted, show the section banner in its success variant. While the action is destructive, it was completed successfully and aligned with the user's intent.
+
+![](/Penny-documentation/components/section-banner/section-banner-image-4.gif)
+
+## Desktop usage and treatment
+
+Section banners should be positioned strategically to provide contextual feedback without disrupting the user flow. Use appropriate sizing and placement based on the urgency and scope of the message.
+
+## Mobile usage and treatment
+
+On mobile, use the Large variant. Actions appear at the bottom to preserve horizontal space.
+
+![The Large variant is used in mobile](/Penny-documentation/components/section-banner/section-banner-image-28.png)
+**The Large variant is used in mobile**
+
+&nbsp;

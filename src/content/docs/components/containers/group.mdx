@@ -1,0 +1,79 @@
+---
+title: Group 
+description: The Group component is used to group multiple elements within a single container. It provides consistent spacing, layout direction, and optional dividers, helping structure UIs with clean, aligned patterns.
+---
+
+import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
+
+The Group component is used to group multiple elements within a single container. It provides consistent spacing, layout direction, and optional dividers, helping structure UIs with clean, aligned patterns.
+
+<iframe
+  src="https://penny.melio.com/iframe.html?id=containers-group--main&viewMode=story"
+  width="100%"
+  height="300px"
+  frameborder="0"
+  allow="clipboard-write"
+  style="border: 1px solid #e1e5e9; border-radius: 8px; margin: 16px 0;"
+  title="Group Interactive Example"
+></iframe>
+
+<CardGrid>
+  <LinkCard
+    title="Figma"
+    href="https://zeroheight.com/98bb1df01/v/latest/p/596a7b-group"
+  />
+  <LinkCard
+    title="Storybook"
+    href="https://penny.melio.com/?path=/story/containers-group--main"
+  />
+</CardGrid>
+
+## Usage
+
+* Use when multiple components should appear as a unified section.
+* Adjust spacing to control the visual rhythm between items using design tokens.
+* Use variant to switch between horizontal or vertical layout.
+* Use hasDivider for visual separation between elements.
+
+<Aside type="tip">
+  Use the Figma [Group Lvl. 2](https://www.figma.com/design/X7oG85653Gwwg7eDTrDUYW/%F0%9F%A4%8D-DS-Components-%F0%9F%A4%8D?node-id=29916-532118&t=SIqolpvrLo3kBWk9-11) to nest groups within groups
+</Aside>
+
+## Variants
+
+### Direction
+
+![Horizontal (default): Items are laid out in a row.](/Penny-documentation/components/group/group-image-2.png)
+**Horizontal (default): Items are laid out in a row.**
+
+&nbsp;
+
+![Vertical: Items are stacked in a column.](/Penny-documentation/components/group/group-image-3.png)
+**Vertical: Items are stacked in a column.**
+
+### With dividers
+
+![Turn dividers on/off for visual separation.](/Penny-documentation/components/group/group-image-4.png)
+**Turn dividers on/off for visual separation.**
+
+### Horizontal scrolling
+
+`allowOverflowX` lets content scroll horizontally, which is useful for dynamic lists.
+
+<Aside type="caution">
+  Horizontal scrolling can be challenging for accessibility—avoid it when possible.
+</Aside>
+
+## How to use
+
+Use the Group component to create complex components. Simply replace the slots with other components, and adjust sizing.
+
+![](/Penny-documentation/components/group/group-image-1.gif)
+
+## Desktop usage and treatment
+
+On desktop, groups provide clear structure and organization for related elements. Use appropriate spacing and dividers to create visual hierarchy.
+
+## Mobile usage and treatment
+
+On mobile, groups maintain their layout structure while adapting spacing for touch interactions. Consider stacking horizontal groups vertically when needed for better usability.
