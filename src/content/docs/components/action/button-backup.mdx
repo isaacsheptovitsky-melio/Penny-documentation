@@ -5,11 +5,7 @@ description: The Button component is used to trigger actions or events, such as 
 
 import { Aside, LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
 
-Buttons are fundamental interactive elements that trigger actions throughout your application. They come in multiple variants to support different levels of visual hierarchy and user intent.
-
-## Interactive Example
-
-Explore the button component with different variants and states:
+The Button component is used to trigger actions or events, such as form submissions and navigation.
 
 <iframe
   src="https://penny.melio.com/iframe.html?id=action-components-button--main&viewMode=story"
@@ -32,22 +28,18 @@ Explore the button component with different variants and states:
   />
 </CardGrid>
 
-## When to Use
+## Usage
 
-Buttons should be used for actions that have an immediate effect on the interface or user's data:
-
-- **Form submissions** - Save, submit, or send data
-- **Navigation** - Move between pages or sections  
-- **Modal triggers** - Open dialogs, menus, or overlays
-- **Data actions** - Delete, edit, or create items
-
-Choose button variants based on the action's importance and visual hierarchy needs.
+- Use for proper actions, such as submitting forms or initiating key flows
+- Secondary and tertiary variants should support less prominent actions
+- Use the Disabled variant to prevent interactions when an action is unavailable
+  - However, don't use a disabled button to indicate that form submission would be invalid
 
 ## Variants
 
 ### Hierarchy
 
-Button variants create a clear visual hierarchy for different action priorities:
+The Button component has several levels of hierarchy:
 
 ![Primary](/Penny-documentation/components/button/button-primary.png)
 
@@ -65,24 +57,45 @@ Button variants create a clear visual hierarchy for different action priorities:
 
 **Critical**
 
-### Interactive States
+### States
 
-All button variants support consistent interactive states for user feedback:
+All buttons share the same set of states:
 
-- **Rest** - Default appearance
-- **Hover** - Indicates interactivity when cursor is over the button
-- **Pressed** - Provides immediate feedback when clicked or tapped  
-- **Loading** - Shows ongoing process execution
-- **Disabled** - Prevents interaction when action is unavailable
-
-::: tip[Accessibility Note]
-Don't use disabled buttons to indicate form validation errors. Instead, keep buttons enabled and provide clear error messaging.
-:::
-
-Each button variant maintains its visual hierarchy while displaying these interaction states. The examples below show how states apply across different button types:
+- **Rest**: the default appearance
+- **Hover**: When the user points at the button with the cursor
+- **Pressed**: The moment the button is clicked or tapped
+- **Loading**: While the system processes the action
+- **Disabled**: When the action is unavailable
 
 ![Primary button states](/Penny-documentation/components/button/button-primary-states.png)
+
+**Primary button states**
+
+---
+
 ![Secondary button states](/Penny-documentation/components/button/button-secondary-states.png)
+
+**Secondary button states**
+
+---
+
+![Tertiary button states](/Penny-documentation/components/button/button-tertiary-states.png)
+
+**Tertiary button states**
+
+---
+
+![Critical button states](/Penny-documentation/components/button/button-critical-states.png)
+
+**Critical button states**
+
+---
+
+![Critical - Secondary button states](/Penny-documentation/components/button/button-critical-secondary-states.png)
+
+**Critical - Secondary button states**
+
+---
 
 ### Inverse
 
@@ -161,57 +174,66 @@ Destructive actions, like deleting content, follow a confirmatory flow to preven
 ![](/Penny-documentation/components/button/button-hover-animation.gif)
 _When deleting a bill, the user is first presented with a critical-text "Delete bill", that signals a destructive action. Clicking this button opens a confirmation modal._
 
-## Layout Guidelines
+## Desktop usage and treatment
 
-### Width Behavior
-
-Button width should adapt to the platform and content needs:
+### Width
 
 ![Hug content](/Penny-documentation/components/button/button-hug-content.png)
 
-- **Desktop**: Use hug content width for optimal spacing and readability
-- **Mobile**: Use full container width for better touch targets
+**Hug content**
+
+---
 
 | ✅ **Do**                                                                                                                                                                                     | ❌ **Don't**                                                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ![](/Penny-documentation/components/button/button-states.png) <br/> **Use hug contents to set the button's width** <br/> Buttons should size themselves to their content for optimal spacing. | ![](/Penny-documentation/components/button/button-layout.png) <br/> **Don't use fill container unless on mobile** <br/> Avoid fill container width on desktop; reserve for mobile layouts. |
 
-### Button Arrangement
+### Placement
 
-#### Hierarchy and Quantity
-
-Organize buttons to create clear action hierarchies and avoid choice overload:
-
-| ✅ **Do**                                                                                                                                                                                 | ❌ **Don't**                                                                                                                                                                                                      |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](/Penny-documentation/components/button/button-three-buttons-do.png) <br/> **Limit to 3 buttons per section** <br/> This prevents overwhelming users and maintains clear decision paths. | ![](/Penny-documentation/components/button/button-many-buttons-dont.png) <br/> **Avoid button overload** <br/> Too many options create decision paralysis and visual clutter. |
-
-#### Position and Priority
-
-Position buttons according to their importance and user expectations:
+Place primary (essential) actions on the right and secondary or optional actions on the left.
 
 ![Button placement in a Bill details drawer](/Penny-documentation/components/button/button-placement-drawer.png)
 
+**Button placement in a Bill details drawer**
+
+---
+
+| ✅ **Do**                                                                                                                                                                                                                                    | ❌ **Don't**                                                                                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Use hug contents to set the button's width](/Penny-documentation/components/button/button-width-hug.png) <br/> **Place buttons horizontally, next to each other** <br/> Horizontal placement provides better user experience and scanning. | ![Don't use fill container](/Penny-documentation/components/button/button-width-fill-dont.png) <br/> **Don't place buttons vertically, one on top of the other** <br/> Vertical stacking on desktop creates unnecessary visual noise. |
+
+| ✅ **Do**                                                                                                                                                                                 | ❌ **Don't**                                                                                                                                                                                                      |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](/Penny-documentation/components/button/button-three-buttons-do.png) <br/> **Expose up to 3 buttons** <br/> Limit to maximum 3 buttons per screen section to avoid overwhelming users. | ![](/Penny-documentation/components/button/button-many-buttons-dont.png) <br/> **Don't expose more than 3 buttons for a part of the screen** <br/> Too many buttons create decision paralysis and visual clutter. |
+
 | ✅ **Do**                                                                                                                                                                                                                   | ❌ **Don't**                                                                                                                                                                                                                      |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](/Penny-documentation/components/button/button-placement-do.png) <br/> **Place primary actions on the right** <br/> This follows natural reading patterns and user expectations. | ![](/Penny-documentation/components/button/button-placement-dont.png) <br/> **Don't place secondary actions on the right** <br/> This confuses the visual hierarchy and user expectations. |
+| ![](/Penny-documentation/components/button/button-placement-do.png) <br/> **Place the essential action on the far-right of the layout** <br/> Position primary actions on the far-right following natural reading patterns. | ![](/Penny-documentation/components/button/button-placement-dont.png) <br/> **Don't place secondary buttons to the right of prominent buttons** <br/> Secondary actions should not be positioned to the right of primary actions. |
 
-::: tip[Business Context]
-These guidelines support consistent action arrangement. However, if an optional action needs extra emphasis due to its business impact, you may adjust positioning accordingly.
-:::
+<Aside type="tip">
+  These guidelines support consistent action arrangement. However, if an
+  optional action needs extra emphasis due to its business impact, it's okay to
+  break the rule.
+</Aside>
 
-### Platform-Specific Layouts
+## Mobile usage and treatment
 
-#### Desktop
-- Use horizontal button arrangements for better scanning
-- Position primary actions on the right following reading patterns
-- Maintain proper spacing between buttons
+### Width
 
-#### Mobile  
-- Prefer vertical stacking for better touch accessibility
-- Use full-width buttons for primary actions
-- Ensure adequate spacing between touch targets
+![Fill container on mobile](/Penny-documentation/components/button/button-mobile-fill-container.png)
 
-![Mobile vertical placement](/Penny-documentation/components/button/button-mobile-vertical-placement.png)
+**Fill container on mobile**
+
+---
+
+### Placement
+
+When placing buttons side by side, let buttons hug content and their width be determined by the content of the button.
+
+![Vertical placement](/Penny-documentation/components/button/button-mobile-vertical-placement.png)
+
+**Vertical placement**
+
+---
 
 ## Related components
