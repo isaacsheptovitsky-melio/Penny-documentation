@@ -1,3 +1,105 @@
+/* Font Face Declarations */
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-SemiBoldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-Heavy.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-HeavyItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Sans';
+    src: url('/Penny-documentation/fonts/LinearSans-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Apply Linear Sans font globally */
+:root {
+    --sl-font: 'Linear Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
 /* Dark mode colors. */
 :root {
     --sl-color-accent-low: #231a49;
@@ -41,6 +143,7 @@
 	background-color: var(--sl-color-accent);
 	border-color: var(--sl-color-accent);
 	color: white !important;
+	border-radius: 8px;
 }
 
 .sl-link-button:hover {
