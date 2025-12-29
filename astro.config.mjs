@@ -12,6 +12,11 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Penny Design System',
+			logo: {
+				light: './src/assets/logo-light.svg',
+				dark: './src/assets/logo-dark.svg',
+			},
+			favicon: '/penny-symbol-light.png',
 			customCss: [
 				'./src/styles/custom.css',
 			],
@@ -130,6 +135,7 @@ export default defineConfig({
 								{ label: 'External Layout', slug: 'components/layout/external-layout' },
 								{ label: 'Layout', slug: 'components/layout/layout' },
 								{ label: 'Split Layout', slug: 'components/layout/split-layout' },
+								{ label: 'Split Screen', slug: 'components/layout/split-screen' },
 							],
 						},
 						{

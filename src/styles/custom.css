@@ -160,3 +160,17 @@
 .hero .action:hover {
 	color: white !important;
 }
+
+/* Hide only the site title text, keep the logo */
+.site-title span {
+	display: none !important;
+}
+
+/* Ensure the site-title container and logo remain visible */
+.site-title {
+	display: flex !important;
+}
+
+.site-title a {
+	display: flex !important;
+}

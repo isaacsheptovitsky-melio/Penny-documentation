@@ -1,0 +1,159 @@
+---
+title: Layout system
+description: Layouts are here to help with the structure and alignment of elements within a design, ensuring consistent arrangement, responsiveness, and spacing.
+---
+
+import { Aside } from "@astrojs/starlight/components";
+
+Layouts are here to help with the **structure** and alignment of elements within a design, ensuring a **consistent** experience.
+
+We strive to offer the best layout for each screen's function, addressing various user needs:
+
+- **Creating** new entities and information
+- **Reading**, or consuming, information
+- **Updating**, or editing, information
+- **Deleting** information
+
+<Aside type="tip">
+  Read about CRUD operations in regard to UX
+  [here](https://medium.com/design-bootcamp/mastering-crud-operations-a-framework-for-seamless-product-design-2630affbc1e5).
+</Aside>
+
+To achieve this, we have consolidated the number of layouts into the following basic
+structure patterns:
+
+![Layout system](/Penny-documentation/foundation/layout-system-assets/layout-types.png)
+
+## Reading information
+
+### Dashboard layout
+
+Used for the main dashboard, this layout is optimized for system notifications and high-level system overview, and it includes:
+
+- Payments overview
+- Pro-tips
+- Client table
+
+![](/Penny-documentation/foundation/layout-system-assets/type-dashboard.png)
+
+<Aside type="note" title="🖥️ Max width">
+  The dashboard layout has a max width of **1600px**, utilizing the full screen
+  space to maximize information display.
+</Aside>
+
+### Resources layout
+
+Used for viewing a single resource screen, such as Vendors and Bills. It consists of:
+
+- Search and filter controls at the top
+- Table for displaying data
+- Inline actions for items (e.g., edit, delete, view details)
+- Pagination for large datasets
+
+![](/Penny-documentation/foundation/layout-system-assets/type-resource.png)
+
+<Aside type="note" title="🖥️ Max width">
+  The Resources layout has a max width of **100%**, utilizing the full screen
+  space to maximize information display.
+</Aside>
+
+#### Mobile interpretation
+
+The table in the Resource layout is interpreted as a list of items on mobile
+
+![Mobile resource layout](/Penny-documentation/foundation/layout-system-assets/resource-mobile-interpretation.png)
+
+## Creating entities and information
+
+### Resource details layout
+
+For drilling down into information that cannot be displayed inline within a table, data is displayed in a drawer:
+
+- Drawer view with detailed information
+- Additional data will be displayed
+- Action buttons for the main and additional actions
+- Light editing of entity's details
+
+![Resource details layout](/Penny-documentation/foundation/layout-system-assets/type-resource-details.png)
+
+<Aside type="note" title="🖥️ Drawer width">
+[Read more](/components/containers/drawer/) about the Drawer component and its different sizes.
+
+</Aside>
+
+### Job layout
+
+This layout is used for creating new entities and information. It includes:
+
+- Multi-column grid or single-column form fields
+- Clear section headers for complex forms
+- Action button for completing or canceling the task
+
+![Job layout](/Penny-documentation/foundation/layout-system-assets/type-job-1-step.png)
+
+<Aside type="note" title="🖥️ Container width">
+  The Job layout supports the **600px** container width.
+</Aside>
+
+### Job: 2 steps layout
+
+This layout is used for tasks that require two distinct steps or phases, providing a clear progression through the workflow.
+
+![Job 2 steps layout](/Penny-documentation/foundation/layout-system-assets/type-job-2-steps.png)
+
+<Aside type="note" title="🖥️ Container width">
+  The Job: 2 steps layout supports the **600px** container width.
+</Aside>
+
+### Job: Multiple steps layout
+
+This layout is designed for complex tasks that span 3 steps or more.
+
+![Multiple steps layout](/Penny-documentation/foundation/layout-system-assets/type-job-multiple-steps.png)
+
+<Aside type="note" title="🖥️ Max width">
+  The Page: Multiple steps layout supports the **1200px** container width.
+</Aside>
+
+## Updating information
+
+### Checkpoint layout
+
+The **Checkpoint** layout interrupts the user experience to present important product-related decisions that require immediate attention outside of the normal product flow.
+
+This layout could be reused for the following use cases:
+
+- Feature gating
+- Unsubscribe
+- Session expiration
+- MFA
+
+![Checkpoint layout](/Penny-documentation/foundation/layout-system-assets/type-checkpoint.png)
+
+<Aside type="note" title="🖥️ Container width">
+  The Checkpoint layout supports the **480px** container width.
+</Aside>
+
+### Settings layout
+
+This layout is dedicated to system configuration and includes:
+
+- Sidebar navigation for different settings categories
+- Form fields or toggles for adjusting preferences
+
+![Settings layout](/Penny-documentation/foundation/layout-system-assets/type-settings.png)
+
+<Aside type="note" title="🖥️ Max width">
+  The Settings screen uses a container width of **1200px**, utilizing the screen
+  space to maximize information display.
+</Aside>
+
+### Vendor Experience
+
+This layout is for external users, and is viewed by customers of our users.
+
+![Vendor experience layout](/Penny-documentation/foundation/layout-system-assets/type-vendor-experience.png)
+
+<Aside type="note" title="🖥️ Max width">
+  The Vendor experience layout uses a max width of **600px**.
+</Aside>
