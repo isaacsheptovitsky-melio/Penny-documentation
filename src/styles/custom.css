@@ -174,3 +174,9 @@
 .site-title a {
 	display: flex !important;
 }
+
+/* Make tables take full width of the container */
+.sl-markdown-content table {
+	width: 100%;
+	table-layout: auto;
+}
