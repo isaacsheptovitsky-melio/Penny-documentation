@@ -7,16 +7,14 @@ import { Aside } from "@astrojs/starlight/components";
 
 Typography defines the visual appearance of text elements across our product.
 
-## Font Family 
+## Font Family
 
-We use **Poppins** in two weights:
+We use **Poppins** (primary font family token) in two weights:
 
 - **Regular** – weight 400
 - **SemiBold** – weight 600
 
-<Aside type="note">
-  ℹ️ Currently, we only have tokens for the Font family
-</Aside>
+<Aside type="note">ℹ️ We now have tokens for font family and font weight</Aside>
 
 ## Accessibility & DOM Structure
 
@@ -38,60 +36,55 @@ This separation ensures:
 
 ## Display & Headings
 
-![Typography Display and Headings](/Penny-documentation/foundation/typography-assets/typography-image-1.png)
+| Style              | Font Family | Font Weight | Desktop Size | Mobile Size |
+| ------------------ | ----------- | ----------- | ------------ | ----------- |
+| **Display 1 Semi** | primary     | 600         | 48px / 60px  | 40px / 48px |
+| **Display 2 Semi** | primary     | 600         | 40px / 48px  | 32px / 40px |
+| **Display 2**      | primary     | 400         | 40px / 48px  | 32px / 40px |
+| **Heading 1 Semi** | primary     | 600         | 32px / 40px  | 28px / 36px |
+| **Heading 2 Semi** | primary     | 600         | 24px / 32px  | 24px / 32px |
+| **Heading 2**      | primary     | 400         | 24px / 32px  | 24px / 32px |
+| **Heading 3 Semi** | primary     | 600         | 20px / 28px  | 20px / 28px |
 
-| Style | Weight | Desktop Size | Mobile Size |
-| --- | --- | --- | --- |
-| **Display 1 Semi** | SemiBold | 48px / 60px | 40px / 48px |
-| **Display 2 Semi** | SemiBold | 40px / 48px | 32px / 40px |
-| **Display 2** | Regular | 40px / 48px | 32px / 40px |
-| **Heading 1 Semi** | SemiBold | 32px / 40px | 28px / 36px |
-| **Heading 2 Semi** | SemiBold | 24px / 32px | 24px / 32px |
-| **Heading 2** | Regular | 24px / 32px | 24px / 32px |
-| **Heading 3 Semi** | SemiBold | 20px / 28px | 20px / 28px |
+## Metrics
+
+Metric styles are used for displaying numerical data and key performance indicators.
+
+| Style             | Font Family | Font Weight | Desktop Size | Mobile Size |
+| ----------------- | ----------- | ----------- | ------------ | ----------- |
+| **Metric 1 Semi** | primary     | 600         | 32px / 40px  | 28px / 36px |
+| **Metric 2 Semi** | primary     | 600         | 24px / 32px  | 24px / 32px |
 
 ## Body Text
 
-![Typography Body Text](/Penny-documentation/foundation/typography-assets/typography-image-2.png)
-
-| Style | Weight | Desktop Size | Mobile Size |
-| --- | --- | --- | --- |
-| **Body 1 Semi** | SemiBold | 20px / 28px | 20px / 28px |
-| **Body 1** | Regular | 20px / 28px | 20px / 28px |
-| **Body 2 Semi** | SemiBold | 16px / 24px | 16px / 24px |
-| **Body 2** | Regular | 16px / 24px | 16px / 24px |
-| **Body 3 Semi** | SemiBold | 14px / 20px | 14px / 20px |
-| **Body 3** | Regular | 14px / 20px | 14px / 20px |
-| **Body 4 Semi** | SemiBold | 12px / 16px | 12px / 16px |
-| **Body 4** | Regular | 12px / 16px | 12px / 16px |
-| **Body 5 Semi** | SemiBold | 10px / 16px | 10px / 16px |
+| Style                 | Font Family | Font Weight | Size / Line Height | Letter Spacing | Transform |
+| --------------------- | ----------- | ----------- | ------------------ | -------------- | --------- |
+| **Body 1 Semi**       | primary     | 600         | 20px / 28px        | —              | —         |
+| **Body 1**            | primary     | 400         | 20px / 28px        | —              | —         |
+| **Body 2 Semi**       | primary     | 600         | 16px / 24px        | —              | —         |
+| **Body 2**            | primary     | 400         | 16px / 24px        | —              | —         |
+| **Body 3 Semi**       | primary     | 600         | 14px / 20px        | —              | —         |
+| **Body 3**            | primary     | 400         | 14px / 20px        | —              | —         |
+| **Body 4 Semi**       | primary     | 600         | 12px / 16px        | —              | —         |
+| **Body 4**            | primary     | 400         | 12px / 16px        | —              | —         |
+| **Body 4 Semi Upper** | primary     | 600         | 12px / 16px        | 0.4px          | uppercase |
+| **Body 5 Semi Upper** | primary     | 600         | 10px / 16px        | 0.4px          | uppercase |
 
 ## Captions
 
-![Typography Captions](/Penny-documentation/foundation/typography-assets/typography-image-3.png)
+| Style                    | Font Family | Font Weight | Size / Line Height | Letter Spacing | Transform |
+| ------------------------ | ----------- | ----------- | ------------------ | -------------- | --------- |
+| **Caption 1 Semi**       | primary     | 600         | 10px / 14px        | 0.2px          | —         |
+| **Caption 1**            | primary     | 400         | 10px / 14px        | 0.2px          | —         |
+| **Caption 1 Semi Upper** | primary     | 600         | 10px / 14px        | 0.2px          | uppercase |
+| **Caption 2 Semi**       | primary     | 600         | 8px / 12px         | 0.2px          | —         |
 
-| Style | Weight | Desktop Size | Mobile Size |
-| --- | --- | --- | --- |
-| **Caption 1 Semi** | SemiBold | 10px / 14px | 10px / 14px |
-| **Caption 1** | Regular | 10px / 14px | 10px / 14px |
-| **Caption 2 Semi** | SemiBold | 8px / 12px | 8px / 12px |
+## Special Typography
 
-## Links
+### Inline
 
-| Style | Weight | Desktop Size | Mobile Size |
-| --- | --- | --- | --- |
-| **Link 1 Semi** | SemiBold | 16px / 24px | 16px / 24px |
-| **Link 1** | Regular | 16px / 24px | 16px / 24px |
-| **Link 1 Hover** | Regular | 16px / 24px | 16px / 24px |
-| **Link 2 Semi** | SemiBold | 14px / 20px | 14px / 20px |
-| **Link 2** | Regular | 14px / 20px | 14px / 20px |
-| **Link 2 Hover** | Regular | 14px / 20px | 14px / 20px |
+The inline style inherits properties from its parent element, making it perfect for inline text formatting within existing typography styles.
 
-## Naked Buttons
-
-| Style | Weight | Desktop Size | Mobile Size |
-| --- | --- | --- | --- |
-| **Naked Button L** | SemiBold | 16px / 24px | 16px / 24px |
-| **Naked Button L Hover** | SemiBold | 16px / 24px | 16px / 24px |
-| **Naked Button M** | SemiBold | 14px / 20px | 14px / 20px |
-| **Naked Button M Hover** | SemiBold | 14px / 20px | 14px / 20px |
+| Style      | Font Family | Font Weight | Size / Line Height |
+| ---------- | ----------- | ----------- | ------------------ |
+| **Inline** | inherit     | inherit     | inherit            |
