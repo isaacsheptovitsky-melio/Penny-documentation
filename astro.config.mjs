@@ -28,7 +28,7 @@ export default defineConfig({
 						{ label: 'Accessibility', slug: 'foundation/accessibility' },
 						{ label: 'Typography', slug: 'foundation/typography' },
 						{ label: 'Color Tokens', slug: 'foundation/color-tokens' },
-						{ label: 'Spacing', slug: 'foundation/spaces' },
+						{ label: 'Spacing', slug: 'foundation/spacing' },
 						{ label: 'Layout System', slug: 'foundation/layout-system' },
 						{ label: 'Breakpoints', slug: 'foundation/breakpoints' },
 						{ label: 'Icons', slug: 'foundation/icons' },
