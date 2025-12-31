@@ -1,182 +1,196 @@
 /* Font Face Declarations */
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-Italic.otf') format('opentype');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-Italic.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-Light.otf') format('opentype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-LightItalic.otf') format('opentype');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-LightItalic.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-SemiBold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-SemiBold.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-SemiBoldItalic.otf') format('opentype');
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-SemiBoldItalic.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-BoldItalic.otf') format('opentype');
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-BoldItalic.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-Heavy.otf') format('opentype');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-Heavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-HeavyItalic.otf') format('opentype');
-    font-weight: 800;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-HeavyItalic.otf")
+    format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-Black.otf') format('opentype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Linear Sans';
-    src: url('/Penny-documentation/fonts/LinearSans-BlackItalic.otf') format('opentype');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Linear Sans";
+  src: url("/Penny-documentation/fonts/LinearSans-BlackItalic.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
 }
 
 /* Apply Linear Sans font globally */
 :root {
-    --sl-font: 'Linear Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --sl-font: "Linear Sans", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 /* Dark mode colors. */
 :root {
-    --sl-color-accent-low: #231a49;
-    --sl-color-accent: #6d36ee;
-    --sl-color-accent-high: #c5c0fd;
-    --sl-color-white: #ffffff;
-    --sl-color-gray-1: #e9eef9;
-    --sl-color-gray-2: #bcc2cf;
-    --sl-color-gray-3: #808ba5;
-    --sl-color-gray-4: #4d586f;
-    --sl-color-gray-5: #2e384d;
-    --sl-color-gray-6: #1d263b;
-    --sl-color-black: #141822;
+  --sl-color-accent-low: #231a49;
+  --sl-color-accent: #6d36ee;
+  --sl-color-accent-high: #c5c0fd;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #e9eef9;
+  --sl-color-gray-2: #bcc2cf;
+  --sl-color-gray-3: #808ba5;
+  --sl-color-gray-4: #4d586f;
+  --sl-color-gray-5: #2e384d;
+  --sl-color-gray-6: #1d263b;
+  --sl-color-black: #141822;
 }
 /* Light mode colors. */
-:root[data-theme='light'] {
-    --sl-color-accent-low: #d4d1ff;
-    --sl-color-accent: #6f38f0;
-    --sl-color-accent-high: #32206d;
-    --sl-color-white: #141822;
-    --sl-color-gray-1: #1d263b;
-    --sl-color-gray-2: #2e384d;
-    --sl-color-gray-3: #4d586f;
-    --sl-color-gray-4: #808ba5;
-    --sl-color-gray-5: #bcc2cf;
-    --sl-color-gray-6: #e9eef9;
-    --sl-color-gray-7: #f4f6fc;
-    --sl-color-black: #ffffff;
+:root[data-theme="light"] {
+  --sl-color-accent-low: #d4d1ff;
+  --sl-color-accent: #6f38f0;
+  --sl-color-accent-high: #32206d;
+  --sl-color-white: #141822;
+  --sl-color-gray-1: #1d263b;
+  --sl-color-gray-2: #2e384d;
+  --sl-color-gray-3: #4d586f;
+  --sl-color-gray-4: #808ba5;
+  --sl-color-gray-5: #bcc2cf;
+  --sl-color-gray-6: #e9eef9;
+  --sl-color-gray-7: #f4f6fc;
+  --sl-color-black: #ffffff;
 }
 
 /* Additional brand color customizations */
 .hero > h1 {
-	background: linear-gradient(315deg, var(--sl-color-accent), var(--sl-color-accent-high));
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    315deg,
+    var(--sl-color-accent),
+    var(--sl-color-accent-high)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Button styling */
 .sl-link-button {
-	background-color: var(--sl-color-accent);
-	border-color: var(--sl-color-accent);
-	color: white !important;
-	border-radius: 8px;
+  background-color: var(--sl-color-accent);
+  border-color: var(--sl-color-accent);
+  color: white !important;
+  border-radius: 8px;
 }
 
 .sl-link-button:hover {
-	background-color: var(--sl-color-accent-high);
-	border-color: var(--sl-color-accent-high);
-	color: white !important;
+  background-color: var(--sl-color-accent-high);
+  border-color: var(--sl-color-accent-high);
+  color: white !important;
 }
 
 /* Action buttons in hero */
 .hero .action {
-	color: white !important;
+  color: white !important;
 }
 
 .hero .action:hover {
-	color: white !important;
+  color: white !important;
 }
 
 /* Hide only the site title text, keep the logo */
 .site-title span {
-	display: none !important;
+  display: none !important;
 }
 
 /* Ensure the site-title container and logo remain visible */
 .site-title {
-	display: flex !important;
+  display: flex !important;
 }
 
 .site-title a {
-	display: flex !important;
+  display: flex !important;
 }
 
 /* Make tables take full width of the container */
 .sl-markdown-content table {
-	width: 100%;
-	table-layout: auto;
+  width: 100%;
+  table-layout: auto;
 }
