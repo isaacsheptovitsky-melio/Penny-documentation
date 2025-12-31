@@ -1,0 +1,246 @@
+---
+title: Icons
+description: Icons help communicate actions, statuses, and information at a glance.
+---
+
+import { Tabs, TabItem, Aside } from "@astrojs/starlight/components";
+
+<style>{`
+  .color-tokens-table {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    padding: 1px;
+    margin: 24px 0;
+  }
+  
+  .color-row {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 12px 16px;
+    gap: 12px;
+    margin-top: 0 !important;
+  }
+  
+  .color-row:first-child {
+    border-radius: 7px 7px 0 0;
+  }
+  
+  .color-row:last-child {
+    border-radius: 0 0 7px 7px;
+  }
+  
+  .color-swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  
+  .color-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .color-name {
+    font-weight: 500;
+    color: #111827;
+  }
+  
+  .color-value {
+    color: #6b7280;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    font-size: 14px;
+    margin: 0;
+  }
+`}</style>
+
+Icons help communicate actions, statuses, and information at a glance.
+
+Melio has an icon bank with about 300 custom pixel-perfect icons
+
+![](/Penny-documentation/foundation/assets/icons-image-1.png)
+
+## Grid & Sizes
+
+Each icon has two versions–on a 16px and on a 24px grid
+
+![](/Penny-documentation/foundation/assets/icons-image-2.png)
+
+## Large: 24px Grid
+
+On the large 24px grid, the stroke width will be 2px with rounded ends, the round corners will usually be 2px (except in exceptional cases), with a 1px margin (frame).
+
+![](/Penny-documentation/foundation/assets/icons-image-3.png)
+
+## Small: 16px Grid
+
+On the small 16px grid, the stroke width will be 1.5px with rounded ends, the round corners will usually be 1.5px (except in exceptional cases), with a 1px margin (frame).
+
+![](/Penny-documentation/foundation/assets/icons-image-4.png)
+
+![](/Penny-documentation/foundation/assets/icons-image-5.png)
+
+## Color
+
+Icons are used exclusively in the following colors depending on the context of use.
+
+<Tabs>
+  <TabItem label="Table view">
+    <div className="color-tokens-table">
+      <div className="color-row">
+        <div className="color-swatch" style={{backgroundColor: '#7C3AED'}}></div>
+        <div className="color-info">
+          <div className="color-name">Colors.Icon.brand</div>
+          <div className="color-value">&#123;Colors.brand.700&#125;</div>
+        </div>
+      </div>
+      <div className="color-row">
+        <div className="color-swatch" style={{backgroundColor: '#DC2626'}}></div>
+        <div className="color-info">
+          <div className="color-name">Colors.Icon.critical</div>
+          <div className="color-value">&#123;Colors.critical.700&#125;</div>
+        </div>
+      </div>
+      <div className="color-row">
+        <div className="color-swatch" style={{backgroundColor: '#9CA3AF'}}></div>
+        <div className="color-info">
+          <div className="color-name">Colors.Icon.disabled</div>
+          <div className="color-value">&#123;Colors.neutral.500&#125;</div>
+        </div>
+      </div>
+      <div className="color-row">
+        <div className="color-swatch" style={{backgroundColor: '#2563EB'}}></div>
+        <div className="color-info">
+          <div className="color-name">Colors.Icon.info</div>
+          <div className="color-value">&#123;Colors.informative.700&#125;</div>
+        </div>
+      </div>
+      <div className="color-row">
+        <div className="color-swatch" style={{backgroundColor: '#F3F4F6', border: '1px solid #E5E7EB'}}></div>
+        <div className="color-info">
+          <div className="color-name">Colors.Icon.inverse</div>
+          <div className="color-value">&#123;Colors.neutral.100&#125;</div>
+        </div>
+      </div>
+      <div className="color-row">
+        <div className="color-swatch" style={{backgroundColor: '#F9FAFB', border: '1px solid #E5E7EB'}}></div>
+        <div className="color-info">
+          <div className="color-name">Colors.Icon.inverse-disabled</div>
+          <div className="color-value">&#123;Colors.neutral.A35&#125;</div>
+        </div>
+      </div>
+      <div className="color-row">
+        <div className="color-swatch" style={{backgroundColor: '#111827'}}></div>
+        <div className="color-info">
+          <div className="color-name">Colors.Icon.primary</div>
+          <div className="color-value">&#123;Colors.neutral.1000&#125;</div>
+        </div>
+      </div>
+      <div className="color-row">
+        <div className="color-swatch" style={{backgroundColor: '#6B7280'}}></div>
+        <div className="color-info">
+          <div className="color-name">Colors.Icon.read-only</div>
+          <div className="color-value">&#123;Colors.neutral.700&#125;</div>
+        </div>
+      </div>
+      <div className="color-row">
+        <div className="color-swatch" style={{backgroundColor: '#059669'}}></div>
+        <div className="color-info">
+          <div className="color-name">Colors.Icon.success</div>
+          <div className="color-value">&#123;Colors.success.700&#125;</div>
+        </div>
+      </div>
+      <div className="color-row">
+        <div className="color-swatch" style={{backgroundColor: '#D97706'}}></div>
+        <div className="color-info">
+          <div className="color-name">Colors.Icon.warning</div>
+          <div className="color-value">&#123;Colors.warning.700&#125;</div>
+        </div>
+      </div>
+    </div>
+  </TabItem>
+  <TabItem label="JSON">
+    ```json
+    {
+      "Colors": {
+        "Icon": {
+          "brand": {
+            "$type": "color",
+            "$value": "{Colors.brand.700}"
+          },
+          "critical": {
+            "$type": "color",
+            "$value": "{Colors.critical.700}"
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{Colors.neutral.500}"
+          },
+          "info": {
+            "$type": "color",
+            "$value": "{Colors.informative.700}"
+          },
+          "inverse": {
+            "$type": "color",
+            "$value": "{Colors.neutral.100}"
+          },
+          "inverse-disabled": {
+            "$type": "color",
+            "$value": "{Colors.neutral.A35}"
+          },
+          "primary": {
+            "$type": "color",
+            "$value": "{Colors.neutral.1000}"
+          },
+          "read-only": {
+            "$type": "color",
+            "$value": "{Colors.neutral.700}"
+          },
+          "success": {
+            "$type": "color",
+            "$value": "{Colors.success.700}"
+          },
+          "warning": {
+            "$type": "color",
+            "$value": "{Colors.warning.700}"
+          }
+        }
+      }
+    }
+    ```
+  </TabItem>
+</Tabs>
+
+![](/Penny-documentation/foundation/assets/icons-image-6.png)
+
+## Adding icons to Penny
+
+[How to add a new icon to Penny](https://www.notion.so/meliopayments/How-to-add-a-new-icon-to-Penny-16c66d69640a807580e2d0eaaf0f6d33)
+
+![](/Penny-documentation/foundation/assets/icons-image-7.png)
+
+![](/Penny-documentation/foundation/assets/icons-image-8.png)
+
+## Accessibility
+
+When choosing or naming an icon, focus on **what it does**, not just what it looks like.
+
+| ❌ Don't Use | ✅ Use Instead |
+| ------------ | -------------- |
+| Trash        | Delete         |
+| Pencil       | Edit           |
+| Cross        | Close          |
+| Tick         | Check          |
+| Magnifier    | Search         |
+
+<Aside type="note" title="Ask yourself">
+  If I couldn't see the icon, would the name still help me understand what it
+  does?
+</Aside>

@@ -1,0 +1,1322 @@
+---
+title: Color tokens
+description: Our design system uses a structured approach to color tokens to support consistency, scalability, and white-label theming. Our token system is divided into three levels - Global, Semantic, and Component-Based.
+---
+
+Our design system uses a structured approach to color tokens to support consistency, scalability, and white-label theming. Our token system is divided into three levels: **Global, Semantic, and Component-Based**. 
+
+
+## Semantic tokens
+Semantic tokens map global tokens to a functional meaning, defining usage intent rather than specific colors. These tokens help unify visual language across the system while allowing controlled customization.
+
+| Token | Value | Description |
+| --- | --- | --- |
+| Colors.Action.critical-primary | &#123;Colors.critical.700&#125; |   |
+| Colors.Action.critical-primary-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Action.critical-primary-hover | &#123;Colors.critical.800&#125; |   |
+| Colors.Action.critical-primary-pressed | &#123;Colors.critical.900&#125; |   |
+| Colors.Action.critical-secondary | &#123;Colors.neutral.A0&#125; |   |
+| Colors.Action.critical-secondary-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Action.critical-secondary-hover | &#123;Colors.critical.100&#125; |   |
+| Colors.Action.critical-secondary-pressed | &#123;Colors.critical.200&#125; |   |
+| Colors.Action.inverse-primary | &#123;Colors.neutral.100&#125; |   |
+| Colors.Action.inverse-primary-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Action.inverse-primary-hover | &#123;Colors.neutral.A80&#125; |   |
+| Colors.Action.inverse-primary-pressed | &#123;Colors.neutral.A60&#125; |   |
+| Colors.Action.inverse-secondary | &#123;Colors.neutral.A0&#125; |   |
+| Colors.Action.inverse-secondary-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Action.inverse-secondary-hover | &#123;Colors.neutral.A15&#125; |   |
+| Colors.Action.inverse-secondary-pressed | &#123;Colors.neutral.A35&#125; |   |
+| Colors.Action.inverse-tertiary | &#123;Colors.neutral.A0&#125; |   |
+| Colors.Action.inverse-tertiary-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Action.inverse-tertiary-hover | &#123;Colors.neutral.A15&#125; |   |
+| Colors.Action.inverse-tertiary-pressed | &#123;Colors.neutral.A35&#125; |   |
+| Colors.Action.primary | &#123;Colors.brand.700&#125; |   |
+| Colors.Action.primary-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Action.primary-hover | &#123;Colors.brand.800&#125; |   |
+| Colors.Action.primary-pressed | &#123;Colors.brand.900&#125; |   |
+| Colors.Action.secondary | &#123;Colors.neutral.A0&#125; |   |
+| Colors.Action.secondary-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Action.secondary-hover | &#123;Colors.brand.100&#125; |   |
+| Colors.Action.secondary-pressed | &#123;Colors.brand.200&#125; |   |
+| Colors.Action.success | &#123;Colors.success.700&#125; |   |
+| Colors.Action.success-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Action.success-hover | &#123;Colors.success.800&#125; |   |
+| Colors.Action.success-pressed | &#123;Colors.success.900&#125; |   |
+| Colors.Action.tertiary | &#123;Colors.neutral.A0&#125; |   |
+| Colors.Action.tertiary-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Action.tertiary-hover | &#123;Colors.neutral.300&#125; |   |
+| Colors.Action.tertiary-pressed | &#123;Colors.neutral.400&#125; |   |
+| Colors.Background.background-brand-primary | &#123;Colors.brand.700&#125; |   |
+| Colors.Background.background-brand-secondary | &#123;Colors.brand.100&#125; |   |
+| Colors.Background.background-secondary | &#123;Colors.neutral.200&#125; |   |
+| Colors.Background.primary | &#123;Colors.neutral.100&#125; |   |
+| Colors.Border.Inverse | &#123;Colors.neutral.100&#125; |   |
+| Colors.Border.brand | &#123;Colors.brand.700&#125; |   |
+| Colors.Border.critical | &#123;Colors.critical.700&#125; |   |
+| Colors.Border.info | &#123;Colors.informative.700&#125; |   |
+| Colors.Border.interactive-disabled | &#123;Colors.neutral.400&#125; |   |
+| Colors.Border.interactive-hover | &#123;Colors.neutral.1000&#125; |   |
+| Colors.Border.interactive-rest | &#123;Colors.neutral.600&#125; |   |
+| Colors.Border.interactive-selected | &#123;Colors.brand.700&#125; |   |
+| Colors.Border.neutral | &#123;Colors.neutral.1000&#125; |   |
+| Colors.Border.static | &#123;Colors.neutral.400&#125; |   |
+| Colors.Border.success | &#123;Colors.success.700&#125; |   |
+| Colors.Border.warning | &#123;Colors.warning.700&#125; |   |
+| Colors.Fill.brand-primary | &#123;Colors.brand.700&#125; |   |
+| Colors.Fill.brand-secondary | &#123;Colors.brand.100&#125; |   |
+| Colors.Fill.critical-primary | &#123;Colors.critical.700&#125; |   |
+| Colors.Fill.critical-secondary | &#123;Colors.critical.100&#125; |   |
+| Colors.Fill.decorative-1 | &#123;Colors.decorative.1&#125; |   |
+| Colors.Fill.decorative-2 | &#123;Colors.decorative.2&#125; |   |
+| Colors.Fill.decorative-3 | &#123;Colors.decorative.3&#125; |   |
+| Colors.Fill.decorative-4 | &#123;Colors.decorative.4&#125; |   |
+| Colors.Fill.decorative-5 | &#123;Colors.decorative.5&#125; |   |
+| Colors.Fill.disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Fill.info-primary | &#123;Colors.informative.700&#125; |   |
+| Colors.Fill.info-secondary | &#123;Colors.informative.100&#125; |   |
+| Colors.Fill.inverse | &#123;Colors.neutral.1000&#125; |   |
+| Colors.Fill.primary | &#123;Colors.neutral.100&#125; |   |
+| Colors.Fill.read-only | &#123;Colors.neutral.700&#125; |   |
+| Colors.Fill.secondary | &#123;Colors.neutral.300&#125; |   |
+| Colors.Fill.success-primary | &#123;Colors.success.700&#125; |   |
+| Colors.Fill.success-secondary | &#123;Colors.success.100&#125; |   |
+| Colors.Fill.tertiary | &#123;Colors.neutral.400&#125; |   |
+| Colors.Fill.warning-primary | &#123;Colors.warning.700&#125; |   |
+| Colors.Fill.warning-secondary | &#123;Colors.warning.100&#125; |   |
+| Colors.Focus.inverse | &#123;Colors.focus.Inverse&#125; |   |
+| Colors.Focus.primary | &#123;Colors.focus.primary&#125; |   |
+| Colors.Icon.brand | &#123;Colors.brand.700&#125; |   |
+| Colors.Icon.critical | &#123;Colors.critical.700&#125; |   |
+| Colors.Icon.disabled | &#123;Colors.neutral.500&#125; |   |
+| Colors.Icon.info | &#123;Colors.informative.700&#125; |   |
+| Colors.Icon.inverse | &#123;Colors.neutral.100&#125; |   |
+| Colors.Icon.inverse-disabled | &#123;Colors.neutral.A35&#125; |   |
+| Colors.Icon.primary | &#123;Colors.neutral.1000&#125; |   |
+| Colors.Icon.read-only | &#123;Colors.neutral.700&#125; |   |
+| Colors.Icon.success | &#123;Colors.success.700&#125; |   |
+| Colors.Icon.warning | &#123;Colors.warning.700&#125; |   |
+| Colors.Illustration.background | &#123;Colors.neutral.100&#125; |   |
+| Colors.Illustration.border | &#123;Colors.neutral.1000&#125; |   |
+| Colors.Illustration.brand-primary | &#123;Colors.brand.700&#125; |   |
+| Colors.Illustration.brand-secondary | &#123;Colors.brand.100&#125; |   |
+| Colors.Illustration.critical | &#123;Colors.critical.700&#125; |   |
+| Colors.Illustration.success | &#123;Colors.success.700&#125; |   |
+| Colors.Link.inverse | &#123;Colors.neutral.100&#125; |   |
+| Colors.Link.inverse-disabled | &#123;Colors.neutral.A35&#125; |   |
+| Colors.Link.inverse-hover | &#123;Colors.neutral.A80&#125; |   |
+| Colors.Link.inverse-pressed | &#123;Colors.neutral.A60&#125; |   |
+| Colors.Link.primary | &#123;Colors.neutral.1000&#125; |   |
+| Colors.Link.primary-disabled | &#123;Colors.neutral.500&#125; |   |
+| Colors.Link.primary-hover | &#123;Colors.neutral.1000&#125; |   |
+| Colors.Link.primary-pressed | &#123;Colors.neutral.700&#125; |   |
+| Colors.Link.secondary | &#123;Colors.brand.700&#125; |   |
+| Colors.Link.secondary-disabled | &#123;Colors.neutral.500&#125; |   |
+| Colors.Link.secondary-hover | &#123;Colors.brand.800&#125; |   |
+| Colors.Link.secondary-pressed | &#123;Colors.brand.900&#125; |   |
+| Colors.Surface.inverse | &#123;Colors.neutral.1000&#125; |   |
+| Colors.Surface.primary | &#123;Colors.neutral.100&#125; |   |
+| Colors.Surface.primary-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Surface.primary-hover | &#123;Colors.neutral.300&#125; |   |
+| Colors.Surface.primary-pressed | &#123;Colors.neutral.400&#125; |   |
+| Colors.Surface.primary-selected | &#123;Colors.brand.100&#125; |   |
+| Colors.Surface.secondary | &#123;Colors.neutral.200&#125; |   |
+| Colors.Surface.secondary-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Surface.secondary-hover | &#123;Colors.neutral.400&#125; |   |
+| Colors.Surface.secondary-pressed | &#123;Colors.neutral.500&#125; |   |
+| Colors.Surface.secondary-selected | &#123;Colors.brand.100&#125; |   |
+| Colors.Surface.tertiary | &#123;Colors.neutral.400&#125; |   |
+| Colors.Surface.tertiary-disabled | &#123;Colors.neutral.300&#125; |   |
+| Colors.Surface.tertiary-hover | &#123;Colors.neutral.500&#125; |   |
+| Colors.Surface.tertiary-pressed | &#123;Colors.neutral.600&#125; |   |
+| Colors.Surface.tertiary-selected | &#123;Colors.neutral.100&#125; |   |
+| Colors.Text.brand | &#123;Colors.brand.700&#125; |   |
+| Colors.Text.brand-hover | &#123;Colors.brand.800&#125; |   |
+| Colors.Text.brand-on-color | &#123;Colors.brand.900&#125; |   |
+| Colors.Text.brand-pressed | &#123;Colors.brand.900&#125; |   |
+| Colors.Text.critical | &#123;Colors.critical.700&#125; |   |
+| Colors.Text.critical-hover | &#123;Colors.critical.800&#125; |   |
+| Colors.Text.critical-on-color | &#123;Colors.critical.900&#125; |   |
+| Colors.Text.critical-pressed | &#123;Colors.critical.900&#125; |   |
+| Colors.Text.disabled | &#123;Colors.neutral.500&#125; |   |
+| Colors.Text.info | &#123;Colors.informative.700&#125; |   |
+| Colors.Text.info-hover | &#123;Colors.informative.800&#125; |   |
+| Colors.Text.info-on-color | &#123;Colors.informative.900&#125; |   |
+| Colors.Text.info-pressed | &#123;Colors.informative.900&#125; |   |
+| Colors.Text.inverse | &#123;Colors.neutral.100&#125; |   |
+| Colors.Text.primary | &#123;Colors.neutral.1000&#125; | Neutral 1000 |
+| Colors.Text.secondary | &#123;Colors.neutral.700&#125; |   |
+| Colors.Text.succese-hover | &#123;Colors.success.800&#125; |   |
+| Colors.Text.succese-pressed | &#123;Colors.success.900&#125; |   |
+| Colors.Text.success | &#123;Colors.success.700&#125; |   |
+| Colors.Text.success-on-color | &#123;Colors.success.900&#125; |   |
+
+```json
+{
+  "Colors": {
+    "Action": {
+      "critical-primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.700&#125;"
+      &#125;,
+      "critical-primary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "critical-primary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.800&#125;"
+      &#125;,
+      "critical-primary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.900&#125;"
+      &#125;,
+      "critical-secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A0&#125;"
+      &#125;,
+      "critical-secondary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "critical-secondary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.100&#125;"
+      &#125;,
+      "critical-secondary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.200&#125;"
+      &#125;,
+      "inverse-primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.100&#125;"
+      &#125;,
+      "inverse-primary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "inverse-primary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A80&#125;"
+      &#125;,
+      "inverse-primary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A60&#125;"
+      &#125;,
+      "inverse-secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A0&#125;"
+      &#125;,
+      "inverse-secondary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "inverse-secondary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A15&#125;"
+      &#125;,
+      "inverse-secondary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A35&#125;"
+      &#125;,
+      "inverse-tertiary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A0&#125;"
+      &#125;,
+      "inverse-tertiary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "inverse-tertiary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A15&#125;"
+      &#125;,
+      "inverse-tertiary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A35&#125;"
+      &#125;,
+      "primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.700&#125;"
+      &#125;,
+      "primary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "primary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.800&#125;"
+      &#125;,
+      "primary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.900&#125;"
+      &#125;,
+      "secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A0&#125;"
+      &#125;,
+      "secondary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "secondary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.100&#125;"
+      &#125;,
+      "secondary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.200&#125;"
+      &#125;,
+      "success": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.700&#125;"
+      &#125;,
+      "success-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "success-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.800&#125;"
+      &#125;,
+      "success-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.900&#125;"
+      &#125;,
+      "tertiary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A0&#125;"
+      &#125;,
+      "tertiary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "tertiary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "tertiary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.400&#125;"
+      &#125;
+    &#125;,
+    "Background": {
+      "background-brand-primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.700&#125;"
+      &#125;,
+      "background-brand-secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.100&#125;"
+      &#125;,
+      "background-secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.200&#125;"
+      &#125;,
+      "primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.100&#125;"
+      &#125;
+    &#125;,
+    "Border": {
+      "Inverse": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.100&#125;"
+      &#125;,
+      "brand": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.700&#125;"
+      &#125;,
+      "critical": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.700&#125;"
+      &#125;,
+      "info": {
+        "$type": "color",
+        "$value": "&#123;Colors.informative.700&#125;"
+      &#125;,
+      "interactive-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.400&#125;"
+      &#125;,
+      "interactive-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.1000&#125;"
+      &#125;,
+      "interactive-rest": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.600&#125;"
+      &#125;,
+      "interactive-selected": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.700&#125;"
+      &#125;,
+      "neutral": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.1000&#125;"
+      &#125;,
+      "static": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.400&#125;"
+      &#125;,
+      "success": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.700&#125;"
+      &#125;,
+      "warning": {
+        "$type": "color",
+        "$value": "&#123;Colors.warning.700&#125;"
+      &#125;
+    &#125;,
+    "Fill": {
+      "brand-primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.700&#125;"
+      &#125;,
+      "brand-secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.100&#125;"
+      &#125;,
+      "critical-primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.700&#125;"
+      &#125;,
+      "critical-secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.100&#125;"
+      &#125;,
+      "decorative-1": {
+        "$type": "color",
+        "$value": "&#123;Colors.decorative.1&#125;"
+      &#125;,
+      "decorative-2": {
+        "$type": "color",
+        "$value": "&#123;Colors.decorative.2&#125;"
+      &#125;,
+      "decorative-3": {
+        "$type": "color",
+        "$value": "&#123;Colors.decorative.3&#125;"
+      &#125;,
+      "decorative-4": {
+        "$type": "color",
+        "$value": "&#123;Colors.decorative.4&#125;"
+      &#125;,
+      "decorative-5": {
+        "$type": "color",
+        "$value": "&#123;Colors.decorative.5&#125;"
+      &#125;,
+      "disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "info-primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.informative.700&#125;"
+      &#125;,
+      "info-secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.informative.100&#125;"
+      &#125;,
+      "inverse": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.1000&#125;"
+      &#125;,
+      "primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.100&#125;"
+      &#125;,
+      "read-only": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.700&#125;"
+      &#125;,
+      "secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "success-primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.700&#125;"
+      &#125;,
+      "success-secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.100&#125;"
+      &#125;,
+      "tertiary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.400&#125;"
+      &#125;,
+      "warning-primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.warning.700&#125;"
+      &#125;,
+      "warning-secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.warning.100&#125;"
+      &#125;
+    &#125;,
+    "Focus": {
+      "inverse": {
+        "$type": "color",
+        "$value": "&#123;Colors.focus.Inverse&#125;"
+      &#125;,
+      "primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.focus.primary&#125;"
+      &#125;
+    &#125;,
+    "Icon": {
+      "brand": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.700&#125;"
+      &#125;,
+      "critical": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.700&#125;"
+      &#125;,
+      "disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.500&#125;"
+      &#125;,
+      "info": {
+        "$type": "color",
+        "$value": "&#123;Colors.informative.700&#125;"
+      &#125;,
+      "inverse": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.100&#125;"
+      &#125;,
+      "inverse-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A35&#125;"
+      &#125;,
+      "primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.1000&#125;"
+      &#125;,
+      "read-only": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.700&#125;"
+      &#125;,
+      "success": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.700&#125;"
+      &#125;,
+      "warning": {
+        "$type": "color",
+        "$value": "&#123;Colors.warning.700&#125;"
+      &#125;
+    &#125;,
+    "Illustration": {
+      "background": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.100&#125;"
+      &#125;,
+      "border": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.1000&#125;"
+      &#125;,
+      "brand-primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.700&#125;"
+      &#125;,
+      "brand-secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.100&#125;"
+      &#125;,
+      "critical": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.700&#125;"
+      &#125;,
+      "success": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.700&#125;"
+      &#125;
+    &#125;,
+    "Link": {
+      "inverse": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.100&#125;"
+      &#125;,
+      "inverse-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A35&#125;"
+      &#125;,
+      "inverse-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A80&#125;"
+      &#125;,
+      "inverse-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.A60&#125;"
+      &#125;,
+      "primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.1000&#125;"
+      &#125;,
+      "primary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.500&#125;"
+      &#125;,
+      "primary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.1000&#125;"
+      &#125;,
+      "primary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.700&#125;"
+      &#125;,
+      "secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.700&#125;"
+      &#125;,
+      "secondary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.500&#125;"
+      &#125;,
+      "secondary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.800&#125;"
+      &#125;,
+      "secondary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.900&#125;"
+      &#125;
+    &#125;,
+    "Surface": {
+      "inverse": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.1000&#125;"
+      &#125;,
+      "primary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.100&#125;"
+      &#125;,
+      "primary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "primary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "primary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.400&#125;"
+      &#125;,
+      "primary-selected": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.100&#125;"
+      &#125;,
+      "secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.200&#125;"
+      &#125;,
+      "secondary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "secondary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.400&#125;"
+      &#125;,
+      "secondary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.500&#125;"
+      &#125;,
+      "secondary-selected": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.100&#125;"
+      &#125;,
+      "tertiary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.400&#125;"
+      &#125;,
+      "tertiary-disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.300&#125;"
+      &#125;,
+      "tertiary-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.500&#125;"
+      &#125;,
+      "tertiary-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.600&#125;"
+      &#125;,
+      "tertiary-selected": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.100&#125;"
+      &#125;
+    &#125;,
+    "Text": {
+      "brand": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.700&#125;"
+      &#125;,
+      "brand-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.800&#125;"
+      &#125;,
+      "brand-on-color": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.900&#125;"
+      &#125;,
+      "brand-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.brand.900&#125;"
+      &#125;,
+      "critical": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.700&#125;"
+      &#125;,
+      "critical-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.800&#125;"
+      &#125;,
+      "critical-on-color": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.900&#125;"
+      &#125;,
+      "critical-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.critical.900&#125;"
+      &#125;,
+      "disabled": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.500&#125;"
+      &#125;,
+      "info": {
+        "$type": "color",
+        "$value": "&#123;Colors.informative.700&#125;"
+      &#125;,
+      "info-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.informative.800&#125;"
+      &#125;,
+      "info-on-color": {
+        "$type": "color",
+        "$value": "&#123;Colors.informative.900&#125;"
+      &#125;,
+      "info-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.informative.900&#125;"
+      &#125;,
+      "inverse": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.100&#125;"
+      &#125;,
+      "primary": {
+        "$description": "Neutral 1000",
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.1000&#125;"
+      &#125;,
+      "secondary": {
+        "$type": "color",
+        "$value": "&#123;Colors.neutral.700&#125;"
+      &#125;,
+      "succese-hover": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.800&#125;"
+      &#125;,
+      "succese-pressed": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.900&#125;"
+      &#125;,
+      "success": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.700&#125;"
+      &#125;,
+      "success-on-color": {
+        "$type": "color",
+        "$value": "&#123;Colors.success.900&#125;"
+      &#125;
+    &#125;
+  &#125;
+&#125;
+```
+---
+
+## Component based tokens
+Component-based tokens are the most specific level, defining colors for individual components. These tokens reference semantic tokens to maintain a clear relationship between design and function.
+
+| Token | Value | Description |
+| --- | --- | --- |
+| Pill.default | &#123;Border radius.full&#125; |   |
+| Tabs.default-hover | &#123;Colors.Text.brand-hover&#125; |   |
+| Tabs.default-pressed | &#123;Colors.Text.brand-pressed&#125; |   |
+| Tabs.default-rest | &#123;Colors.Text.secondary&#125; |   |
+| Tabs.default-selected | &#123;Colors.Text.brand&#125; |   |
+| Tabs.neutral-hover | &#123;Colors.Text.primary&#125; |   |
+| Tabs.neutral-pressed | &#123;Colors.Text.primary&#125; |   |
+| Tabs.neutral-rest | &#123;Colors.Text.secondary&#125; |   |
+| Tabs.neutral-selected | &#123;Colors.Text.primary&#125; |   |
+| Text button.critical-disabled | &#123;Colors.Text.disabled&#125; |   |
+| Text button.critical-hover | &#123;Colors.Text.critical-hover&#125; |   |
+| Text button.critical-pressed | &#123;Colors.Text.critical-pressed&#125; |   |
+| Text button.critical-rest | &#123;Colors.Text.critical&#125; |   |
+| Text button.inverse-disabled | &#123;Colors.Link.inverse-disabled&#125; |   |
+| Text button.inverse-hover | &#123;Colors.Link.inverse-hover&#125; |   |
+| Text button.inverse-pressed | &#123;Colors.Link.inverse-pressed&#125; |   |
+| Text button.inverse-rest | &#123;Colors.Link.inverse&#125; |   |
+| Text button.primary-disabled | &#123;Colors.Text.disabled&#125; |   |
+| Text button.primary-hover | &#123;Colors.Text.brand&#125; |   |
+| Text button.primary-pressed | &#123;Colors.Text.brand-hover&#125; |   |
+| Text button.primary-rest | &#123;Colors.Text.primary&#125; |   |
+| Text button.secondary-disabled | &#123;Colors.Text.disabled&#125; |   |
+| Text button.secondary-hover | &#123;Colors.Text.brand-hover&#125; |   |
+| Text button.secondary-pressed | &#123;Colors.Text.brand-pressed&#125; |   |
+| Text button.secondary-rest | &#123;Colors.Text.brand&#125; |   |
+
+```json
+{
+  "Pill": {
+    "default": {
+      "$type": "number",
+      "$value": "&#123;Border radius.full&#125;"
+    &#125;
+  &#125;,
+  "Tabs": {
+    "default-hover": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.brand-hover&#125;"
+    &#125;,
+    "default-pressed": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.brand-pressed&#125;"
+    &#125;,
+    "default-rest": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.secondary&#125;"
+    &#125;,
+    "default-selected": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.brand&#125;"
+    &#125;,
+    "neutral-hover": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.primary&#125;"
+    &#125;,
+    "neutral-pressed": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.primary&#125;"
+    &#125;,
+    "neutral-rest": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.secondary&#125;"
+    &#125;,
+    "neutral-selected": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.primary&#125;"
+    &#125;
+  &#125;,
+  "Text button": {
+    "critical-disabled": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.disabled&#125;"
+    &#125;,
+    "critical-hover": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.critical-hover&#125;"
+    &#125;,
+    "critical-pressed": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.critical-pressed&#125;"
+    &#125;,
+    "critical-rest": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.critical&#125;"
+    &#125;,
+    "inverse-disabled": {
+      "$type": "color",
+      "$value": "&#123;Colors.Link.inverse-disabled&#125;"
+    &#125;,
+    "inverse-hover": {
+      "$type": "color",
+      "$value": "&#123;Colors.Link.inverse-hover&#125;"
+    &#125;,
+    "inverse-pressed": {
+      "$type": "color",
+      "$value": "&#123;Colors.Link.inverse-pressed&#125;"
+    &#125;,
+    "inverse-rest": {
+      "$type": "color",
+      "$value": "&#123;Colors.Link.inverse&#125;"
+    &#125;,
+    "primary-disabled": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.disabled&#125;"
+    &#125;,
+    "primary-hover": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.brand&#125;"
+    &#125;,
+    "primary-pressed": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.brand-hover&#125;"
+    &#125;,
+    "primary-rest": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.primary&#125;"
+    &#125;,
+    "secondary-disabled": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.disabled&#125;"
+    &#125;,
+    "secondary-hover": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.brand-hover&#125;"
+    &#125;,
+    "secondary-pressed": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.brand-pressed&#125;"
+    &#125;,
+    "secondary-rest": {
+      "$type": "color",
+      "$value": "&#123;Colors.Text.brand&#125;"
+    &#125;
+  &#125;
+&#125;
+```
+---
+
+## Global tokens
+Global tokens are the foundational values of our color system. These are raw color values that are not tied to a specific meaning or usage. They serve as the core palette from which all other tokens derive.
+
+| Token | Value | Description |
+| --- | --- | --- |
+| Colors.brand.100 | #f6f2fd |   |
+| Colors.brand.200 | #e4dbff |   |
+| Colors.brand.300 | #d9ccff |   |
+| Colors.brand.400 | #c8b5fe |   |
+| Colors.brand.500 | #b79eff |   |
+| Colors.brand.600 | #9470ff |   |
+| Colors.brand.700 | #7849ff |   |
+| Colors.brand.800 | #5f33e6 |   |
+| Colors.brand.900 | #4315cb |   |
+| Colors.brand.1000 | #321098 |   |
+| Colors.brand-secondary.100 | #f3f0ff |   |
+| Colors.brand-secondary.200 | #e4dbff |   |
+| Colors.brand-secondary.300 | #d9ccff |   |
+| Colors.brand-secondary.400 | #c9b6ff |   |
+| Colors.brand-secondary.500 | #b79eff |   |
+| Colors.brand-secondary.600 | #9470ff |   |
+| Colors.brand-secondary.700 | #7849ff |   |
+| Colors.brand-secondary.800 | #5f33e6 |   |
+| Colors.brand-secondary.900 | #4315cb |   |
+| Colors.brand-secondary.1000 | #321098 |   |
+| Colors.critical.100 | #fde7e9 |   |
+| Colors.critical.200 | #fac4c9 |   |
+| Colors.critical.300 | #f9b4ba |   |
+| Colors.critical.400 | #f79ca4 |   |
+| Colors.critical.500 | #f57f89 |   |
+| Colors.critical.600 | #f14755 |   |
+| Colors.critical.700 | #d80e25 |   |
+| Colors.critical.800 | #c50c22 |   |
+| Colors.critical.900 | #8d0411 |   |
+| Colors.critical.1000 | #6d030d |   |
+| Colors.decorative.1 | #ead6d4 |   |
+| Colors.decorative.2 | #ffe0d6 |   |
+| Colors.decorative.3 | #ffd0ea |   |
+| Colors.decorative.4 | #d9e1fd |   |
+| Colors.decorative.5 | #c9f8f8 |   |
+| Colors.focus.Inverse | #3798f2 |   |
+| Colors.focus.primary | #0548cf |   |
+| Colors.informative.100 | #e6f0fe |   |
+| Colors.informative.200 | #c7dafd |   |
+| Colors.informative.300 | #b5cefc |   |
+| Colors.informative.400 | #a2c1fb |   |
+| Colors.informative.500 | #8fb4fa |   |
+| Colors.informative.600 | #5484f8 |   |
+| Colors.informative.700 | #306af7 |   |
+| Colors.informative.800 | #2256d6 |   |
+| Colors.informative.900 | #0351c0 |   |
+| Colors.informative.1000 | #023d91 |   |
+| Colors.neutral.100 | #ffffff |   |
+| Colors.neutral.200 | #f8fafc |   |
+| Colors.neutral.300 | #f1f5f8 |   |
+| Colors.neutral.400 | #e4e7ec |   |
+| Colors.neutral.500 | #c3cad5 |   |
+| Colors.neutral.600 | #8b95a9 |   |
+| Colors.neutral.700 | #646f87 |   |
+| Colors.neutral.800 | #475467 |   |
+| Colors.neutral.900 | #344054 |   |
+| Colors.neutral.1000 | #18191b |   |
+| Colors.neutral.A0 | rgba(255, 255, 255, 0.0000) |   |
+| Colors.neutral.A15 | rgba(255, 255, 255, 0.1500) |   |
+| Colors.neutral.A35 | rgba(255, 255, 255, 0.3500) |   |
+| Colors.neutral.A60 | rgba(255, 255, 255, 0.6000) |   |
+| Colors.neutral.A80 | rgba(255, 255, 255, 0.8000) |   |
+| Colors.success.100 | #dff5e7 |   |
+| Colors.success.200 | #b1e2c4 |   |
+| Colors.success.300 | #9bdab3 |   |
+| Colors.success.400 | #7dcf9d |   |
+| Colors.success.500 | #54bf7e |   |
+| Colors.success.600 | #41ae6c |   |
+| Colors.success.700 | #028838 |   |
+| Colors.success.800 | #00702d |   |
+| Colors.success.900 | #014b1f |   |
+| Colors.success.1000 | #012811 |   |
+| Colors.warning.100 | #fff8e6 |   |
+| Colors.warning.200 | #fff0ca |   |
+| Colors.warning.300 | #ffe9b2 |   |
+| Colors.warning.400 | #ffe299 |   |
+| Colors.warning.500 | #ffd875 |   |
+| Colors.warning.600 | #fdc535 |   |
+| Colors.warning.700 | #fdb702 |   |
+| Colors.warning.800 | #e6a702 |   |
+| Colors.warning.900 | #b88501 |   |
+| Colors.warning.1000 | #986e01 |   |
+
+```json
+{
+  "Colors": {
+    "brand": {
+      "100": {
+        "$type": "color",
+        "$value": "#f6f2fd"
+      &#125;,
+      "200": {
+        "$type": "color",
+        "$value": "#e4dbff"
+      &#125;,
+      "300": {
+        "$type": "color",
+        "$value": "#d9ccff"
+      &#125;,
+      "400": {
+        "$type": "color",
+        "$value": "#c8b5fe"
+      &#125;,
+      "500": {
+        "$type": "color",
+        "$value": "#b79eff"
+      &#125;,
+      "600": {
+        "$type": "color",
+        "$value": "#9470ff"
+      &#125;,
+      "700": {
+        "$type": "color",
+        "$value": "#7849ff"
+      &#125;,
+      "800": {
+        "$type": "color",
+        "$value": "#5f33e6"
+      &#125;,
+      "900": {
+        "$type": "color",
+        "$value": "#4315cb"
+      &#125;,
+      "1000": {
+        "$type": "color",
+        "$value": "#321098"
+      &#125;
+    &#125;,
+    "brand-secondary": {
+      "100": {
+        "$type": "color",
+        "$value": "#f3f0ff"
+      &#125;,
+      "200": {
+        "$type": "color",
+        "$value": "#e4dbff"
+      &#125;,
+      "300": {
+        "$type": "color",
+        "$value": "#d9ccff"
+      &#125;,
+      "400": {
+        "$type": "color",
+        "$value": "#c9b6ff"
+      &#125;,
+      "500": {
+        "$type": "color",
+        "$value": "#b79eff"
+      &#125;,
+      "600": {
+        "$type": "color",
+        "$value": "#9470ff"
+      &#125;,
+      "700": {
+        "$type": "color",
+        "$value": "#7849ff"
+      &#125;,
+      "800": {
+        "$type": "color",
+        "$value": "#5f33e6"
+      &#125;,
+      "900": {
+        "$type": "color",
+        "$value": "#4315cb"
+      &#125;,
+      "1000": {
+        "$type": "color",
+        "$value": "#321098"
+      &#125;
+    &#125;,
+    "critical": {
+      "100": {
+        "$type": "color",
+        "$value": "#fde7e9"
+      &#125;,
+      "200": {
+        "$type": "color",
+        "$value": "#fac4c9"
+      &#125;,
+      "300": {
+        "$type": "color",
+        "$value": "#f9b4ba"
+      &#125;,
+      "400": {
+        "$type": "color",
+        "$value": "#f79ca4"
+      &#125;,
+      "500": {
+        "$type": "color",
+        "$value": "#f57f89"
+      &#125;,
+      "600": {
+        "$type": "color",
+        "$value": "#f14755"
+      &#125;,
+      "700": {
+        "$type": "color",
+        "$value": "#d80e25"
+      &#125;,
+      "800": {
+        "$type": "color",
+        "$value": "#c50c22"
+      &#125;,
+      "900": {
+        "$type": "color",
+        "$value": "#8d0411"
+      &#125;,
+      "1000": {
+        "$type": "color",
+        "$value": "#6d030d"
+      &#125;
+    &#125;,
+    "decorative": {
+      "1": {
+        "$type": "color",
+        "$value": "#ead6d4"
+      &#125;,
+      "2": {
+        "$type": "color",
+        "$value": "#ffe0d6"
+      &#125;,
+      "3": {
+        "$type": "color",
+        "$value": "#ffd0ea"
+      &#125;,
+      "4": {
+        "$type": "color",
+        "$value": "#d9e1fd"
+      &#125;,
+      "5": {
+        "$type": "color",
+        "$value": "#c9f8f8"
+      &#125;
+    &#125;,
+    "focus": {
+      "Inverse": {
+        "$type": "color",
+        "$value": "#3798f2"
+      &#125;,
+      "primary": {
+        "$type": "color",
+        "$value": "#0548cf"
+      &#125;
+    &#125;,
+    "informative": {
+      "100": {
+        "$type": "color",
+        "$value": "#e6f0fe"
+      &#125;,
+      "200": {
+        "$type": "color",
+        "$value": "#c7dafd"
+      &#125;,
+      "300": {
+        "$type": "color",
+        "$value": "#b5cefc"
+      &#125;,
+      "400": {
+        "$type": "color",
+        "$value": "#a2c1fb"
+      &#125;,
+      "500": {
+        "$type": "color",
+        "$value": "#8fb4fa"
+      &#125;,
+      "600": {
+        "$type": "color",
+        "$value": "#5484f8"
+      &#125;,
+      "700": {
+        "$type": "color",
+        "$value": "#306af7"
+      &#125;,
+      "800": {
+        "$type": "color",
+        "$value": "#2256d6"
+      &#125;,
+      "900": {
+        "$type": "color",
+        "$value": "#0351c0"
+      &#125;,
+      "1000": {
+        "$type": "color",
+        "$value": "#023d91"
+      &#125;
+    &#125;,
+    "neutral": {
+      "100": {
+        "$type": "color",
+        "$value": "#ffffff"
+      &#125;,
+      "200": {
+        "$type": "color",
+        "$value": "#f8fafc"
+      &#125;,
+      "300": {
+        "$type": "color",
+        "$value": "#f1f5f8"
+      &#125;,
+      "400": {
+        "$type": "color",
+        "$value": "#e4e7ec"
+      &#125;,
+      "500": {
+        "$type": "color",
+        "$value": "#c3cad5"
+      &#125;,
+      "600": {
+        "$type": "color",
+        "$value": "#8b95a9"
+      &#125;,
+      "700": {
+        "$type": "color",
+        "$value": "#646f87"
+      &#125;,
+      "800": {
+        "$type": "color",
+        "$value": "#475467"
+      &#125;,
+      "900": {
+        "$type": "color",
+        "$value": "#344054"
+      &#125;,
+      "1000": {
+        "$type": "color",
+        "$value": "#18191b"
+      &#125;,
+      "A0": {
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0.0000)"
+      &#125;,
+      "A15": {
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0.1500)"
+      &#125;,
+      "A35": {
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0.3500)"
+      &#125;,
+      "A60": {
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0.6000)"
+      &#125;,
+      "A80": {
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0.8000)"
+      &#125;
+    &#125;,
+    "success": {
+      "100": {
+        "$type": "color",
+        "$value": "#dff5e7"
+      &#125;,
+      "200": {
+        "$type": "color",
+        "$value": "#b1e2c4"
+      &#125;,
+      "300": {
+        "$type": "color",
+        "$value": "#9bdab3"
+      &#125;,
+      "400": {
+        "$type": "color",
+        "$value": "#7dcf9d"
+      &#125;,
+      "500": {
+        "$type": "color",
+        "$value": "#54bf7e"
+      &#125;,
+      "600": {
+        "$type": "color",
+        "$value": "#41ae6c"
+      &#125;,
+      "700": {
+        "$type": "color",
+        "$value": "#028838"
+      &#125;,
+      "800": {
+        "$type": "color",
+        "$value": "#00702d"
+      &#125;,
+      "900": {
+        "$type": "color",
+        "$value": "#014b1f"
+      &#125;,
+      "1000": {
+        "$type": "color",
+        "$value": "#012811"
+      &#125;
+    &#125;,
+    "warning": {
+      "100": {
+        "$type": "color",
+        "$value": "#fff8e6"
+      &#125;,
+      "200": {
+        "$type": "color",
+        "$value": "#fff0ca"
+      &#125;,
+      "300": {
+        "$type": "color",
+        "$value": "#ffe9b2"
+      &#125;,
+      "400": {
+        "$type": "color",
+        "$value": "#ffe299"
+      &#125;,
+      "500": {
+        "$type": "color",
+        "$value": "#ffd875"
+      &#125;,
+      "600": {
+        "$type": "color",
+        "$value": "#fdc535"
+      &#125;,
+      "700": {
+        "$type": "color",
+        "$value": "#fdb702"
+      &#125;,
+      "800": {
+        "$type": "color",
+        "$value": "#e6a702"
+      &#125;,
+      "900": {
+        "$type": "color",
+        "$value": "#b88501"
+      &#125;,
+      "1000": {
+        "$type": "color",
+        "$value": "#986e01"
+      &#125;
+    &#125;
+  &#125;
+&#125;
+```
+---

@@ -34,7 +34,9 @@ description: [Brief description of the component's purpose]
 
 ### Removed Sections
 - **Related components** - Remove this section entirely from all pages
+- **Use cases** - Remove empty "Use cases" headings with no content
 - **Tabs** - Do not use tabs, single iframe embed is sufficient
+- **Empty headings** - Remove any headings that have no content beneath them
 - Redundant headings that duplicate the page title
 
 ## Heading Hierarchy
@@ -54,9 +56,9 @@ description: [Brief description of the component's purpose]
 ```
 
 ### Spacing Rules
-- Remove `&nbsp;` elements before headings - headings provide sufficient spacing
-- Keep `&nbsp;` elements after images for visual separation
-- No extra spacing between sections
+- **Remove `&nbsp;` elements before headings** - headings provide sufficient spacing automatically
+- **Keep `&nbsp;` elements after images** for visual separation from following content
+- **No extra spacing between sections** - maintain clean, consistent layout
 
 ## Interactive Elements
 
@@ -72,6 +74,8 @@ description: [Brief description of the component's purpose]
   title="[Component] Interactive Example"
 ></iframe>
 ```
+
+**Important:** When you encounter Storybook text links (especially old Chromatic URLs), convert them to iframe embeds using this format. Replace `[component-id]` with the actual component path (e.g., `action-components-button` for button component).
 
 ### LinkCards Section
 ```markdown
@@ -170,15 +174,26 @@ description: [Brief description of the component's purpose]
 
 ### Usage
 ```markdown
+<Aside type="note">
+  Content here for general information or notes.
+</Aside>
+
 <Aside type="tip">
   Content here for helpful tips or exceptions to rules.
 </Aside>
 ```
 
+### Formatting Rules
+- **Blockquotes (`>`)** and **tips** should be converted to `<Aside>` components
+- **Default type:** Use `type="note"` by default unless content specifically calls for another type
+- **Available types:** `note`, `tip`, `caution`, `danger`
+- **Storybook links:** Replace old Chromatic URLs and convert to iframe format using `https://penny.melio.com/iframe.html?id=` instead of text links
+
 ### When to Use
 - For helpful tips that support main content
 - For important exceptions to stated rules
 - For accessibility notes or considerations
+- To replace markdown blockquotes for better visual consistency
 
 ## Quality Checklist
 
