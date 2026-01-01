@@ -194,3 +194,18 @@
   width: 100%;
   table-layout: auto;
 }
+
+/* Image container with light gray background and centered content */
+.image-container {
+  background-color: var(--sl-color-gray-7);
+  padding: 16px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  height: 500px;
+}
