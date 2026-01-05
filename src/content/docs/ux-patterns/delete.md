@@ -3,17 +3,13 @@ title: Delete
 description: Users can delete existing resources with confirmation steps to prevent accidental data loss.
 ---
 
-## Delete
-
-[Web URL](https://zeroheight.com/98bb1df01/v/latest/p/97d3e6-delete)
-
 Users can delete existing resources.
 
 **Preventing accidental deletions:** To prevent unintended data loss, all destructive actions (e.g., "Delete vendor," "Delete bill") must include another confirmation step.
 
-**Confirmation friction:** This confirmation step uses a **[Modal](https://zeroheight.com/98bb1df01/p/216a44)**, is to add friction, ensuring the user verifies their intent before an irreversible action is processed.
+**Confirmation friction:** This confirmation step uses a **[Modal](/components/containers/modal)**, is to add friction, ensuring the user verifies their intent before an irreversible action is processed.
 
-![Delete confirmation modal example](/Penny-documentation/ux-patterns/delete/delete-confirmation-modal.png)
+![Delete flow](/Penny-documentation/ux-patterns/delete/delete-flow.png)
 
 ## How to best implement
 
@@ -29,4 +25,4 @@ Position deletion triggers within the drawer's footer menu. Always trigger a con
 
 ![Delete resource from details drawer](/Penny-documentation/ux-patterns/delete/delete-resource-drawer-interaction.gif)
 
-## Related patterns
+![Delete confirmation modal example](/Penny-documentation/ux-patterns/delete/delete-confirmation-modal.png)
