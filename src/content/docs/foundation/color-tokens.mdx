@@ -3,1320 +3,1235 @@ title: Color tokens
 description: Our design system uses a structured approach to color tokens to support consistency, scalability, and white-label theming. Our token system is divided into three levels - Global, Semantic, and Component-Based.
 ---
 
-Our design system uses a structured approach to color tokens to support consistency, scalability, and white-label theming. Our token system is divided into three levels: **Global, Semantic, and Component-Based**. 
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+import ColorTokenRow from "../../../components/ColorTokenRow.astro";
 
+Our design system uses a structured approach to color tokens to support consistency, scalability, and white-label theming. Our token system is divided into three levels: **Global, Semantic, and Component-Based**.
 
-## Semantic tokens
-Semantic tokens map global tokens to a functional meaning, defining usage intent rather than specific colors. These tokens help unify visual language across the system while allowing controlled customization.
-
-| Token | Value | Description |
-| --- | --- | --- |
-| Colors.Action.critical-primary | &#123;Colors.critical.700&#125; |   |
-| Colors.Action.critical-primary-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Action.critical-primary-hover | &#123;Colors.critical.800&#125; |   |
-| Colors.Action.critical-primary-pressed | &#123;Colors.critical.900&#125; |   |
-| Colors.Action.critical-secondary | &#123;Colors.neutral.A0&#125; |   |
-| Colors.Action.critical-secondary-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Action.critical-secondary-hover | &#123;Colors.critical.100&#125; |   |
-| Colors.Action.critical-secondary-pressed | &#123;Colors.critical.200&#125; |   |
-| Colors.Action.inverse-primary | &#123;Colors.neutral.100&#125; |   |
-| Colors.Action.inverse-primary-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Action.inverse-primary-hover | &#123;Colors.neutral.A80&#125; |   |
-| Colors.Action.inverse-primary-pressed | &#123;Colors.neutral.A60&#125; |   |
-| Colors.Action.inverse-secondary | &#123;Colors.neutral.A0&#125; |   |
-| Colors.Action.inverse-secondary-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Action.inverse-secondary-hover | &#123;Colors.neutral.A15&#125; |   |
-| Colors.Action.inverse-secondary-pressed | &#123;Colors.neutral.A35&#125; |   |
-| Colors.Action.inverse-tertiary | &#123;Colors.neutral.A0&#125; |   |
-| Colors.Action.inverse-tertiary-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Action.inverse-tertiary-hover | &#123;Colors.neutral.A15&#125; |   |
-| Colors.Action.inverse-tertiary-pressed | &#123;Colors.neutral.A35&#125; |   |
-| Colors.Action.primary | &#123;Colors.brand.700&#125; |   |
-| Colors.Action.primary-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Action.primary-hover | &#123;Colors.brand.800&#125; |   |
-| Colors.Action.primary-pressed | &#123;Colors.brand.900&#125; |   |
-| Colors.Action.secondary | &#123;Colors.neutral.A0&#125; |   |
-| Colors.Action.secondary-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Action.secondary-hover | &#123;Colors.brand.100&#125; |   |
-| Colors.Action.secondary-pressed | &#123;Colors.brand.200&#125; |   |
-| Colors.Action.success | &#123;Colors.success.700&#125; |   |
-| Colors.Action.success-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Action.success-hover | &#123;Colors.success.800&#125; |   |
-| Colors.Action.success-pressed | &#123;Colors.success.900&#125; |   |
-| Colors.Action.tertiary | &#123;Colors.neutral.A0&#125; |   |
-| Colors.Action.tertiary-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Action.tertiary-hover | &#123;Colors.neutral.300&#125; |   |
-| Colors.Action.tertiary-pressed | &#123;Colors.neutral.400&#125; |   |
-| Colors.Background.background-brand-primary | &#123;Colors.brand.700&#125; |   |
-| Colors.Background.background-brand-secondary | &#123;Colors.brand.100&#125; |   |
-| Colors.Background.background-secondary | &#123;Colors.neutral.200&#125; |   |
-| Colors.Background.primary | &#123;Colors.neutral.100&#125; |   |
-| Colors.Border.Inverse | &#123;Colors.neutral.100&#125; |   |
-| Colors.Border.brand | &#123;Colors.brand.700&#125; |   |
-| Colors.Border.critical | &#123;Colors.critical.700&#125; |   |
-| Colors.Border.info | &#123;Colors.informative.700&#125; |   |
-| Colors.Border.interactive-disabled | &#123;Colors.neutral.400&#125; |   |
-| Colors.Border.interactive-hover | &#123;Colors.neutral.1000&#125; |   |
-| Colors.Border.interactive-rest | &#123;Colors.neutral.600&#125; |   |
-| Colors.Border.interactive-selected | &#123;Colors.brand.700&#125; |   |
-| Colors.Border.neutral | &#123;Colors.neutral.1000&#125; |   |
-| Colors.Border.static | &#123;Colors.neutral.400&#125; |   |
-| Colors.Border.success | &#123;Colors.success.700&#125; |   |
-| Colors.Border.warning | &#123;Colors.warning.700&#125; |   |
-| Colors.Fill.brand-primary | &#123;Colors.brand.700&#125; |   |
-| Colors.Fill.brand-secondary | &#123;Colors.brand.100&#125; |   |
-| Colors.Fill.critical-primary | &#123;Colors.critical.700&#125; |   |
-| Colors.Fill.critical-secondary | &#123;Colors.critical.100&#125; |   |
-| Colors.Fill.decorative-1 | &#123;Colors.decorative.1&#125; |   |
-| Colors.Fill.decorative-2 | &#123;Colors.decorative.2&#125; |   |
-| Colors.Fill.decorative-3 | &#123;Colors.decorative.3&#125; |   |
-| Colors.Fill.decorative-4 | &#123;Colors.decorative.4&#125; |   |
-| Colors.Fill.decorative-5 | &#123;Colors.decorative.5&#125; |   |
-| Colors.Fill.disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Fill.info-primary | &#123;Colors.informative.700&#125; |   |
-| Colors.Fill.info-secondary | &#123;Colors.informative.100&#125; |   |
-| Colors.Fill.inverse | &#123;Colors.neutral.1000&#125; |   |
-| Colors.Fill.primary | &#123;Colors.neutral.100&#125; |   |
-| Colors.Fill.read-only | &#123;Colors.neutral.700&#125; |   |
-| Colors.Fill.secondary | &#123;Colors.neutral.300&#125; |   |
-| Colors.Fill.success-primary | &#123;Colors.success.700&#125; |   |
-| Colors.Fill.success-secondary | &#123;Colors.success.100&#125; |   |
-| Colors.Fill.tertiary | &#123;Colors.neutral.400&#125; |   |
-| Colors.Fill.warning-primary | &#123;Colors.warning.700&#125; |   |
-| Colors.Fill.warning-secondary | &#123;Colors.warning.100&#125; |   |
-| Colors.Focus.inverse | &#123;Colors.focus.Inverse&#125; |   |
-| Colors.Focus.primary | &#123;Colors.focus.primary&#125; |   |
-| Colors.Icon.brand | &#123;Colors.brand.700&#125; |   |
-| Colors.Icon.critical | &#123;Colors.critical.700&#125; |   |
-| Colors.Icon.disabled | &#123;Colors.neutral.500&#125; |   |
-| Colors.Icon.info | &#123;Colors.informative.700&#125; |   |
-| Colors.Icon.inverse | &#123;Colors.neutral.100&#125; |   |
-| Colors.Icon.inverse-disabled | &#123;Colors.neutral.A35&#125; |   |
-| Colors.Icon.primary | &#123;Colors.neutral.1000&#125; |   |
-| Colors.Icon.read-only | &#123;Colors.neutral.700&#125; |   |
-| Colors.Icon.success | &#123;Colors.success.700&#125; |   |
-| Colors.Icon.warning | &#123;Colors.warning.700&#125; |   |
-| Colors.Illustration.background | &#123;Colors.neutral.100&#125; |   |
-| Colors.Illustration.border | &#123;Colors.neutral.1000&#125; |   |
-| Colors.Illustration.brand-primary | &#123;Colors.brand.700&#125; |   |
-| Colors.Illustration.brand-secondary | &#123;Colors.brand.100&#125; |   |
-| Colors.Illustration.critical | &#123;Colors.critical.700&#125; |   |
-| Colors.Illustration.success | &#123;Colors.success.700&#125; |   |
-| Colors.Link.inverse | &#123;Colors.neutral.100&#125; |   |
-| Colors.Link.inverse-disabled | &#123;Colors.neutral.A35&#125; |   |
-| Colors.Link.inverse-hover | &#123;Colors.neutral.A80&#125; |   |
-| Colors.Link.inverse-pressed | &#123;Colors.neutral.A60&#125; |   |
-| Colors.Link.primary | &#123;Colors.neutral.1000&#125; |   |
-| Colors.Link.primary-disabled | &#123;Colors.neutral.500&#125; |   |
-| Colors.Link.primary-hover | &#123;Colors.neutral.1000&#125; |   |
-| Colors.Link.primary-pressed | &#123;Colors.neutral.700&#125; |   |
-| Colors.Link.secondary | &#123;Colors.brand.700&#125; |   |
-| Colors.Link.secondary-disabled | &#123;Colors.neutral.500&#125; |   |
-| Colors.Link.secondary-hover | &#123;Colors.brand.800&#125; |   |
-| Colors.Link.secondary-pressed | &#123;Colors.brand.900&#125; |   |
-| Colors.Surface.inverse | &#123;Colors.neutral.1000&#125; |   |
-| Colors.Surface.primary | &#123;Colors.neutral.100&#125; |   |
-| Colors.Surface.primary-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Surface.primary-hover | &#123;Colors.neutral.300&#125; |   |
-| Colors.Surface.primary-pressed | &#123;Colors.neutral.400&#125; |   |
-| Colors.Surface.primary-selected | &#123;Colors.brand.100&#125; |   |
-| Colors.Surface.secondary | &#123;Colors.neutral.200&#125; |   |
-| Colors.Surface.secondary-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Surface.secondary-hover | &#123;Colors.neutral.400&#125; |   |
-| Colors.Surface.secondary-pressed | &#123;Colors.neutral.500&#125; |   |
-| Colors.Surface.secondary-selected | &#123;Colors.brand.100&#125; |   |
-| Colors.Surface.tertiary | &#123;Colors.neutral.400&#125; |   |
-| Colors.Surface.tertiary-disabled | &#123;Colors.neutral.300&#125; |   |
-| Colors.Surface.tertiary-hover | &#123;Colors.neutral.500&#125; |   |
-| Colors.Surface.tertiary-pressed | &#123;Colors.neutral.600&#125; |   |
-| Colors.Surface.tertiary-selected | &#123;Colors.neutral.100&#125; |   |
-| Colors.Text.brand | &#123;Colors.brand.700&#125; |   |
-| Colors.Text.brand-hover | &#123;Colors.brand.800&#125; |   |
-| Colors.Text.brand-on-color | &#123;Colors.brand.900&#125; |   |
-| Colors.Text.brand-pressed | &#123;Colors.brand.900&#125; |   |
-| Colors.Text.critical | &#123;Colors.critical.700&#125; |   |
-| Colors.Text.critical-hover | &#123;Colors.critical.800&#125; |   |
-| Colors.Text.critical-on-color | &#123;Colors.critical.900&#125; |   |
-| Colors.Text.critical-pressed | &#123;Colors.critical.900&#125; |   |
-| Colors.Text.disabled | &#123;Colors.neutral.500&#125; |   |
-| Colors.Text.info | &#123;Colors.informative.700&#125; |   |
-| Colors.Text.info-hover | &#123;Colors.informative.800&#125; |   |
-| Colors.Text.info-on-color | &#123;Colors.informative.900&#125; |   |
-| Colors.Text.info-pressed | &#123;Colors.informative.900&#125; |   |
-| Colors.Text.inverse | &#123;Colors.neutral.100&#125; |   |
-| Colors.Text.primary | &#123;Colors.neutral.1000&#125; | Neutral 1000 |
-| Colors.Text.secondary | &#123;Colors.neutral.700&#125; |   |
-| Colors.Text.succese-hover | &#123;Colors.success.800&#125; |   |
-| Colors.Text.succese-pressed | &#123;Colors.success.900&#125; |   |
-| Colors.Text.success | &#123;Colors.success.700&#125; |   |
-| Colors.Text.success-on-color | &#123;Colors.success.900&#125; |   |
-
-```json
-{
-  "Colors": {
-    "Action": {
-      "critical-primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.700&#125;"
-      &#125;,
-      "critical-primary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "critical-primary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.800&#125;"
-      &#125;,
-      "critical-primary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.900&#125;"
-      &#125;,
-      "critical-secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A0&#125;"
-      &#125;,
-      "critical-secondary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "critical-secondary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.100&#125;"
-      &#125;,
-      "critical-secondary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.200&#125;"
-      &#125;,
-      "inverse-primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.100&#125;"
-      &#125;,
-      "inverse-primary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "inverse-primary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A80&#125;"
-      &#125;,
-      "inverse-primary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A60&#125;"
-      &#125;,
-      "inverse-secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A0&#125;"
-      &#125;,
-      "inverse-secondary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "inverse-secondary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A15&#125;"
-      &#125;,
-      "inverse-secondary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A35&#125;"
-      &#125;,
-      "inverse-tertiary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A0&#125;"
-      &#125;,
-      "inverse-tertiary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "inverse-tertiary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A15&#125;"
-      &#125;,
-      "inverse-tertiary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A35&#125;"
-      &#125;,
-      "primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.700&#125;"
-      &#125;,
-      "primary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "primary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.800&#125;"
-      &#125;,
-      "primary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.900&#125;"
-      &#125;,
-      "secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A0&#125;"
-      &#125;,
-      "secondary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "secondary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.100&#125;"
-      &#125;,
-      "secondary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.200&#125;"
-      &#125;,
-      "success": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.700&#125;"
-      &#125;,
-      "success-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "success-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.800&#125;"
-      &#125;,
-      "success-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.900&#125;"
-      &#125;,
-      "tertiary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A0&#125;"
-      &#125;,
-      "tertiary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "tertiary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "tertiary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.400&#125;"
-      &#125;
-    &#125;,
-    "Background": {
-      "background-brand-primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.700&#125;"
-      &#125;,
-      "background-brand-secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.100&#125;"
-      &#125;,
-      "background-secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.200&#125;"
-      &#125;,
-      "primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.100&#125;"
-      &#125;
-    &#125;,
-    "Border": {
-      "Inverse": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.100&#125;"
-      &#125;,
-      "brand": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.700&#125;"
-      &#125;,
-      "critical": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.700&#125;"
-      &#125;,
-      "info": {
-        "$type": "color",
-        "$value": "&#123;Colors.informative.700&#125;"
-      &#125;,
-      "interactive-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.400&#125;"
-      &#125;,
-      "interactive-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.1000&#125;"
-      &#125;,
-      "interactive-rest": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.600&#125;"
-      &#125;,
-      "interactive-selected": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.700&#125;"
-      &#125;,
-      "neutral": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.1000&#125;"
-      &#125;,
-      "static": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.400&#125;"
-      &#125;,
-      "success": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.700&#125;"
-      &#125;,
-      "warning": {
-        "$type": "color",
-        "$value": "&#123;Colors.warning.700&#125;"
-      &#125;
-    &#125;,
-    "Fill": {
-      "brand-primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.700&#125;"
-      &#125;,
-      "brand-secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.100&#125;"
-      &#125;,
-      "critical-primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.700&#125;"
-      &#125;,
-      "critical-secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.100&#125;"
-      &#125;,
-      "decorative-1": {
-        "$type": "color",
-        "$value": "&#123;Colors.decorative.1&#125;"
-      &#125;,
-      "decorative-2": {
-        "$type": "color",
-        "$value": "&#123;Colors.decorative.2&#125;"
-      &#125;,
-      "decorative-3": {
-        "$type": "color",
-        "$value": "&#123;Colors.decorative.3&#125;"
-      &#125;,
-      "decorative-4": {
-        "$type": "color",
-        "$value": "&#123;Colors.decorative.4&#125;"
-      &#125;,
-      "decorative-5": {
-        "$type": "color",
-        "$value": "&#123;Colors.decorative.5&#125;"
-      &#125;,
-      "disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "info-primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.informative.700&#125;"
-      &#125;,
-      "info-secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.informative.100&#125;"
-      &#125;,
-      "inverse": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.1000&#125;"
-      &#125;,
-      "primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.100&#125;"
-      &#125;,
-      "read-only": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.700&#125;"
-      &#125;,
-      "secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "success-primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.700&#125;"
-      &#125;,
-      "success-secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.100&#125;"
-      &#125;,
-      "tertiary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.400&#125;"
-      &#125;,
-      "warning-primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.warning.700&#125;"
-      &#125;,
-      "warning-secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.warning.100&#125;"
-      &#125;
-    &#125;,
-    "Focus": {
-      "inverse": {
-        "$type": "color",
-        "$value": "&#123;Colors.focus.Inverse&#125;"
-      &#125;,
-      "primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.focus.primary&#125;"
-      &#125;
-    &#125;,
-    "Icon": {
-      "brand": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.700&#125;"
-      &#125;,
-      "critical": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.700&#125;"
-      &#125;,
-      "disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.500&#125;"
-      &#125;,
-      "info": {
-        "$type": "color",
-        "$value": "&#123;Colors.informative.700&#125;"
-      &#125;,
-      "inverse": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.100&#125;"
-      &#125;,
-      "inverse-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A35&#125;"
-      &#125;,
-      "primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.1000&#125;"
-      &#125;,
-      "read-only": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.700&#125;"
-      &#125;,
-      "success": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.700&#125;"
-      &#125;,
-      "warning": {
-        "$type": "color",
-        "$value": "&#123;Colors.warning.700&#125;"
-      &#125;
-    &#125;,
-    "Illustration": {
-      "background": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.100&#125;"
-      &#125;,
-      "border": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.1000&#125;"
-      &#125;,
-      "brand-primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.700&#125;"
-      &#125;,
-      "brand-secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.100&#125;"
-      &#125;,
-      "critical": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.700&#125;"
-      &#125;,
-      "success": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.700&#125;"
-      &#125;
-    &#125;,
-    "Link": {
-      "inverse": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.100&#125;"
-      &#125;,
-      "inverse-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A35&#125;"
-      &#125;,
-      "inverse-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A80&#125;"
-      &#125;,
-      "inverse-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.A60&#125;"
-      &#125;,
-      "primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.1000&#125;"
-      &#125;,
-      "primary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.500&#125;"
-      &#125;,
-      "primary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.1000&#125;"
-      &#125;,
-      "primary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.700&#125;"
-      &#125;,
-      "secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.700&#125;"
-      &#125;,
-      "secondary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.500&#125;"
-      &#125;,
-      "secondary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.800&#125;"
-      &#125;,
-      "secondary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.900&#125;"
-      &#125;
-    &#125;,
-    "Surface": {
-      "inverse": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.1000&#125;"
-      &#125;,
-      "primary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.100&#125;"
-      &#125;,
-      "primary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "primary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "primary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.400&#125;"
-      &#125;,
-      "primary-selected": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.100&#125;"
-      &#125;,
-      "secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.200&#125;"
-      &#125;,
-      "secondary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "secondary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.400&#125;"
-      &#125;,
-      "secondary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.500&#125;"
-      &#125;,
-      "secondary-selected": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.100&#125;"
-      &#125;,
-      "tertiary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.400&#125;"
-      &#125;,
-      "tertiary-disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.300&#125;"
-      &#125;,
-      "tertiary-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.500&#125;"
-      &#125;,
-      "tertiary-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.600&#125;"
-      &#125;,
-      "tertiary-selected": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.100&#125;"
-      &#125;
-    &#125;,
-    "Text": {
-      "brand": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.700&#125;"
-      &#125;,
-      "brand-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.800&#125;"
-      &#125;,
-      "brand-on-color": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.900&#125;"
-      &#125;,
-      "brand-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.brand.900&#125;"
-      &#125;,
-      "critical": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.700&#125;"
-      &#125;,
-      "critical-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.800&#125;"
-      &#125;,
-      "critical-on-color": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.900&#125;"
-      &#125;,
-      "critical-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.critical.900&#125;"
-      &#125;,
-      "disabled": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.500&#125;"
-      &#125;,
-      "info": {
-        "$type": "color",
-        "$value": "&#123;Colors.informative.700&#125;"
-      &#125;,
-      "info-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.informative.800&#125;"
-      &#125;,
-      "info-on-color": {
-        "$type": "color",
-        "$value": "&#123;Colors.informative.900&#125;"
-      &#125;,
-      "info-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.informative.900&#125;"
-      &#125;,
-      "inverse": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.100&#125;"
-      &#125;,
-      "primary": {
-        "$description": "Neutral 1000",
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.1000&#125;"
-      &#125;,
-      "secondary": {
-        "$type": "color",
-        "$value": "&#123;Colors.neutral.700&#125;"
-      &#125;,
-      "succese-hover": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.800&#125;"
-      &#125;,
-      "succese-pressed": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.900&#125;"
-      &#125;,
-      "success": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.700&#125;"
-      &#125;,
-      "success-on-color": {
-        "$type": "color",
-        "$value": "&#123;Colors.success.900&#125;"
-      &#125;
-    &#125;
-  &#125;
-&#125;
-```
----
-
-## Component based tokens
-Component-based tokens are the most specific level, defining colors for individual components. These tokens reference semantic tokens to maintain a clear relationship between design and function.
-
-| Token | Value | Description |
-| --- | --- | --- |
-| Pill.default | &#123;Border radius.full&#125; |   |
-| Tabs.default-hover | &#123;Colors.Text.brand-hover&#125; |   |
-| Tabs.default-pressed | &#123;Colors.Text.brand-pressed&#125; |   |
-| Tabs.default-rest | &#123;Colors.Text.secondary&#125; |   |
-| Tabs.default-selected | &#123;Colors.Text.brand&#125; |   |
-| Tabs.neutral-hover | &#123;Colors.Text.primary&#125; |   |
-| Tabs.neutral-pressed | &#123;Colors.Text.primary&#125; |   |
-| Tabs.neutral-rest | &#123;Colors.Text.secondary&#125; |   |
-| Tabs.neutral-selected | &#123;Colors.Text.primary&#125; |   |
-| Text button.critical-disabled | &#123;Colors.Text.disabled&#125; |   |
-| Text button.critical-hover | &#123;Colors.Text.critical-hover&#125; |   |
-| Text button.critical-pressed | &#123;Colors.Text.critical-pressed&#125; |   |
-| Text button.critical-rest | &#123;Colors.Text.critical&#125; |   |
-| Text button.inverse-disabled | &#123;Colors.Link.inverse-disabled&#125; |   |
-| Text button.inverse-hover | &#123;Colors.Link.inverse-hover&#125; |   |
-| Text button.inverse-pressed | &#123;Colors.Link.inverse-pressed&#125; |   |
-| Text button.inverse-rest | &#123;Colors.Link.inverse&#125; |   |
-| Text button.primary-disabled | &#123;Colors.Text.disabled&#125; |   |
-| Text button.primary-hover | &#123;Colors.Text.brand&#125; |   |
-| Text button.primary-pressed | &#123;Colors.Text.brand-hover&#125; |   |
-| Text button.primary-rest | &#123;Colors.Text.primary&#125; |   |
-| Text button.secondary-disabled | &#123;Colors.Text.disabled&#125; |   |
-| Text button.secondary-hover | &#123;Colors.Text.brand-hover&#125; |   |
-| Text button.secondary-pressed | &#123;Colors.Text.brand-pressed&#125; |   |
-| Text button.secondary-rest | &#123;Colors.Text.brand&#125; |   |
-
-```json
-{
-  "Pill": {
-    "default": {
-      "$type": "number",
-      "$value": "&#123;Border radius.full&#125;"
-    &#125;
-  &#125;,
-  "Tabs": {
-    "default-hover": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.brand-hover&#125;"
-    &#125;,
-    "default-pressed": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.brand-pressed&#125;"
-    &#125;,
-    "default-rest": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.secondary&#125;"
-    &#125;,
-    "default-selected": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.brand&#125;"
-    &#125;,
-    "neutral-hover": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.primary&#125;"
-    &#125;,
-    "neutral-pressed": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.primary&#125;"
-    &#125;,
-    "neutral-rest": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.secondary&#125;"
-    &#125;,
-    "neutral-selected": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.primary&#125;"
-    &#125;
-  &#125;,
-  "Text button": {
-    "critical-disabled": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.disabled&#125;"
-    &#125;,
-    "critical-hover": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.critical-hover&#125;"
-    &#125;,
-    "critical-pressed": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.critical-pressed&#125;"
-    &#125;,
-    "critical-rest": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.critical&#125;"
-    &#125;,
-    "inverse-disabled": {
-      "$type": "color",
-      "$value": "&#123;Colors.Link.inverse-disabled&#125;"
-    &#125;,
-    "inverse-hover": {
-      "$type": "color",
-      "$value": "&#123;Colors.Link.inverse-hover&#125;"
-    &#125;,
-    "inverse-pressed": {
-      "$type": "color",
-      "$value": "&#123;Colors.Link.inverse-pressed&#125;"
-    &#125;,
-    "inverse-rest": {
-      "$type": "color",
-      "$value": "&#123;Colors.Link.inverse&#125;"
-    &#125;,
-    "primary-disabled": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.disabled&#125;"
-    &#125;,
-    "primary-hover": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.brand&#125;"
-    &#125;,
-    "primary-pressed": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.brand-hover&#125;"
-    &#125;,
-    "primary-rest": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.primary&#125;"
-    &#125;,
-    "secondary-disabled": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.disabled&#125;"
-    &#125;,
-    "secondary-hover": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.brand-hover&#125;"
-    &#125;,
-    "secondary-pressed": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.brand-pressed&#125;"
-    &#125;,
-    "secondary-rest": {
-      "$type": "color",
-      "$value": "&#123;Colors.Text.brand&#125;"
-    &#125;
-  &#125;
-&#125;
-```
----
+<Tabs>
+  
+  <TabItem label="Global tokens">
 
 ## Global tokens
-Global tokens are the foundational values of our color system. These are raw color values that are not tied to a specific meaning or usage. They serve as the core palette from which all other tokens derive.
 
-| Token | Value | Description |
-| --- | --- | --- |
-| Colors.brand.100 | #f6f2fd |   |
-| Colors.brand.200 | #e4dbff |   |
-| Colors.brand.300 | #d9ccff |   |
-| Colors.brand.400 | #c8b5fe |   |
-| Colors.brand.500 | #b79eff |   |
-| Colors.brand.600 | #9470ff |   |
-| Colors.brand.700 | #7849ff |   |
-| Colors.brand.800 | #5f33e6 |   |
-| Colors.brand.900 | #4315cb |   |
-| Colors.brand.1000 | #321098 |   |
-| Colors.brand-secondary.100 | #f3f0ff |   |
-| Colors.brand-secondary.200 | #e4dbff |   |
-| Colors.brand-secondary.300 | #d9ccff |   |
-| Colors.brand-secondary.400 | #c9b6ff |   |
-| Colors.brand-secondary.500 | #b79eff |   |
-| Colors.brand-secondary.600 | #9470ff |   |
-| Colors.brand-secondary.700 | #7849ff |   |
-| Colors.brand-secondary.800 | #5f33e6 |   |
-| Colors.brand-secondary.900 | #4315cb |   |
-| Colors.brand-secondary.1000 | #321098 |   |
-| Colors.critical.100 | #fde7e9 |   |
-| Colors.critical.200 | #fac4c9 |   |
-| Colors.critical.300 | #f9b4ba |   |
-| Colors.critical.400 | #f79ca4 |   |
-| Colors.critical.500 | #f57f89 |   |
-| Colors.critical.600 | #f14755 |   |
-| Colors.critical.700 | #d80e25 |   |
-| Colors.critical.800 | #c50c22 |   |
-| Colors.critical.900 | #8d0411 |   |
-| Colors.critical.1000 | #6d030d |   |
-| Colors.decorative.1 | #ead6d4 |   |
-| Colors.decorative.2 | #ffe0d6 |   |
-| Colors.decorative.3 | #ffd0ea |   |
-| Colors.decorative.4 | #d9e1fd |   |
-| Colors.decorative.5 | #c9f8f8 |   |
-| Colors.focus.Inverse | #3798f2 |   |
-| Colors.focus.primary | #0548cf |   |
-| Colors.informative.100 | #e6f0fe |   |
-| Colors.informative.200 | #c7dafd |   |
-| Colors.informative.300 | #b5cefc |   |
-| Colors.informative.400 | #a2c1fb |   |
-| Colors.informative.500 | #8fb4fa |   |
-| Colors.informative.600 | #5484f8 |   |
-| Colors.informative.700 | #306af7 |   |
-| Colors.informative.800 | #2256d6 |   |
-| Colors.informative.900 | #0351c0 |   |
-| Colors.informative.1000 | #023d91 |   |
-| Colors.neutral.100 | #ffffff |   |
-| Colors.neutral.200 | #f8fafc |   |
-| Colors.neutral.300 | #f1f5f8 |   |
-| Colors.neutral.400 | #e4e7ec |   |
-| Colors.neutral.500 | #c3cad5 |   |
-| Colors.neutral.600 | #8b95a9 |   |
-| Colors.neutral.700 | #646f87 |   |
-| Colors.neutral.800 | #475467 |   |
-| Colors.neutral.900 | #344054 |   |
-| Colors.neutral.1000 | #18191b |   |
-| Colors.neutral.A0 | rgba(255, 255, 255, 0.0000) |   |
-| Colors.neutral.A15 | rgba(255, 255, 255, 0.1500) |   |
-| Colors.neutral.A35 | rgba(255, 255, 255, 0.3500) |   |
-| Colors.neutral.A60 | rgba(255, 255, 255, 0.6000) |   |
-| Colors.neutral.A80 | rgba(255, 255, 255, 0.8000) |   |
-| Colors.success.100 | #dff5e7 |   |
-| Colors.success.200 | #b1e2c4 |   |
-| Colors.success.300 | #9bdab3 |   |
-| Colors.success.400 | #7dcf9d |   |
-| Colors.success.500 | #54bf7e |   |
-| Colors.success.600 | #41ae6c |   |
-| Colors.success.700 | #028838 |   |
-| Colors.success.800 | #00702d |   |
-| Colors.success.900 | #014b1f |   |
-| Colors.success.1000 | #012811 |   |
-| Colors.warning.100 | #fff8e6 |   |
-| Colors.warning.200 | #fff0ca |   |
-| Colors.warning.300 | #ffe9b2 |   |
-| Colors.warning.400 | #ffe299 |   |
-| Colors.warning.500 | #ffd875 |   |
-| Colors.warning.600 | #fdc535 |   |
-| Colors.warning.700 | #fdb702 |   |
-| Colors.warning.800 | #e6a702 |   |
-| Colors.warning.900 | #b88501 |   |
-| Colors.warning.1000 | #986e01 |   |
+Global tokens with visual color swatches for better recognition.
 
-```json
-{
-  "Colors": {
-    "brand": {
-      "100": {
-        "$type": "color",
-        "$value": "#f6f2fd"
-      &#125;,
-      "200": {
-        "$type": "color",
-        "$value": "#e4dbff"
-      &#125;,
-      "300": {
-        "$type": "color",
-        "$value": "#d9ccff"
-      &#125;,
-      "400": {
-        "$type": "color",
-        "$value": "#c8b5fe"
-      &#125;,
-      "500": {
-        "$type": "color",
-        "$value": "#b79eff"
-      &#125;,
-      "600": {
-        "$type": "color",
-        "$value": "#9470ff"
-      &#125;,
-      "700": {
-        "$type": "color",
-        "$value": "#7849ff"
-      &#125;,
-      "800": {
-        "$type": "color",
-        "$value": "#5f33e6"
-      &#125;,
-      "900": {
-        "$type": "color",
-        "$value": "#4315cb"
-      &#125;,
-      "1000": {
-        "$type": "color",
-        "$value": "#321098"
-      &#125;
-    &#125;,
-    "brand-secondary": {
-      "100": {
-        "$type": "color",
-        "$value": "#f3f0ff"
-      &#125;,
-      "200": {
-        "$type": "color",
-        "$value": "#e4dbff"
-      &#125;,
-      "300": {
-        "$type": "color",
-        "$value": "#d9ccff"
-      &#125;,
-      "400": {
-        "$type": "color",
-        "$value": "#c9b6ff"
-      &#125;,
-      "500": {
-        "$type": "color",
-        "$value": "#b79eff"
-      &#125;,
-      "600": {
-        "$type": "color",
-        "$value": "#9470ff"
-      &#125;,
-      "700": {
-        "$type": "color",
-        "$value": "#7849ff"
-      &#125;,
-      "800": {
-        "$type": "color",
-        "$value": "#5f33e6"
-      &#125;,
-      "900": {
-        "$type": "color",
-        "$value": "#4315cb"
-      &#125;,
-      "1000": {
-        "$type": "color",
-        "$value": "#321098"
-      &#125;
-    &#125;,
-    "critical": {
-      "100": {
-        "$type": "color",
-        "$value": "#fde7e9"
-      &#125;,
-      "200": {
-        "$type": "color",
-        "$value": "#fac4c9"
-      &#125;,
-      "300": {
-        "$type": "color",
-        "$value": "#f9b4ba"
-      &#125;,
-      "400": {
-        "$type": "color",
-        "$value": "#f79ca4"
-      &#125;,
-      "500": {
-        "$type": "color",
-        "$value": "#f57f89"
-      &#125;,
-      "600": {
-        "$type": "color",
-        "$value": "#f14755"
-      &#125;,
-      "700": {
-        "$type": "color",
-        "$value": "#d80e25"
-      &#125;,
-      "800": {
-        "$type": "color",
-        "$value": "#c50c22"
-      &#125;,
-      "900": {
-        "$type": "color",
-        "$value": "#8d0411"
-      &#125;,
-      "1000": {
-        "$type": "color",
-        "$value": "#6d030d"
-      &#125;
-    &#125;,
-    "decorative": {
-      "1": {
-        "$type": "color",
-        "$value": "#ead6d4"
-      &#125;,
-      "2": {
-        "$type": "color",
-        "$value": "#ffe0d6"
-      &#125;,
-      "3": {
-        "$type": "color",
-        "$value": "#ffd0ea"
-      &#125;,
-      "4": {
-        "$type": "color",
-        "$value": "#d9e1fd"
-      &#125;,
-      "5": {
-        "$type": "color",
-        "$value": "#c9f8f8"
-      &#125;
-    &#125;,
-    "focus": {
-      "Inverse": {
-        "$type": "color",
-        "$value": "#3798f2"
-      &#125;,
-      "primary": {
-        "$type": "color",
-        "$value": "#0548cf"
-      &#125;
-    &#125;,
-    "informative": {
-      "100": {
-        "$type": "color",
-        "$value": "#e6f0fe"
-      &#125;,
-      "200": {
-        "$type": "color",
-        "$value": "#c7dafd"
-      &#125;,
-      "300": {
-        "$type": "color",
-        "$value": "#b5cefc"
-      &#125;,
-      "400": {
-        "$type": "color",
-        "$value": "#a2c1fb"
-      &#125;,
-      "500": {
-        "$type": "color",
-        "$value": "#8fb4fa"
-      &#125;,
-      "600": {
-        "$type": "color",
-        "$value": "#5484f8"
-      &#125;,
-      "700": {
-        "$type": "color",
-        "$value": "#306af7"
-      &#125;,
-      "800": {
-        "$type": "color",
-        "$value": "#2256d6"
-      &#125;,
-      "900": {
-        "$type": "color",
-        "$value": "#0351c0"
-      &#125;,
-      "1000": {
-        "$type": "color",
-        "$value": "#023d91"
-      &#125;
-    &#125;,
-    "neutral": {
-      "100": {
-        "$type": "color",
-        "$value": "#ffffff"
-      &#125;,
-      "200": {
-        "$type": "color",
-        "$value": "#f8fafc"
-      &#125;,
-      "300": {
-        "$type": "color",
-        "$value": "#f1f5f8"
-      &#125;,
-      "400": {
-        "$type": "color",
-        "$value": "#e4e7ec"
-      &#125;,
-      "500": {
-        "$type": "color",
-        "$value": "#c3cad5"
-      &#125;,
-      "600": {
-        "$type": "color",
-        "$value": "#8b95a9"
-      &#125;,
-      "700": {
-        "$type": "color",
-        "$value": "#646f87"
-      &#125;,
-      "800": {
-        "$type": "color",
-        "$value": "#475467"
-      &#125;,
-      "900": {
-        "$type": "color",
-        "$value": "#344054"
-      &#125;,
-      "1000": {
-        "$type": "color",
-        "$value": "#18191b"
-      &#125;,
-      "A0": {
-        "$type": "color",
-        "$value": "rgba(255, 255, 255, 0.0000)"
-      &#125;,
-      "A15": {
-        "$type": "color",
-        "$value": "rgba(255, 255, 255, 0.1500)"
-      &#125;,
-      "A35": {
-        "$type": "color",
-        "$value": "rgba(255, 255, 255, 0.3500)"
-      &#125;,
-      "A60": {
-        "$type": "color",
-        "$value": "rgba(255, 255, 255, 0.6000)"
-      &#125;,
-      "A80": {
-        "$type": "color",
-        "$value": "rgba(255, 255, 255, 0.8000)"
-      &#125;
-    &#125;,
-    "success": {
-      "100": {
-        "$type": "color",
-        "$value": "#dff5e7"
-      &#125;,
-      "200": {
-        "$type": "color",
-        "$value": "#b1e2c4"
-      &#125;,
-      "300": {
-        "$type": "color",
-        "$value": "#9bdab3"
-      &#125;,
-      "400": {
-        "$type": "color",
-        "$value": "#7dcf9d"
-      &#125;,
-      "500": {
-        "$type": "color",
-        "$value": "#54bf7e"
-      &#125;,
-      "600": {
-        "$type": "color",
-        "$value": "#41ae6c"
-      &#125;,
-      "700": {
-        "$type": "color",
-        "$value": "#028838"
-      &#125;,
-      "800": {
-        "$type": "color",
-        "$value": "#00702d"
-      &#125;,
-      "900": {
-        "$type": "color",
-        "$value": "#014b1f"
-      &#125;,
-      "1000": {
-        "$type": "color",
-        "$value": "#012811"
-      &#125;
-    &#125;,
-    "warning": {
-      "100": {
-        "$type": "color",
-        "$value": "#fff8e6"
-      &#125;,
-      "200": {
-        "$type": "color",
-        "$value": "#fff0ca"
-      &#125;,
-      "300": {
-        "$type": "color",
-        "$value": "#ffe9b2"
-      &#125;,
-      "400": {
-        "$type": "color",
-        "$value": "#ffe299"
-      &#125;,
-      "500": {
-        "$type": "color",
-        "$value": "#ffd875"
-      &#125;,
-      "600": {
-        "$type": "color",
-        "$value": "#fdc535"
-      &#125;,
-      "700": {
-        "$type": "color",
-        "$value": "#fdb702"
-      &#125;,
-      "800": {
-        "$type": "color",
-        "$value": "#e6a702"
-      &#125;,
-      "900": {
-        "$type": "color",
-        "$value": "#b88501"
-      &#125;,
-      "1000": {
-        "$type": "color",
-        "$value": "#986e01"
-      &#125;
-    &#125;
-  &#125;
-&#125;
-```
----
+<table class="color-tokens-table">
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Token</th>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ColorTokenRow
+      token="colors.brand.100"
+      value="#f6f2fd"
+      description="Lightest brand color"
+    />
+    <ColorTokenRow token="colors.brand.200" value="#e4dbff" description="" />
+    <ColorTokenRow token="colors.brand.300" value="#d9ccff" description="" />
+    <ColorTokenRow token="colors.brand.400" value="#c8b5fe" description="" />
+    <ColorTokenRow token="colors.brand.500" value="#b79eff" description="" />
+    <ColorTokenRow token="colors.brand.600" value="#9470ff" description="" />
+    <ColorTokenRow
+      token="colors.brand.700"
+      value="#7849ff"
+      description="Primary brand color"
+    />
+    <ColorTokenRow token="colors.brand.800" value="#5f33e6" description="" />
+    <ColorTokenRow token="colors.brand.900" value="#4315cb" description="" />
+    <ColorTokenRow
+      token="colors.brand.1000"
+      value="#321098"
+      description="Darkest brand color"
+    />
+
+    <ColorTokenRow
+      token="colors.brand-secondary.100"
+      value="#f3f0ff"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.brand-secondary.200"
+      value="#e4dbff"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.brand-secondary.300"
+      value="#d9ccff"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.brand-secondary.400"
+      value="#c9b6ff"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.brand-secondary.500"
+      value="#b79eff"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.brand-secondary.600"
+      value="#9470ff"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.brand-secondary.700"
+      value="#7849ff"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.brand-secondary.800"
+      value="#5f33e6"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.brand-secondary.900"
+      value="#4315cb"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.brand-secondary.1000"
+      value="#321098"
+      description=""
+    />
+
+    <ColorTokenRow
+      token="colors.critical.100"
+      value="#fde7e9"
+      description="Lightest critical color"
+    />
+    <ColorTokenRow token="colors.critical.200" value="#fac4c9" description="" />
+    <ColorTokenRow token="colors.critical.300" value="#f9b4ba" description="" />
+    <ColorTokenRow token="colors.critical.400" value="#f79ca4" description="" />
+    <ColorTokenRow token="colors.critical.500" value="#f57f89" description="" />
+    <ColorTokenRow token="colors.critical.600" value="#f14755" description="" />
+    <ColorTokenRow
+      token="colors.critical.700"
+      value="#d80e25"
+      description="Primary critical color"
+    />
+    <ColorTokenRow token="colors.critical.800" value="#c50c22" description="" />
+    <ColorTokenRow token="colors.critical.900" value="#8d0411" description="" />
+    <ColorTokenRow
+      token="colors.critical.1000"
+      value="#6d030d"
+      description="Darkest critical color"
+    />
+
+    <ColorTokenRow token="colors.decorative.1" value="#ead6d4" description="" />
+    <ColorTokenRow token="colors.decorative.2" value="#ffe0d6" description="" />
+    <ColorTokenRow token="colors.decorative.3" value="#ffd0ea" description="" />
+    <ColorTokenRow token="colors.decorative.4" value="#d9e1fd" description="" />
+    <ColorTokenRow token="colors.decorative.5" value="#c9f8f8" description="" />
+
+    <ColorTokenRow
+      token="colors.focus.Inverse"
+      value="#3798f2"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.focus.primary"
+      value="#0548cf"
+      description=""
+    />
+
+    <ColorTokenRow
+      token="colors.informative.100"
+      value="#e6f0fe"
+      description="Lightest informative color"
+    />
+    <ColorTokenRow
+      token="colors.informative.200"
+      value="#c7dafd"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.informative.300"
+      value="#b5cefc"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.informative.400"
+      value="#a2c1fb"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.informative.500"
+      value="#8fb4fa"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.informative.600"
+      value="#5484f8"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.informative.700"
+      value="#306af7"
+      description="Primary informative color"
+    />
+    <ColorTokenRow
+      token="colors.informative.800"
+      value="#2256d6"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.informative.900"
+      value="#0351c0"
+      description=""
+    />
+    <ColorTokenRow
+      token="colors.informative.1000"
+      value="#023d91"
+      description="Darkest informative color"
+    />
+
+    <ColorTokenRow
+      token="colors.neutral.100"
+      value="#ffffff"
+      description="White"
+    />
+    <ColorTokenRow token="colors.neutral.200" value="#f8fafc" description="" />
+    <ColorTokenRow token="colors.neutral.300" value="#f1f5f8" description="" />
+    <ColorTokenRow token="colors.neutral.400" value="#e4e7ec" description="" />
+    <ColorTokenRow token="colors.neutral.500" value="#c3cad5" description="" />
+    <ColorTokenRow token="colors.neutral.600" value="#8b95a9" description="" />
+    <ColorTokenRow token="colors.neutral.700" value="#646f87" description="" />
+    <ColorTokenRow token="colors.neutral.800" value="#475467" description="" />
+    <ColorTokenRow token="colors.neutral.900" value="#344054" description="" />
+    <ColorTokenRow
+      token="colors.neutral.1000"
+      value="#18191b"
+      description="Dark gray"
+    />
+    <ColorTokenRow
+      token="colors.neutral.A0"
+      value="rgba(255, 255, 255, 0.0000)"
+      description="Transparent"
+    />
+    <ColorTokenRow
+      token="colors.neutral.A15"
+      value="rgba(255, 255, 255, 0.1500)"
+      description="15% opacity white"
+    />
+    <ColorTokenRow
+      token="colors.neutral.A35"
+      value="rgba(255, 255, 255, 0.3500)"
+      description="35% opacity white"
+    />
+    <ColorTokenRow
+      token="colors.neutral.A60"
+      value="rgba(255, 255, 255, 0.6000)"
+      description="60% opacity white"
+    />
+    <ColorTokenRow
+      token="colors.neutral.A80"
+      value="rgba(255, 255, 255, 0.8000)"
+      description="80% opacity white"
+    />
+
+    <ColorTokenRow
+      token="colors.success.100"
+      value="#dff5e7"
+      description="Lightest success color"
+    />
+    <ColorTokenRow token="colors.success.200" value="#b1e2c4" description="" />
+    <ColorTokenRow token="colors.success.300" value="#9bdab3" description="" />
+    <ColorTokenRow token="colors.success.400" value="#7dcf9d" description="" />
+    <ColorTokenRow token="colors.success.500" value="#54bf7e" description="" />
+    <ColorTokenRow token="colors.success.600" value="#41ae6c" description="" />
+    <ColorTokenRow
+      token="colors.success.700"
+      value="#028838"
+      description="Primary success color"
+    />
+    <ColorTokenRow token="colors.success.800" value="#00702d" description="" />
+    <ColorTokenRow token="colors.success.900" value="#014b1f" description="" />
+    <ColorTokenRow
+      token="colors.success.1000"
+      value="#012811"
+      description="Darkest success color"
+    />
+
+    <ColorTokenRow
+      token="colors.warning.100"
+      value="#fff8e6"
+      description="Lightest warning color"
+    />
+    <ColorTokenRow token="colors.warning.200" value="#fff0ca" description="" />
+    <ColorTokenRow token="colors.warning.300" value="#ffe9b2" description="" />
+    <ColorTokenRow token="colors.warning.400" value="#ffe299" description="" />
+    <ColorTokenRow token="colors.warning.500" value="#ffd875" description="" />
+    <ColorTokenRow token="colors.warning.600" value="#fdc535" description="" />
+    <ColorTokenRow
+      token="colors.warning.700"
+      value="#fdb702"
+      description="Primary warning color"
+    />
+    <ColorTokenRow token="colors.warning.800" value="#e6a702" description="" />
+    <ColorTokenRow token="colors.warning.900" value="#b88501" description="" />
+    <ColorTokenRow
+      token="colors.warning.1000"
+      value="#986e01"
+      description="Darkest warning color"
+    />
+
+  </tbody>
+</table>
+
+  </TabItem>
+  <TabItem label="Semantic tokens">
+
+## Semantic tokens
+
+Semantic tokens map global tokens to a functional meaning, defining usage intent rather than specific colors. These tokens help unify visual language across the system while allowing controlled customization.
+
+<table class="color-tokens-table">
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Token</th>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {/* Action Colors */}
+    <ColorTokenRow
+      token="colors.Action.primary"
+      value="{colors.brand.700}"
+      description="Primary action color"
+    />
+    <ColorTokenRow
+      token="colors.Action.primary-hover"
+      value="{colors.brand.800}"
+      description="Primary action hover state"
+    />
+    <ColorTokenRow
+      token="colors.Action.primary-pressed"
+      value="{colors.brand.900}"
+      description="Primary action pressed state"
+    />
+    <ColorTokenRow
+      token="colors.Action.primary-disabled"
+      value="{colors.neutral.300}"
+      description="Primary action disabled state"
+    />
+
+    <ColorTokenRow
+      token="colors.Action.secondary"
+      value="{colors.neutral.A0}"
+      description="Secondary action color"
+    />
+    <ColorTokenRow
+      token="colors.Action.secondary-hover"
+      value="{colors.brand.100}"
+      description="Secondary action hover state"
+    />
+    <ColorTokenRow
+      token="colors.Action.secondary-pressed"
+      value="{colors.brand.200}"
+      description="Secondary action pressed state"
+    />
+    <ColorTokenRow
+      token="colors.Action.secondary-disabled"
+      value="{colors.neutral.300}"
+      description="Secondary action disabled state"
+    />
+
+    <ColorTokenRow
+      token="colors.Action.tertiary"
+      value="{colors.neutral.A0}"
+      description="Tertiary action color"
+    />
+    <ColorTokenRow
+      token="colors.Action.tertiary-hover"
+      value="{colors.neutral.300}"
+      description="Tertiary action hover state"
+    />
+    <ColorTokenRow
+      token="colors.Action.tertiary-pressed"
+      value="{colors.neutral.400}"
+      description="Tertiary action pressed state"
+    />
+    <ColorTokenRow
+      token="colors.Action.tertiary-disabled"
+      value="{colors.neutral.300}"
+      description="Tertiary action disabled state"
+    />
+
+    <ColorTokenRow
+      token="colors.Action.critical-primary"
+      value="{colors.critical.700}"
+      description="Critical primary action color"
+    />
+    <ColorTokenRow
+      token="colors.Action.critical-primary-hover"
+      value="{colors.critical.800}"
+      description="Critical primary action hover state"
+    />
+    <ColorTokenRow
+      token="colors.Action.critical-primary-pressed"
+      value="{colors.critical.900}"
+      description="Critical primary action pressed state"
+    />
+    <ColorTokenRow
+      token="colors.Action.critical-primary-disabled"
+      value="{colors.neutral.300}"
+      description="Critical primary action disabled state"
+    />
+
+    <ColorTokenRow
+      token="colors.Action.critical-secondary"
+      value="{colors.neutral.A0}"
+      description="Critical secondary action color"
+    />
+    <ColorTokenRow
+      token="colors.Action.critical-secondary-hover"
+      value="{colors.critical.100}"
+      description="Critical secondary action hover state"
+    />
+    <ColorTokenRow
+      token="colors.Action.critical-secondary-pressed"
+      value="{colors.critical.200}"
+      description="Critical secondary action pressed state"
+    />
+    <ColorTokenRow
+      token="colors.Action.critical-secondary-disabled"
+      value="{colors.neutral.300}"
+      description="Critical secondary action disabled state"
+    />
+
+    <ColorTokenRow
+      token="colors.Action.success"
+      value="{colors.success.700}"
+      description="Success action color"
+    />
+    <ColorTokenRow
+      token="colors.Action.success-hover"
+      value="{colors.success.800}"
+      description="Success action hover state"
+    />
+    <ColorTokenRow
+      token="colors.Action.success-pressed"
+      value="{colors.success.900}"
+      description="Success action pressed state"
+    />
+    <ColorTokenRow
+      token="colors.Action.success-disabled"
+      value="{colors.neutral.300}"
+      description="Success action disabled state"
+    />
+
+    <ColorTokenRow
+      token="colors.Action.inverse-primary"
+      value="{colors.neutral.100}"
+      description="Inverse primary action color"
+    />
+    <ColorTokenRow
+      token="colors.Action.inverse-primary-hover"
+      value="{colors.neutral.A80}"
+      description="Inverse primary action hover state"
+    />
+    <ColorTokenRow
+      token="colors.Action.inverse-primary-pressed"
+      value="{colors.neutral.A60}"
+      description="Inverse primary action pressed state"
+    />
+    <ColorTokenRow
+      token="colors.Action.inverse-primary-disabled"
+      value="{colors.neutral.300}"
+      description="Inverse primary action disabled state"
+    />
+
+    {/* Background Colors */}
+    <ColorTokenRow
+      token="colors.Background.primary"
+      value="{colors.neutral.100}"
+      description="Primary background color"
+    />
+    <ColorTokenRow
+      token="colors.Background.background-secondary"
+      value="{colors.neutral.200}"
+      description="Secondary background color"
+    />
+    <ColorTokenRow
+      token="colors.Background.background-brand-primary"
+      value="{colors.brand.700}"
+      description="Brand primary background"
+    />
+    <ColorTokenRow
+      token="colors.Background.background-brand-secondary"
+      value="{colors.brand.100}"
+      description="Brand secondary background"
+    />
+
+    {/* Border Colors */}
+    <ColorTokenRow
+      token="colors.Border.brand"
+      value="{colors.brand.700}"
+      description="Brand border color"
+    />
+    <ColorTokenRow
+      token="colors.Border.critical"
+      value="{colors.critical.700}"
+      description="Critical border color"
+    />
+    <ColorTokenRow
+      token="colors.Border.success"
+      value="{colors.success.700}"
+      description="Success border color"
+    />
+    <ColorTokenRow
+      token="colors.Border.warning"
+      value="{colors.warning.700}"
+      description="Warning border color"
+    />
+    <ColorTokenRow
+      token="colors.Border.info"
+      value="{colors.informative.700}"
+      description="Info border color"
+    />
+    <ColorTokenRow
+      token="colors.Border.neutral"
+      value="{colors.neutral.1000}"
+      description="Neutral border color"
+    />
+    <ColorTokenRow
+      token="colors.Border.static"
+      value="{colors.neutral.400}"
+      description="Static border color"
+    />
+    <ColorTokenRow
+      token="colors.Border.Inverse"
+      value="{colors.neutral.100}"
+      description="Inverse border color"
+    />
+    <ColorTokenRow
+      token="colors.Border.interactive-rest"
+      value="{colors.neutral.600}"
+      description="Interactive rest border"
+    />
+    <ColorTokenRow
+      token="colors.Border.interactive-hover"
+      value="{colors.neutral.1000}"
+      description="Interactive hover border"
+    />
+    <ColorTokenRow
+      token="colors.Border.interactive-selected"
+      value="{colors.brand.700}"
+      description="Interactive selected border"
+    />
+    <ColorTokenRow
+      token="colors.Border.interactive-disabled"
+      value="{colors.neutral.400}"
+      description="Interactive disabled border"
+    />
+
+    {/* Fill Colors */}
+    <ColorTokenRow
+      token="colors.Fill.primary"
+      value="{colors.neutral.100}"
+      description="Primary fill color"
+    />
+    <ColorTokenRow
+      token="colors.Fill.secondary"
+      value="{colors.neutral.300}"
+      description="Secondary fill color"
+    />
+    <ColorTokenRow
+      token="colors.Fill.tertiary"
+      value="{colors.neutral.400}"
+      description="Tertiary fill color"
+    />
+    <ColorTokenRow
+      token="colors.Fill.disabled"
+      value="{colors.neutral.300}"
+      description="Disabled fill color"
+    />
+    <ColorTokenRow
+      token="colors.Fill.inverse"
+      value="{colors.neutral.1000}"
+      description="Inverse fill color"
+    />
+    <ColorTokenRow
+      token="colors.Fill.read-only"
+      value="{colors.neutral.700}"
+      description="Read-only fill color"
+    />
+    <ColorTokenRow
+      token="colors.Fill.brand-primary"
+      value="{colors.brand.700}"
+      description="Brand primary fill"
+    />
+    <ColorTokenRow
+      token="colors.Fill.brand-secondary"
+      value="{colors.brand.100}"
+      description="Brand secondary fill"
+    />
+    <ColorTokenRow
+      token="colors.Fill.critical-primary"
+      value="{colors.critical.700}"
+      description="Critical primary fill"
+    />
+    <ColorTokenRow
+      token="colors.Fill.critical-secondary"
+      value="{colors.critical.100}"
+      description="Critical secondary fill"
+    />
+    <ColorTokenRow
+      token="colors.Fill.success-primary"
+      value="{colors.success.700}"
+      description="Success primary fill"
+    />
+    <ColorTokenRow
+      token="colors.Fill.success-secondary"
+      value="{colors.success.100}"
+      description="Success secondary fill"
+    />
+    <ColorTokenRow
+      token="colors.Fill.warning-primary"
+      value="{colors.warning.700}"
+      description="Warning primary fill"
+    />
+    <ColorTokenRow
+      token="colors.Fill.warning-secondary"
+      value="{colors.warning.100}"
+      description="Warning secondary fill"
+    />
+    <ColorTokenRow
+      token="colors.Fill.info-primary"
+      value="{colors.informative.700}"
+      description="Info primary fill"
+    />
+    <ColorTokenRow
+      token="colors.Fill.info-secondary"
+      value="{colors.informative.100}"
+      description="Info secondary fill"
+    />
+
+    {/* Text Colors */}
+    <ColorTokenRow
+      token="colors.Text.primary"
+      value="{colors.neutral.1000}"
+      description="Primary text color"
+    />
+    <ColorTokenRow
+      token="colors.Text.secondary"
+      value="{colors.neutral.700}"
+      description="Secondary text color"
+    />
+    <ColorTokenRow
+      token="colors.Text.disabled"
+      value="{colors.neutral.500}"
+      description="Disabled text color"
+    />
+    <ColorTokenRow
+      token="colors.Text.inverse"
+      value="{colors.neutral.100}"
+      description="Inverse text color"
+    />
+    <ColorTokenRow
+      token="colors.Text.brand"
+      value="{colors.brand.700}"
+      description="Brand text color"
+    />
+    <ColorTokenRow
+      token="colors.Text.brand-hover"
+      value="{colors.brand.800}"
+      description="Brand text hover"
+    />
+    <ColorTokenRow
+      token="colors.Text.brand-pressed"
+      value="{colors.brand.900}"
+      description="Brand text pressed"
+    />
+    <ColorTokenRow
+      token="colors.Text.critical"
+      value="{colors.critical.700}"
+      description="Critical text color"
+    />
+    <ColorTokenRow
+      token="colors.Text.critical-hover"
+      value="{colors.critical.800}"
+      description="Critical text hover"
+    />
+    <ColorTokenRow
+      token="colors.Text.critical-pressed"
+      value="{colors.critical.900}"
+      description="Critical text pressed"
+    />
+    <ColorTokenRow
+      token="colors.Text.success"
+      value="{colors.success.700}"
+      description="Success text color"
+    />
+    <ColorTokenRow
+      token="colors.Text.succese-hover"
+      value="{colors.success.800}"
+      description="Success text hover"
+    />
+    <ColorTokenRow
+      token="colors.Text.succese-pressed"
+      value="{colors.success.900}"
+      description="Success text pressed"
+    />
+    <ColorTokenRow
+      token="colors.Text.info"
+      value="{colors.informative.700}"
+      description="Info text color"
+    />
+    <ColorTokenRow
+      token="colors.Text.info-hover"
+      value="{colors.informative.800}"
+      description="Info text hover"
+    />
+    <ColorTokenRow
+      token="colors.Text.info-pressed"
+      value="{colors.informative.900}"
+      description="Info text pressed"
+    />
+
+    {/* Icon Colors */}
+    <ColorTokenRow
+      token="colors.Icon.primary"
+      value="{colors.neutral.1000}"
+      description="Primary icon color"
+    />
+    <ColorTokenRow
+      token="colors.Icon.disabled"
+      value="{colors.neutral.500}"
+      description="Disabled icon color"
+    />
+    <ColorTokenRow
+      token="colors.Icon.inverse"
+      value="{colors.neutral.100}"
+      description="Inverse icon color"
+    />
+    <ColorTokenRow
+      token="colors.Icon.inverse-disabled"
+      value="{colors.neutral.A35}"
+      description="Inverse disabled icon color"
+    />
+    <ColorTokenRow
+      token="colors.Icon.read-only"
+      value="{colors.neutral.700}"
+      description="Read-only icon color"
+    />
+    <ColorTokenRow
+      token="colors.Icon.brand"
+      value="{colors.brand.700}"
+      description="Brand icon color"
+    />
+    <ColorTokenRow
+      token="colors.Icon.critical"
+      value="{colors.critical.700}"
+      description="Critical icon color"
+    />
+    <ColorTokenRow
+      token="colors.Icon.success"
+      value="{colors.success.700}"
+      description="Success icon color"
+    />
+    <ColorTokenRow
+      token="colors.Icon.warning"
+      value="{colors.warning.700}"
+      description="Warning icon color"
+    />
+    <ColorTokenRow
+      token="colors.Icon.info"
+      value="{colors.informative.700}"
+      description="Info icon color"
+    />
+
+    {/* Surface Colors */}
+    <ColorTokenRow
+      token="colors.Surface.primary"
+      value="{colors.neutral.100}"
+      description="Primary surface color"
+    />
+    <ColorTokenRow
+      token="colors.Surface.primary-hover"
+      value="{colors.neutral.300}"
+      description="Primary surface hover"
+    />
+    <ColorTokenRow
+      token="colors.Surface.primary-pressed"
+      value="{colors.neutral.400}"
+      description="Primary surface pressed"
+    />
+    <ColorTokenRow
+      token="colors.Surface.primary-selected"
+      value="{colors.brand.100}"
+      description="Primary surface selected"
+    />
+    <ColorTokenRow
+      token="colors.Surface.primary-disabled"
+      value="{colors.neutral.300}"
+      description="Primary surface disabled"
+    />
+    <ColorTokenRow
+      token="colors.Surface.secondary"
+      value="{colors.neutral.200}"
+      description="Secondary surface color"
+    />
+    <ColorTokenRow
+      token="colors.Surface.tertiary"
+      value="{colors.neutral.400}"
+      description="Tertiary surface color"
+    />
+    <ColorTokenRow
+      token="colors.Surface.inverse"
+      value="{colors.neutral.1000}"
+      description="Inverse surface color"
+    />
+
+    {/* Focus Colors */}
+    <ColorTokenRow
+      token="colors.Focus.primary"
+      value="{colors.focus.primary}"
+      description="Primary focus color"
+    />
+    <ColorTokenRow
+      token="colors.Focus.inverse"
+      value="{colors.focus.Inverse}"
+      description="Inverse focus color"
+    />
+
+  </tbody>
+</table>
+
+  </TabItem>
+  <TabItem label="Component tokens">
+
+## Component based tokens
+
+Component-based tokens are the most specific level, defining colors for individual components. These tokens reference semantic tokens to maintain a clear relationship between design and function.
+
+<table class="color-tokens-table">
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Token</th>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {/* Button Components */}
+    <ColorTokenRow
+      token="component.button.textPrimary.rest.label"
+      value="{colors.Text.primary}"
+      description="Primary text button rest label"
+    />
+    <ColorTokenRow
+      token="component.button.textPrimary.hover.label"
+      value="{colors.Text.brand}"
+      description="Primary text button hover label"
+    />
+    <ColorTokenRow
+      token="component.button.textPrimary.pressed.label"
+      value="{colors.Text.brand-hover}"
+      description="Primary text button pressed label"
+    />
+    <ColorTokenRow
+      token="component.button.textPrimary.disabled.label"
+      value="{colors.Text.disabled}"
+      description="Primary text button disabled label"
+    />
+    <ColorTokenRow
+      token="component.button.textSecondary.rest.label"
+      value="{colors.Text.brand}"
+      description="Secondary text button rest label"
+    />
+    <ColorTokenRow
+      token="component.button.textSecondary.hover.label"
+      value="{colors.Text.brand-hover}"
+      description="Secondary text button hover label"
+    />
+    <ColorTokenRow
+      token="component.button.textSecondary.pressed.label"
+      value="{colors.Text.brand-pressed}"
+      description="Secondary text button pressed label"
+    />
+    <ColorTokenRow
+      token="component.button.textSecondary.disabled.label"
+      value="{colors.Text.disabled}"
+      description="Secondary text button disabled label"
+    />
+    <ColorTokenRow
+      token="component.button.textCritical.rest.label"
+      value="{colors.Text.critical}"
+      description="Critical text button rest label"
+    />
+    <ColorTokenRow
+      token="component.button.textCritical.hover.label"
+      value="{colors.Text.critical-hover}"
+      description="Critical text button hover label"
+    />
+    <ColorTokenRow
+      token="component.button.textCritical.pressed.label"
+      value="{colors.Text.critical-pressed}"
+      description="Critical text button pressed label"
+    />
+    <ColorTokenRow
+      token="component.button.textCritical.disabled.label"
+      value="{colors.Text.disabled}"
+      description="Critical text button disabled label"
+    />
+    <ColorTokenRow
+      token="component.button.textInverse.rest.label"
+      value="{colors.Text.inverse}"
+      description="Inverse text button rest label"
+    />
+    <ColorTokenRow
+      token="component.button.textInverse.hover.label"
+      value="{colors.Action.inverse-primary-hover}"
+      description="Inverse text button hover label"
+    />
+    <ColorTokenRow
+      token="component.button.textInverse.pressed.label"
+      value="{colors.Action.inverse-primary-pressed}"
+      description="Inverse text button pressed label"
+    />
+    <ColorTokenRow
+      token="component.button.textInverse.disabled.label"
+      value="#ffffff59"
+      description="Inverse text button disabled label"
+    />
+
+    {/* Primary Button */}
+    <ColorTokenRow
+      token="component.button.primary.rest.border"
+      value="{colors.Fill.primary}"
+      description="Primary button rest border"
+    />
+    <ColorTokenRow
+      token="component.button.primary.rest.background"
+      value="{colors.Action.primary}"
+      description="Primary button rest background"
+    />
+    <ColorTokenRow
+      token="component.button.primary.rest.content"
+      value="{colors.Text.inverse}"
+      description="Primary button rest content"
+    />
+    <ColorTokenRow
+      token="component.button.primary.hover.border"
+      value="{colors.Fill.primary}"
+      description="Primary button hover border"
+    />
+    <ColorTokenRow
+      token="component.button.primary.hover.background"
+      value="{colors.Action.primary-hover}"
+      description="Primary button hover background"
+    />
+    <ColorTokenRow
+      token="component.button.primary.hover.content"
+      value="{colors.Text.inverse}"
+      description="Primary button hover content"
+    />
+    <ColorTokenRow
+      token="component.button.primary.pressed.border"
+      value="{colors.Fill.primary}"
+      description="Primary button pressed border"
+    />
+    <ColorTokenRow
+      token="component.button.primary.pressed.background"
+      value="{colors.Action.primary-pressed}"
+      description="Primary button pressed background"
+    />
+    <ColorTokenRow
+      token="component.button.primary.pressed.content"
+      value="{colors.Text.inverse}"
+      description="Primary button pressed content"
+    />
+    <ColorTokenRow
+      token="component.button.primary.disabled.border"
+      value="{colors.Fill.primary}"
+      description="Primary button disabled border"
+    />
+    <ColorTokenRow
+      token="component.button.primary.disabled.background"
+      value="{colors.Fill.disabled}"
+      description="Primary button disabled background"
+    />
+    <ColorTokenRow
+      token="component.button.primary.disabled.content"
+      value="{colors.Text.disabled}"
+      description="Primary button disabled content"
+    />
+
+    {/* Secondary Button */}
+    <ColorTokenRow
+      token="component.button.secondary.rest.border"
+      value="{colors.Border.brand}"
+      description="Secondary button rest border"
+    />
+    <ColorTokenRow
+      token="component.button.secondary.rest.background"
+      value="{colors.Fill.primary}"
+      description="Secondary button rest background"
+    />
+    <ColorTokenRow
+      token="component.button.secondary.rest.content"
+      value="{colors.Text.brand}"
+      description="Secondary button rest content"
+    />
+    <ColorTokenRow
+      token="component.button.secondary.hover.border"
+      value="{colors.Border.brand}"
+      description="Secondary button hover border"
+    />
+    <ColorTokenRow
+      token="component.button.secondary.hover.background"
+      value="{colors.Action.secondary-hover}"
+      description="Secondary button hover background"
+    />
+    <ColorTokenRow
+      token="component.button.secondary.hover.content"
+      value="{colors.Text.brand-hover}"
+      description="Secondary button hover content"
+    />
+    <ColorTokenRow
+      token="component.button.secondary.pressed.border"
+      value="{colors.Border.brand}"
+      description="Secondary button pressed border"
+    />
+    <ColorTokenRow
+      token="component.button.secondary.pressed.background"
+      value="{colors.Action.secondary-pressed}"
+      description="Secondary button pressed background"
+    />
+    <ColorTokenRow
+      token="component.button.secondary.pressed.content"
+      value="{colors.Text.brand-pressed}"
+      description="Secondary button pressed content"
+    />
+    <ColorTokenRow
+      token="component.button.secondary.disabled.border"
+      value="{colors.Fill.primary}"
+      description="Secondary button disabled border"
+    />
+    <ColorTokenRow
+      token="component.button.secondary.disabled.background"
+      value="{colors.Fill.disabled}"
+      description="Secondary button disabled background"
+    />
+    <ColorTokenRow
+      token="component.button.secondary.disabled.content"
+      value="{colors.Text.disabled}"
+      description="Secondary button disabled content"
+    />
+
+    {/* Critical Button */}
+    <ColorTokenRow
+      token="component.button.critical.rest.border"
+      value="{colors.Fill.primary}"
+      description="Critical button rest border"
+    />
+    <ColorTokenRow
+      token="component.button.critical.rest.background"
+      value="{colors.Action.critical-primary}"
+      description="Critical button rest background"
+    />
+    <ColorTokenRow
+      token="component.button.critical.rest.content"
+      value="{colors.Text.inverse}"
+      description="Critical button rest content"
+    />
+    <ColorTokenRow
+      token="component.button.critical.hover.border"
+      value="{colors.Fill.primary}"
+      description="Critical button hover border"
+    />
+    <ColorTokenRow
+      token="component.button.critical.hover.background"
+      value="{colors.Action.critical-primary-hover}"
+      description="Critical button hover background"
+    />
+    <ColorTokenRow
+      token="component.button.critical.hover.content"
+      value="{colors.Text.inverse}"
+      description="Critical button hover content"
+    />
+    <ColorTokenRow
+      token="component.button.critical.pressed.border"
+      value="{colors.Fill.primary}"
+      description="Critical button pressed border"
+    />
+    <ColorTokenRow
+      token="component.button.critical.pressed.background"
+      value="{colors.Action.critical-primary-pressed}"
+      description="Critical button pressed background"
+    />
+    <ColorTokenRow
+      token="component.button.critical.pressed.content"
+      value="{colors.Text.inverse}"
+      description="Critical button pressed content"
+    />
+    <ColorTokenRow
+      token="component.button.critical.disabled.border"
+      value="{colors.Fill.primary}"
+      description="Critical button disabled border"
+    />
+    <ColorTokenRow
+      token="component.button.critical.disabled.background"
+      value="{colors.Fill.disabled}"
+      description="Critical button disabled background"
+    />
+    <ColorTokenRow
+      token="component.button.critical.disabled.content"
+      value="{colors.Text.disabled}"
+      description="Critical button disabled content"
+    />
+
+    {/* Tab Components */}
+    <ColorTokenRow
+      token="component.tab.default.rest.label"
+      value="{colors.Text.secondary}"
+      description="Default tab rest label"
+    />
+    <ColorTokenRow
+      token="component.tab.default.rest.border"
+      value="{colors.Border.static}"
+      description="Default tab rest border"
+    />
+    <ColorTokenRow
+      token="component.tab.default.rest.background"
+      value="{colors.Action.secondary}"
+      description="Default tab rest background"
+    />
+    <ColorTokenRow
+      token="component.tab.default.hover.label"
+      value="{colors.Text.brand-hover}"
+      description="Default tab hover label"
+    />
+    <ColorTokenRow
+      token="component.tab.default.hover.border"
+      value="{colors.Border.static}"
+      description="Default tab hover border"
+    />
+    <ColorTokenRow
+      token="component.tab.default.hover.background"
+      value="{colors.Action.secondary}"
+      description="Default tab hover background"
+    />
+    <ColorTokenRow
+      token="component.tab.default.selected.label"
+      value="{colors.Text.brand}"
+      description="Default tab selected label"
+    />
+    <ColorTokenRow
+      token="component.tab.default.selected.border"
+      value="{colors.Border.brand}"
+      description="Default tab selected border"
+    />
+    <ColorTokenRow
+      token="component.tab.default.selected.background"
+      value="{colors.Action.secondary}"
+      description="Default tab selected background"
+    />
+
+    {/* Pill Components */}
+    <ColorTokenRow
+      token="component.pill.secondaryBrand.rest.label"
+      value="{colors.Text.brand-pressed}"
+      description="Secondary brand pill rest label"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryBrand.rest.border"
+      value="{colors.Action.secondary}"
+      description="Secondary brand pill rest border"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryBrand.rest.background"
+      value="{colors.Fill.brand-secondary}"
+      description="Secondary brand pill rest background"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryCritical.rest.label"
+      value="{colors.Text.critical-pressed}"
+      description="Secondary critical pill rest label"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryCritical.rest.border"
+      value="{colors.Action.secondary}"
+      description="Secondary critical pill rest border"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryCritical.rest.background"
+      value="{colors.Fill.critical-secondary}"
+      description="Secondary critical pill rest background"
+    />
+    <ColorTokenRow
+      token="component.pill.secondarySuccess.rest.label"
+      value="{colors.Text.success}"
+      description="Secondary success pill rest label"
+    />
+    <ColorTokenRow
+      token="component.pill.secondarySuccess.rest.border"
+      value="{colors.Action.secondary}"
+      description="Secondary success pill rest border"
+    />
+    <ColorTokenRow
+      token="component.pill.secondarySuccess.rest.background"
+      value="{colors.Fill.success-secondary}"
+      description="Secondary success pill rest background"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryWarning.rest.label"
+      value="{colors.Text.primary}"
+      description="Secondary warning pill rest label"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryWarning.rest.border"
+      value="{colors.Action.secondary}"
+      description="Secondary warning pill rest border"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryWarning.rest.background"
+      value="{colors.Fill.warning-secondary}"
+      description="Secondary warning pill rest background"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryInformative.rest.label"
+      value="{colors.Text.info}"
+      description="Secondary informative pill rest label"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryInformative.rest.border"
+      value="{colors.Action.secondary}"
+      description="Secondary informative pill rest border"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryInformative.rest.background"
+      value="{colors.Fill.info-secondary}"
+      description="Secondary informative pill rest background"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryNeutral.rest.label"
+      value="{colors.Text.primary}"
+      description="Secondary neutral pill rest label"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryNeutral.rest.border"
+      value="{colors.Action.secondary}"
+      description="Secondary neutral pill rest border"
+    />
+    <ColorTokenRow
+      token="component.pill.secondaryNeutral.rest.background"
+      value="{colors.Fill.secondary}"
+      description="Secondary neutral pill rest background"
+    />
+
+  </tbody>
+</table>
+
+  </TabItem>
+</Tabs>

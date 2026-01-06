@@ -16,7 +16,8 @@ Accessibility in our Design system ensures that our product is usable by everyon
 **Business**: Inclusive design increases market reach, enhances brand reputation, and improves usability for everyone (not just people with disabilities).
 
 <Aside type="tip">
-  ✅ We've got you covered with a [Design system accessibility checklist!](https://drive.google.com/file/d/1JX0UIcpHpXNbXescO8OjA_Sta7ADAOuD/view?usp=sharing)
+  ✅ We've got you covered with a [Design system accessibility
+  checklist!](https://drive.google.com/file/d/1JX0UIcpHpXNbXescO8OjA_Sta7ADAOuD/view?usp=sharing)
 </Aside>
 
 ## 📚Terms
@@ -31,17 +32,20 @@ Accessibility in our Design system ensures that our product is usable by everyon
 
 **ADA (Americans with Disabilities Act)** is a U.S. civil rights law, not a technical standard. It mandates equal access to goods, services, and communication — including digital content. While the ADA doesn't directly reference WCAG, courts and organizations commonly use **WCAG 2.1 AA** as the benchmark for ADA compliance.
 
-| Level | Coverage | Realistic Goal | Helps with... |
-| --- | --- | :--- | --- |
-| A | Minimum | Required | Some disabilities |
-| AA | Standard | Recommended (✅ Melio is here) | Most disabilities |
-| AAA | Optimal | Ambitious  | All/complex disabilities |
+| Level | Coverage | Realistic Goal                 | Helps with...            |
+| ----- | -------- | :----------------------------- | ------------------------ |
+| A     | Minimum  | Required                       | Some disabilities        |
+| AA    | Standard | Recommended (✅ Melio is here) | Most disabilities        |
+| AAA   | Optimal  | Ambitious                      | All/complex disabilities |
 
 <Aside type="tip">
-  ✅ **Melio is ADA-compliant**, meaning our digital experience meets accessibility requirements under U.S. law and follows **[WCAG 2.1 AA standards](https://www.w3.org/WAI/WCAG2AA-Conformance)** to ensure usability for all, including people with disabilities.
+  ✅ **Melio is ADA-compliant**, meaning our digital experience meets
+  accessibility requirements under U.S. law and follows **[WCAG 2.1 AA
+  standards](https://www.w3.org/WAI/WCAG2AA-Conformance)** to ensure usability
+  for all, including people with disabilities.
 </Aside>
 
-## 📃The DOM structure 
+## 📃The DOM structure
 
 **DOM** stands for **"Document Object Model,"** and it represents the structure of a web document in a tree-like format. For webpages, the DOM is built from the HTML and starts with the `<html>` tag, followed by `<head>` and `<body>`, and then continues as a nested hierarchy of elements — such as headings, buttons, links, and forms.
 
@@ -72,11 +76,14 @@ Focus order is the sequence in which interactive elements (like links, buttons, 
   - When a line is removed, focus goes to an appropriate place.
 
 <Aside type="tip">
-  💡**Tip**: Try navigating your design with just the Tab key. If something feels off, it probably is.
+  💡**Tip**: Try navigating your design with just the Tab key. If something
+  feels off, it probably is.
 </Aside>
 
-![Focus order navigation example](/Penny-documentation/foundation/accessibility-assets/focus-order-navigation.gif)
-*While switching focus using the Tab key, the focus ring indicates where the focus is right now.*
+<div class="image-container">
+![Focus order navigation example](/Penny-documentation/foundation/accessibility-assets/accessibility-tab-order.gif)
+</div>
+_While switching focus using the Tab key, the focus ring indicates where the focus is right now._
 
 ## 🎨 Color & Contrast
 
@@ -88,10 +95,12 @@ contrast ratio is a number that shows how different two colors are from each oth
 - **3:1** for large text
 - **3:1** for non-text elements like icons or borders that convey meaning
 
-Exception: Disabled elements do not need to meet minimum contrast. 
+Exception: Disabled elements do not need to meet minimum contrast.
 
 <Aside type="caution">
-  ⚠️ Avoid using color **as the only indicator** for things like errors or status (e.g., red border only). Combine color with icons, labels, or underline styles.
+  ⚠️ Avoid using color **as the only indicator** for things like errors or
+  status (e.g., red border only). Combine color with icons, labels, or underline
+  styles.
 </Aside>
 
 ![Color contrast example](/Penny-documentation/foundation/accessibility-assets/color-contrast-example.png)
@@ -108,13 +117,13 @@ Images must have **descriptive alternative text** (alt text) so that screen read
   💡 The same image can be meaningful or decorative in different contexts.
 </Aside>
 
-| **Image Type** | **What to Do** | ✅ **Example** | ❌ **Don't Do This** |
-| --- | --- | --- | --- |
-| Informative Images | Use alt text that describes the purpose of the image. | `"Upload icon"` | `"A picture of an upload icon"` |
-| Functional Images | For clickable images (e.g., buttons or links), describe the action. | `"Download PDF"` | `"PDF icon"` |
-| Decorative Images | Use `alt=""` or mark as decorative. Indicate this in design handoff notes. | — | Adding unnecessary alt text |
-| Complex Images | Provide a short description on the page and link to a full explanation if needed. | "Chart showing sales trend" with link to full data | Relying on alt text alone |
-| Images of Text | Avoid. If used, ensure all content is also available as real text. | Real text placed below the image | Only text inside the image |
+| **Image Type**     | **What to Do**                                                                    | ✅ **Example**                                     | ❌ **Don't Do This**            |
+| ------------------ | --------------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------- |
+| Informative Images | Use alt text that describes the purpose of the image.                             | `"Upload icon"`                                    | `"A picture of an upload icon"` |
+| Functional Images  | For clickable images (e.g., buttons or links), describe the action.               | `"Download PDF"`                                   | `"PDF icon"`                    |
+| Decorative Images  | Use `alt=""` or mark as decorative. Indicate this in design handoff notes.        | —                                                  | Adding unnecessary alt text     |
+| Complex Images     | Provide a short description on the page and link to a full explanation if needed. | "Chart showing sales trend" with link to full data | Relying on alt text alone       |
+| Images of Text     | Avoid. If used, ensure all content is also available as real text.                | Real text placed below the image                   | Only text inside the image      |
 
 ## 🧠 Alt Text vs. ARIA: What's the Difference?
 
@@ -142,7 +151,8 @@ Interactive elements — like buttons, links, inputs, and select — are core to
 - Never remove focusable elements from the tab order (e.g., using `tabindex="-1"`) unless it's intentional and alternatives are provided.
 
 <Aside type="tip">
-  💡**Tip**: Try using your flow **without a mouse** to test keyboard accessibility.
+  💡**Tip**: Try using your flow **without a mouse** to test keyboard
+  accessibility.
 </Aside>
 
 ### 2. Screen Readers
@@ -157,8 +167,8 @@ Interactive elements — like buttons, links, inputs, and select — are core to
 - Avoid small icons or text links that are hard to tap, especially on mobile.
 - Add adequate spacing around actions to prevent accidental taps.
 
-![Target size example - Calendar component](/Penny-documentation/foundation/accessibility-assets/target-size-calendar.png)
-*The Calendar component has several interactive elements, all adhere to the 24*24px rule.*
+![Target size example - Calendar component](/Penny-documentation/foundation/accessibility-assets/accessibiltiy-target-size.png)
+*The Calendar component has several interactive elements, all adhere to the 24*24px rule.\*
 
 ### 4. Focus States
 
@@ -171,12 +181,15 @@ Interactive elements — like buttons, links, inputs, and select — are core to
 - Technically, WCAG does not set a fixed minimum font size. So the focus is on scalability and legibility, not a specific pixel size. Instead, it requires:
 
 <Aside type="note">
-  **Text must be resizable up to 200% without loss of content or functionality.**(WCAG 2.1 Success Criterion 1.4.4 – [Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html))
+  **Text must be resizable up to 200% without loss of content or
+  functionality.**(WCAG 2.1 Success Criterion 1.4.4 – [Resize
+  text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html))
 </Aside>
 
 - Avoid text in images whenever possible — it cannot be resized, read by screen readers, or translated.
 
-Recommendations: 
+Recommendations:
+
 - Minimum of 16px for body text (paragraphs, long-form content)
 - 14px minimum for labels, buttons, form hints, and other short UI strings
 
@@ -185,7 +198,7 @@ Recommendations:
 Borders are often overlooked in contrast checks - especially in input fields, cards, and containers.
 
 - Minimum contrast ratio for visible borders: **3:1 against the background.**
-- For focus outlines, WCAG requires a visible indicator - often a 1.5px solid border or box-shadow that meets at least 3:1 contrast. 
+- For focus outlines, WCAG requires a visible indicator - often a 1.5px solid border or box-shadow that meets at least 3:1 contrast.
 
 All interactive elements should include **non-color** and **color-based feedback** for hover and focus. This ensures users can understand the state change even if they can't perceive color differences.
 
@@ -200,12 +213,12 @@ All interactive elements should include **non-color** and **color-based feedback
 - **Active State:**
   - Optional but helpful for giving feedback, especially on mobile.
 
-| **Element** | **What to Check** | **Minimum Contrast** |
-| --- | --- | --- |
-| Text on background | High enough contrast | 4.5:1 (normal), 3:1 (large) |
-| Borders | Especially for form elements | 3:1 |
-| Hover/Focus | Visible and non-color based cue | 3:1 for outlines |
-| Disabled states | Legible but visually distinct | Should not be pure gray on white |
+| **Element**        | **What to Check**               | **Minimum Contrast**             |
+| ------------------ | ------------------------------- | -------------------------------- |
+| Text on background | High enough contrast            | 4.5:1 (normal), 3:1 (large)      |
+| Borders            | Especially for form elements    | 3:1                              |
+| Hover/Focus        | Visible and non-color based cue | 3:1 for outlines                 |
+| Disabled states    | Legible but visually distinct   | Should not be pure gray on white |
 
 ## 🌳 Nested Interactive Elements
 
@@ -222,8 +235,8 @@ Avoid placing interactive elements inside other interactive elements. This is a 
 
 Design and code components so that **only one interactive element wraps the interaction**. If both elements need to be clickable, restructure your layout.
 
-![Nested interactive elements example](/Penny-documentation/foundation/accessibility-assets/nested-interactive-elements.png)
-*On the left, an icon button within a selectable card; On the right, the selectable card is the only interactive element.*
+![Nested interactive elements example](/Penny-documentation/foundation/accessibility-assets/accessibiltiy-nested-interactive.png)
+_On the left, an icon button within a selectable card; On the right, the selectable card is the only interactive element._
 
 ## 📋 Forms & Inputs
 
@@ -232,11 +245,11 @@ Forms are one of the most critical parts of a product — and often the most pro
 - Always use visible labels for form inputs. Placeholders are not substitutes — they disappear on typing and can't be relied on for screen readers.
 - Use placeholders for examples or hints, not required information.
 
-| **Label** Form fields should always have a label. In rare cases where context is sufficient, text fields can appear without a visible label. It should still include an aria-label in HTML  | [Storybook](https://61716025a5ae25003ac448af-lgpuioqoxk.chromatic.com/?path=/story/selection-inputs-components-text-field--with-form-field)  |
-| --- | --- |
-|  **Required vs optional** Always mark required fields with an **asterisk (*)** for clarity. If a field is **optional**, remove the asterisk.  | [Storybook](https://61716025a5ae25003ac448af-zrnwqyeniu.chromatic.com/?path=/story/form-form-field--required)  |
-|  **Helper text and placeholder** Avoid using placeholder text whenever possible. Make sure any critical information is communicated either in the field label or using helper text below the field.Don't show placeholder and help at the same time, unless when hinting the right format is needed.  **Avoid placeholders** for essential information because they disappear when typing, making it hard to reference. Also, screen readers may not always announce them properly.  **Help text overflow** When the help text is too long for the available horizontal space, it wraps to form another line.  | ![Helper text example](/Penny-documentation/foundation/accessibility-assets/helper-text-example.png) **Helper text example**  |
-| **Disabled vs read-only**   **Disabled:** The control is inoperable. It is removed from tab order and skipped by keyboard navigation and form interactions. Its value is not submitted. **Use disabled** when the control is irrelevant or gated and should be skipped entirely until it becomes relevant.  **Read-only:** The control remains operable for navigation but not editing. It stays in tab order, can receive focus, be announced by screen readers. **Use read-only** when the value is relevant, must be perceivable/copyable, and may need to be included in submission but should not be edited.  | ![Disabled state example](/Penny-documentation/foundation/accessibility-assets/disabled-state.png) **Disabled** ![Read-only state example](/Penny-documentation/foundation/accessibility-assets/read-only-state.png) **Read only** |
+| **Label** Form fields should always have a label. In rare cases where context is sufficient, text fields can appear without a visible label. It should still include an aria-label in HTML                                                                                                                                                                                                                                                                                                                                                                                                                     | [Storybook](https://61716025a5ae25003ac448af-lgpuioqoxk.chromatic.com/?path=/story/selection-inputs-components-text-field--with-form-field)                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Required vs optional** Always mark required fields with an **asterisk (\*)** for clarity. If a field is **optional**, remove the asterisk.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | [Storybook](https://61716025a5ae25003ac448af-zrnwqyeniu.chromatic.com/?path=/story/form-form-field--required)                                                                                                                      |
+| **Helper text and placeholder** Avoid using placeholder text whenever possible. Make sure any critical information is communicated either in the field label or using helper text below the field.Don't show placeholder and help at the same time, unless when hinting the right format is needed. **Avoid placeholders** for essential information because they disappear when typing, making it hard to reference. Also, screen readers may not always announce them properly. **Help text overflow** When the help text is too long for the available horizontal space, it wraps to form another line.     | ![Helper text example](/Penny-documentation/foundation/accessibility-assets/accessibiltiy-text-01.png) **Helper text example**                                                                                                       |
+| **Disabled vs read-only** **Disabled:** The control is inoperable. It is removed from tab order and skipped by keyboard navigation and form interactions. Its value is not submitted. **Use disabled** when the control is irrelevant or gated and should be skipped entirely until it becomes relevant. **Read-only:** The control remains operable for navigation but not editing. It stays in tab order, can receive focus, be announced by screen readers. **Use read-only** when the value is relevant, must be perceivable/copyable, and may need to be included in submission but should not be edited. | ![Disabled state example](/Penny-documentation/foundation/accessibility-assets/accessibility-input-disabled.png) **Disabled** ![Read-only state example](/Penny-documentation/foundation/accessibility-assets/accessibility-input-read-only.png) **Read only** |
 
 ## 📚 Lists
 
@@ -244,10 +257,10 @@ Screen readers interpret lists as groups of items, so using proper HTML list str
 
 **When to Use Lists:**
 
-| **List Type** | **Use When...** |
-| --- | --- |
+| **List Type**           | **Use When...**                                                        |
+| ----------------------- | ---------------------------------------------------------------------- |
 | Unordered List (`<ul>`) | Items have no particular order (e.g., tags, filter chips, navigation). |
-| Ordered List (`<ol>`) | Sequence matters (e.g., steps in a process, rankings, instructions). |
+| Ordered List (`<ol>`)   | Sequence matters (e.g., steps in a process, rankings, instructions).   |
 
 ## 🔍 Zoom and viewport support
 
@@ -271,13 +284,15 @@ Some users don't use screen readers — they zoom instead. Zooming is common for
 
 ### **🛠 How to Design for It**
 
-| **Tip** | **What to Do** |
-| --- | --- |
-| Use responsive layouts | Design with flexible containers, not fixed widths. |
-| Avoid absolute sizing | Use relative units like `em`, `rem`, `%` instead of `px`. |
-| Test at 400% | Use browser zoom (not just Figma scaling) to test a 1280px viewport at 400%. |
-| Support vertical scrolling | Vertical scroll is fine — horizontal scroll is not for most text blocks. |
-| Reflow instead of scale | Let content stack and reflow rather than shrinking or overflowing. |
+| **Tip**                    | **What to Do**                                                               |
+| -------------------------- | ---------------------------------------------------------------------------- |
+| Use responsive layouts     | Design with flexible containers, not fixed widths.                           |
+| Avoid absolute sizing      | Use relative units like `em`, `rem`, `%` instead of `px`.                    |
+| Test at 400%               | Use browser zoom (not just Figma scaling) to test a 1280px viewport at 400%. |
+| Support vertical scrolling | Vertical scroll is fine — horizontal scroll is not for most text blocks.     |
+| Reflow instead of scale    | Let content stack and reflow rather than shrinking or overflowing.           |
 
-![Modal zooming to 400% example](/Penny-documentation/foundation/accessibility-assets/zoom-modal-400percent.gif)
-*Example of a modal zooming in to 400%*
+<div class="image-container">
+![Modal zooming to 400% example](/Penny-documentation/foundation/accessibility-assets/accessibility-modal-zoom-400.gif)
+</div>
+_Example of a modal zooming in to 400%_

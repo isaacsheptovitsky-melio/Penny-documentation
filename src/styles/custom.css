@@ -229,3 +229,23 @@
 .sl-container .sl-link-card {
   border-radius: 8px !important;
 }
+
+/* Color tokens table styling */
+.color-tokens-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 14px;
+}
+
+.color-tokens-table thead th {
+  background-color: var(--sl-color-gray-6);
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--sl-color-gray-5);
+}
+
+.color-tokens-table tbody tr:nth-child(even) {
+  background-color: var(--sl-color-gray-7);
+}

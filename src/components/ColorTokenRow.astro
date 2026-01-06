@@ -1,0 +1,228 @@
+---
+interface Props {
+  token: string;
+  value: string;
+  description?: string;
+}
+
+const { token, value, description = "" } = Astro.props;
+
+// Color mapping for token resolution
+const colorMap: Record<string, string> = {
+  // Global Brand
+  'colors.brand.100': '#f6f2fd',
+  'colors.brand.200': '#e4dbff',
+  'colors.brand.300': '#d9ccff',
+  'colors.brand.400': '#c8b5fe',
+  'colors.brand.500': '#b79eff',
+  'colors.brand.600': '#9470ff',
+  'colors.brand.700': '#7849ff',
+  'colors.brand.800': '#5f33e6',
+  'colors.brand.900': '#4315cb',
+  'colors.brand.1000': '#321098',
+  
+  // Global Critical
+  'colors.critical.100': '#fde7e9',
+  'colors.critical.200': '#fac4c9',
+  'colors.critical.700': '#d80e25',
+  'colors.critical.800': '#c50c22',
+  'colors.critical.900': '#8d0411',
+  
+  // Global Success
+  'colors.success.700': '#028838',
+  'colors.success.800': '#00702d',
+  'colors.success.900': '#014b1f',
+  
+  // Global Neutral
+  'colors.neutral.100': '#ffffff',
+  'colors.neutral.200': '#f8fafc',
+  'colors.neutral.300': '#f1f5f8',
+  'colors.neutral.400': '#e4e7ec',
+  'colors.neutral.500': '#c3cad5',
+  'colors.neutral.600': '#8b95a9',
+  'colors.neutral.700': '#646f87',
+  'colors.neutral.800': '#475467',
+  'colors.neutral.900': '#344054',
+  'colors.neutral.1000': '#18191b',
+  'colors.neutral.A0': 'transparent',
+  'colors.neutral.A15': 'rgba(255, 255, 255, 0.15)',
+  'colors.neutral.A35': 'rgba(255, 255, 255, 0.35)',
+  'colors.neutral.A60': 'rgba(255, 255, 255, 0.60)',
+  'colors.neutral.A80': 'rgba(255, 255, 255, 0.80)',
+  
+  // Global Informative
+  'colors.informative.700': '#306af7',
+  
+  // Global Warning
+  'colors.warning.100': '#fff8e6',
+  'colors.warning.700': '#fdb702',
+  'colors.warning.800': '#e6a702',
+  'colors.warning.900': '#b88501',
+  
+  // Global Decorative
+  'colors.decorative.1': '#ead6d4',
+  'colors.decorative.2': '#ffe0d6',
+  'colors.decorative.3': '#ffd0ea',
+  'colors.decorative.4': '#d9e1fd',
+  'colors.decorative.5': '#c9f8f8',
+  
+  // Global Focus
+  'colors.focus.Inverse': '#3798f2',
+  'colors.focus.primary': '#0548cf',
+  
+  // Semantic Text tokens
+  'colors.Text.primary': '#18191b',
+  'colors.Text.secondary': '#646f87',
+  'colors.Text.disabled': '#c3cad5',
+  'colors.Text.inverse': '#ffffff',
+  'colors.Text.brand': '#7849ff',
+  'colors.Text.brand-hover': '#5f33e6',
+  'colors.Text.brand-pressed': '#4315cb',
+  'colors.Text.critical': '#d80e25',
+  'colors.Text.critical-hover': '#c50c22',
+  'colors.Text.critical-pressed': '#8d0411',
+  'colors.Text.success': '#028838',
+  'colors.Text.info': '#306af7',
+  
+  // Semantic Action tokens
+  'colors.Action.primary': '#7849ff',
+  'colors.Action.primary-hover': '#5f33e6',
+  'colors.Action.primary-pressed': '#4315cb',
+  'colors.Action.primary-disabled': '#f1f5f8',
+  'colors.Action.secondary': 'transparent',
+  'colors.Action.secondary-hover': '#f6f2fd',
+  'colors.Action.secondary-pressed': '#e4dbff',
+  'colors.Action.secondary-disabled': '#f1f5f8',
+  'colors.Action.critical-primary': '#d80e25',
+  'colors.Action.critical-primary-hover': '#c50c22',
+  'colors.Action.critical-primary-pressed': '#8d0411',
+  'colors.Action.critical-secondary': 'transparent',
+  'colors.Action.critical-secondary-hover': '#fde7e9',
+  'colors.Action.critical-secondary-pressed': '#fac4c9',
+  'colors.Action.inverse-primary': '#ffffff',
+  'colors.Action.inverse-primary-hover': '#ffffffcc',
+  'colors.Action.inverse-primary-pressed': '#ffffff99',
+  
+  // Semantic Fill tokens  
+  'colors.Fill.primary': '#ffffff',
+  'colors.Fill.secondary': '#f1f5f8',
+  'colors.Fill.disabled': '#f1f5f8',
+  'colors.Fill.brand-primary': '#7849ff',
+  'colors.Fill.brand-secondary': '#f6f2fd',
+  'colors.Fill.critical-primary': '#d80e25',
+  'colors.Fill.critical-secondary': '#fde7e9',
+  'colors.Fill.success-secondary': '#dff5e7',
+  'colors.Fill.warning-secondary': '#fff8e6',
+  'colors.Fill.info-secondary': '#e6f0fe',
+  
+  // Semantic Border tokens
+  'colors.Border.brand': '#7849ff',
+  'colors.Border.critical': '#d80e25',
+  'colors.Border.neutral': '#18191b',
+  'colors.Border.static': '#e4e7ec',
+  'colors.Border.interactive-rest': '#8b95a9',
+  'colors.Border.interactive-hover': '#18191b',
+  'colors.Border.interactive-selected': '#7849ff',
+};
+
+// Extract hex color from value
+function getHexColor(value: string): string {
+  // If it's a direct hex color
+  if (value.startsWith('#')) {
+    return value;
+  }
+  
+  // If it's rgba
+  if (value.startsWith('rgba')) {
+    return value;
+  }
+  
+  // If it's a token reference like {Colors.brand.700}
+  if (value.includes('{') && value.includes('}')) {
+    const tokenName = value.replace(/[{}]/g, '');
+    return colorMap[tokenName] || '#8b95a9';
+  }
+  
+  // Direct token reference
+  if (colorMap[value]) {
+    return colorMap[value];
+  }
+  
+  // Default fallback
+  return '#8b95a9';
+}
+
+const hexColor = getHexColor(value);
+---
+
+<tr class="color-token-row">
+  <td class="token-swatch">
+    <div class="color-swatch" style={`background-color: ${hexColor}`}></div>
+  </td>
+  <td class="token-name"><code>{token}</code></td>
+  <td class="token-value"><code>{value}</code></td>
+  <td class="token-description">{description}</td>
+</tr>
+
+<style>
+  .color-token-row {
+    border-bottom: 1px solid var(--sl-color-gray-5);
+  }
+  
+  .color-token-row:hover {
+    background-color: var(--sl-color-gray-6);
+  }
+  
+  .token-swatch {
+    width: 60px;
+    padding: 8px;
+  }
+  
+  .color-swatch {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 1px solid var(--sl-color-gray-4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .token-name {
+    padding: 8px 12px;
+  }
+  
+  .token-name code {
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: var(--sl-color-gray-6);
+    color: var(--sl-color-white);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--sl-color-gray-5);
+    text-transform: lowercase;
+  }
+
+  .token-value {
+    padding: 8px 12px;
+  }
+  
+  .token-value code {
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--sl-color-white);
+    background-color: var(--sl-color-gray-5);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--sl-color-gray-4);
+    opacity: 0.9;
+    text-transform: lowercase;
+  }
+  
+  .token-description {
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: var(--sl-color-gray-2);
+  }
+</style>

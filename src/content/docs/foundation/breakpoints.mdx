@@ -14,63 +14,34 @@ Breakpoints represent how the screen resolution is broken down so we could suppo
 - Use **larger tokens** to separate sections or create breathing room.
 - Use **smaller tokens** inside compact components or dense UI areas.
 
-## Breakpoints 
+## Breakpoints
 
-| Breakpoint | Range | Device |
-| --- | --- | --- |
-| xs | 0px - 599px | Mobile |
-| s | 600px - 904px | Mobile in landscape |
-| m | 905px - 1239px | Tablet |
-| l | 1240px - 1439px | Laptop |
-| xl | < 1440px | Desktop |
+| Breakpoint | Range           | Device              |
+| ---------- | --------------- | ------------------- |
+| xs         | 0px - 599px     | Mobile              |
+| s          | 600px - 904px   | Mobile in landscape |
+| m          | 905px - 1239px  | Tablet              |
+| l          | 1240px - 1439px | Laptop              |
+| xl         | < 1440px        | Desktop             |
 
 <Aside type="note">
-  📌 We primarily design for two device types: mobile and desktop. Our main breakpoint is 1240px, meaning that at 1239px and below, components and layouts adapt to a mobile-friendly format.
+  📌 We primarily design for two device types: mobile and desktop. Our main
+  breakpoint is 1240px, meaning that at 1239px and below, components and layouts
+  adapt to a mobile-friendly format.
 </Aside>
 
 ## Container width
 
 <Aside type="note" title="🖥️ Max width behavior">
-  The max-width setting allows containers to expand up to the specified width (e.g., 900px) when there is enough space. For example, a container with a max-width of 900px will grow to fill the screen but will stop expanding once it reaches 900px.
+  The max-width setting allows containers to expand up to the specified width
+  (e.g., 900px) when there is enough space. For example, a container with a
+  max-width of 900px will grow to fill the screen but will stop expanding once
+  it reaches 900px.
 </Aside>
 
-![Container width expansion](/Penny-documentation/foundation/breakpoints-assets/breakpoints-image-1.png)
-*Expanding the viewport to let the container increase in width, up to its maximum width of 900px.*
-
-## Variants
-
-We use several container width variants:
-
-![Container width variants](/Penny-documentation/foundation/breakpoints-assets/breakpoints-image-2.png)
-
-### 480px container width
-
-This container width is used for the main login screen.
-
-![480px container](/Penny-documentation/foundation/breakpoints-assets/breakpoints-image-3.png)
-
-### 600px max-width
-
-**This is the default** width of the main container, primarily in the [Job layout](/foundation/layout-system). Elements are stacked vertically to help users focus on one task at a time.
-
-![600px container](/Penny-documentation/foundation/breakpoints-assets/breakpoints-image-4.png)
-
-### 900px container width
-
-This width is used when the default 600px is too narrow. It features horizontally arranged elements and is commonly used for form fields.
-
-![900px container](/Penny-documentation/foundation/breakpoints-assets/breakpoints-image-5.png)
-*The Create Invoice screen allows users to generate invoices in a traditional, familiar format with line items.*
-
-### 1200px container width
-
-This width is used when users need to view and compare detailed information.
-
-![1200px container](/Penny-documentation/foundation/breakpoints-assets/breakpoints-image-6.png)
-*The Choose a Plan screen requires users to compare 3 different plans*
-
-### 100% container max-width
-
-Used in the Resource screen and tables to optimize screen space.
-
-![Resource screen example](/Penny-documentation/foundation/breakpoints-assets/resource-screen-example.png)
+<div class="image-container">
+  ![Container width
+  expansion](/Penny-documentation/foundation/breakpoints-assets/breakpoints-image-1.png)
+</div>
+*Expanding the viewport to let the container increase in width, up to its maximum
+width of 900px.*
