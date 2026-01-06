@@ -16,55 +16,38 @@ hero:
 ---
 
 import { Card, CardGrid } from "@astrojs/starlight/components";
+import ImageCard from "../../components/ImageCard.astro";
+import ImageCardGrid from "../../components/ImageCardGrid.astro";
 
-Here you can find our design guidelines, component documentation, and resources for creating cohesive experiences with Penny. As a white-label design system, Penny offers partners the flexibility to customize and adapt it to their unique branding needs.
+<div class="lead-text">
+  Here you can find our design guidelines, component documentation, and
+  resources for creating cohesive experiences with Penny. As a white-label
+  design system, Penny offers partners the flexibility to customize and adapt it
+  to their unique branding needs.
+</div>
 
 ## Get Started
 
-<CardGrid stagger>
-  <Card title="Foundation" icon="star">
-    Design tokens, typography, colors, and core principles that form the
-    foundation of our design system. [Explore Foundation
-    →](/Penny-documentation/foundation/accessibility/)
-  </Card>
-  <Card title="UX Patterns" icon="information">
-    Common user experience patterns and interactions across our products.
-    [Explore UX Patterns →](/Penny-documentation/ux-patterns/buttons-vs-links/)
-  </Card>
-  <Card title="Components" icon="puzzle">
-    Reusable UI components built with accessibility and consistency in mind.
-    [Explore Components →](/Penny-documentation/components/overview/)
-  </Card>
-</CardGrid>
-
-## Foundation Categories
-
-<CardGrid>
-  <Card title="Accessibility" icon="heart">
-    Guidelines and standards for creating inclusive experiences for all users.
-    [Explore Accessibility →](/Penny-documentation/foundation/accessibility/)
-  </Card>
-  <Card title="Typography" icon="pen">
-    Font families, scales, and text styling guidelines. [Explore Typography
-    →](/Penny-documentation/foundation/typography/)
-  </Card>
-  <Card title="Color Tokens" icon="approve-check-circle">
-    Color palette, semantic tokens, and usage guidelines. [Explore Color Tokens
-    →](/Penny-documentation/foundation/color-tokens/)
-  </Card>
-  <Card title="Layout System" icon="bars">
-    Grid systems, spacing, and layout principles. [Explore Layout System
-    →](/Penny-documentation/foundation/layout-system/)
-  </Card>
-  <Card title="Spacing" icon="random">
-    Consistent spacing scale and layout principles. [Explore Spacing
-    →](/Penny-documentation/foundation/spaces/)
-  </Card>
-  <Card title="Breakpoints" icon="laptop">
-    Responsive design breakpoints and device targeting. [Explore Breakpoints
-    →](/Penny-documentation/foundation/breakpoints/)
-  </Card>
-</CardGrid>
+<ImageCardGrid>
+  <ImageCard
+    title="Foundation"
+    href="/Penny-documentation/foundation/accessibility/"
+    image="/Penny-documentation/index/foundations.png"
+    alt="Foundation - Design tokens and typography"
+  />
+  <ImageCard
+    title="UX Patterns"
+    href="/Penny-documentation/ux-patterns/buttons-vs-links/"
+    image="/Penny-documentation/index/ux-patterns.png"
+    alt="UX Patterns - User experience patterns"
+  />
+  <ImageCard
+    title="Components"
+    href="/Penny-documentation/components/overview/"
+    image="/Penny-documentation/index/components.png"
+    alt="Components - Reusable UI components"
+  />
+</ImageCardGrid>
 
 ## Stay Updated
 

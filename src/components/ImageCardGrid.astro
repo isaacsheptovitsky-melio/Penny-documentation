@@ -1,0 +1,23 @@
+---
+// ImageCardGrid component for displaying multiple image cards
+---
+
+<div class="image-card-grid">
+  <slot />
+</div>
+
+<style>
+  .image-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+  }
+
+  @media (max-width: 768px) {
+    .image-card-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+</style>

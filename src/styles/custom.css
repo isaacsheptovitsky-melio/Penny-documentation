@@ -209,3 +209,23 @@
 .image-container img {
   height: 500px;
 }
+
+/* Lead text style - 20px font size for introductory text */
+.lead-text {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Apply 8px border-radius to regular Card components */
+.sl-link-card,
+.card,
+[data-card],
+.sl-card {
+  border-radius: 8px !important;
+}
+
+/* Target Starlight CardGrid cards specifically */
+.sl-container .sl-link-card {
+  border-radius: 8px !important;
+}
