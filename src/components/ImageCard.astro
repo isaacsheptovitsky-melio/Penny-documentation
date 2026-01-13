@@ -4,13 +4,14 @@ interface Props {
   href: string;
   image: string;
   alt?: string;
+  ratio?: "1:1" | "1.5:1";
 }
 
-const { title, href, image, alt = "" } = Astro.props;
+const { title, href, image, alt = "", ratio = "1:1" } = Astro.props;
 ---
 
 <a href={href} class="image-card">
-  <div class="image-card__image">
+  <div class="image-card__image" data-ratio={ratio}>
     <img src={image} alt={alt} />
   </div>
   <div class="image-card__title">
@@ -37,11 +38,18 @@ const { title, href, image, alt = "" } = Astro.props;
 
   .image-card__image {
     width: 100%;
-    aspect-ratio: 1;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .image-card__image[data-ratio="1:1"] {
+    aspect-ratio: 1 / 1;
+  }
+
+  .image-card__image[data-ratio="1.5:1"] {
+    aspect-ratio: 1.5 / 1;
   }
 
   .image-card__image img {

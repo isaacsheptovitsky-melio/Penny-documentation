@@ -1,0 +1,144 @@
+---
+title: Buttons vs. Links
+description: Distinguish between buttons and links based on function, not appearance.
+---
+
+import { Aside } from "@astrojs/starlight/components";
+
+## tl;dr
+
+* **Use** **[buttons](https://zeroheight.com/98bb1df01/p/53251c)** for triggering an action
+* **Use** **[links](https://zeroheight.com/98bb1df01/p/921cd5)** for navigation
+
+## When to use buttons
+
+**Buttons trigger actions and guide users through workflows.** They generally carry the highest visual emphasis on the screen.
+
+![Button triggering an action](/Penny-documentation/ux-patterns/button-vs-links/buttons-vs-links-button.png)
+**Example of a button triggering an action**
+
+
+Use buttons to:
+
+* **Complete a task**, such as submitting a payment form
+* **Change the state** of elements within the interface
+* **Open a secondary view**, like a modal or drawer
+
+## When to use links
+
+**Links are primarily used for navigation.** They change the URL and location of the user in the system, without performing an action.
+
+![Link used for navigation](/Penny-documentation/ux-patterns/button-vs-links/buttons-vs-links-link.png)
+**Example of a link used for navigation**
+
+
+Use links to:
+
+* **Navigate internally**, redirecting the user to a new page or a specific anchor within the same page
+* **Navigate externally**, redirecting to a different domain or document
+
+<Aside type="note">
+External links must always include the external link icon trailing the text.
+</Aside>
+
+## Implementation & accessibility
+
+Even when a link is styled to visually resemble a button (or vice versa), the underlying HTML must match the element's function. Screen readers rely on specific tags to tell users whether they are about to perform an action or navigate to a new location.
+
+### As a button
+
+The `<button>` tag is used for actionable elements. This informs screen readers that interacting with the element will trigger an in-page event, such as submitting data or opening a modal.
+
+**/index.html**
+
+```html
+<div>
+  <button type="button" onClick={handleAddVendor}>Add vendor</button>
+</div>
+```
+
+**/styles.css**
+
+```css
+button {
+  padding: 0 16px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: #7849ff;
+  color: white;
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
+}
+
+div {padding: 24px;}
+```
+
+**/index.js**
+
+```js
+import "./styles";
+```
+
+**/package.json**
+
+```json
+{"dependencies":{},"main":"/index.js"}
+```
+
+### As a link
+
+The `<a>` (anchor) tag is used for navigation. This informs screen readers that the element is a link, allowing users to anticipate a change in URL or page context.
+
+**/index.html**
+
+```html
+<div>
+  <a href="/dashboard">Back to dashboard</a>
+</div>
+```
+
+**/styles.css**
+
+```css
+a {
+  padding: 12px 16px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: #7849ff;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  font-family: Poppins, sans-serif;
+}
+
+div {padding: 24px;}
+```
+
+**/index.js**
+
+```js
+import "./styles";
+```
+
+**/package.json**
+
+```json
+{"dependencies":{},"main":"/index.js"}
+```
+
+<Aside type="tip">
+The `<a>` tag also enables browser-native behaviors like "Open in new tab."
+</Aside>
+
+## Do's and Don'ts
+
+| ✅ **Do** | ❌ **Don't** |
+| --------- | ------------ |
+| ![Button used for data-altering action](/Penny-documentation/ux-patterns/button-vs-links/button-vs-links-do-01.png) <br/> **Use buttons for data-altering actions** <br/> Use buttons for actions that save, submit, or change data. | ![Button incorrectly used for navigation](/Penny-documentation/ux-patterns/button-vs-links/button-vs-links-dont-01.png) <br/> **Don't use buttons for navigation** <br/> Avoid buttons for simply loading a new page without altering data. |
+
+| ✅ **Do** | ❌ **Don't** |
+| --------- | ------------ |
+| ![Link styled as button for primary focus](/Penny-documentation/ux-patterns/button-vs-links/button-vs-links-do-02.png) <br/> **Style links as buttons for primary focus** <br/> Use button styling when a navigation link is the primary focus of the page. | ![Multiple button-styled links cluttering interface](/Penny-documentation/ux-patterns/button-vs-links/button-vs-links-dont-02.png) <br/> **Don't style links as buttons in dense UIs** <br/> Avoid button-styled links when they compete with action buttons or clutter the interface. |

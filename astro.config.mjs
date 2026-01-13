@@ -66,7 +66,7 @@ export default defineConfig({
           items: [
             { label: "Overview", slug: "components/overview" },
             {
-              label: "Action Components",
+              label: "Action",
               collapsed: true,
               items: [
                 { label: "Action Bar", slug: "components/action/action-bar" },
@@ -83,7 +83,7 @@ export default defineConfig({
               ],
             },
             {
-              label: "Container Components",
+              label: "Container",
               collapsed: true,
               items: [
                 {

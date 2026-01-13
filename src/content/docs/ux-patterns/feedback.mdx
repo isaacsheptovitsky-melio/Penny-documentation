@@ -1,0 +1,94 @@
+---
+title: Feedback
+description: Feedback messages provide users with system status or response to actions.
+---
+
+import { Aside } from "@astrojs/starlight/components";
+
+Use [Section Banner's](https://zeroheight.com/98bb1df01/p/46d766) Compact variant to surface errors and validation summaries where they're most discoverable and actionable.
+
+![Section Banner Compact variant](/Penny-documentation/ux-patterns/feedback/feedback-section-banner-compact.png)
+**Section Banner's Compact variant**
+
+## Global feedback
+
+For important issues that impact the entire screen or process, position the message at the top of the screen, interrupting the user's flow and demanding immediate attention.
+
+![Global feedback placement](/Penny-documentation/ux-patterns/feedback/error-messages-global-placement.png)
+**Global feedback placement**
+
+### Examples
+
+![Dashboard and Resources layout](/Penny-documentation/ux-patterns/feedback/feedback-resource.png)
+**Dashboard and Resources layout**
+
+![Resource Details](/Penny-documentation/ux-patterns/feedback/feedback-drawer.png)
+**Resource: Details**
+
+![Job layout](/Penny-documentation/ux-patterns/feedback/feedback-job.png)
+**Job layout**
+
+## Local feedback
+
+<Aside type="note">
+Global placement is the standard for most use cases. However, use Local placement when an action is isolated to a specific section and keeping the feedback near the trigger provides necessary context.
+</Aside>
+
+Positioned directly above the section or element where the issue occurs, in order to highlight a localized issue within a specific section, field, or action on the page.
+
+![Local feedback placement](/Penny-documentation/ux-patterns/feedback/feedback-local-placement-flow.png)
+**Local feedback placement**
+
+### Examples
+
+![Local feedback interaction](/Penny-documentation/ux-patterns/feedback/feedback-local-placement-flow-1.png)
+**Local feedback interaction example**
+
+## Form validation
+
+Form validation ensures data accuracy and integrity through two distinct stages: validating the input format (client-side) and validating the data quality (server-side).
+
+![Form validation flow](/Penny-documentation/ux-patterns/feedback/feedback-flow.png)
+**Once a form is submitted it is being validated both on input format, and the data in quality**
+
+### Client-Side validation
+
+This validation occurs locally in the browser before data is sent to the server.
+
+* **When to use:** Use this for feedback on required fields or formatting errors (e.g., an incomplete routing number or a missing vendor name).
+* **Behavior:** Since the input is technically incorrect, the request is not sent to the server.
+* **Visual style:** Display these errors using the **Critical state** of the specific Form Field component.
+
+![Client-side validation example](/Penny-documentation/ux-patterns/feedback/validation-example-1.png)
+**Upon submission, the Vendor name and Bill amount fields are flagged as invalid because they are required but were left empty**
+
+### Server-Side validation
+
+This validation occurs after the user **successfully** submits the form and the server processes the data to verify its validity.
+
+* **When to use:** Use this when the data format is correct, but the content causes a system error (e.g., the vendor already exists or the payment amount exceeds the limit)
+* **Behavior:** The server returns a validation response indicating issues with the data
+* **Visual style:** Display these errors using a **Section Banner** at the top of the form context.
+
+![Server-side validation in modal](/Penny-documentation/ux-patterns/feedback/feedback-modal.png)
+**Server-side feedback displayed in modal**
+
+### Validation logic & placement
+
+Follow this order of operations to ensure a smooth user experience:
+
+1. **Validate fields first:** Upon submission, check for client-side formatting issues first. Highlight these using the input's critical state to alert the user to specific fields that need attention.
+2. **Validate data second:** Once the form is successfully submitted to the server, display any resulting errors.
+3. **Banner placement:**
+   * Use a **Section Banner** to summarize the server-side errors
+   * Place the banner directly above the form heading
+   * If there are multiple issues, consolidate them into a single banner list to avoid clutter
+
+<Aside type="tip">
+Avoid showing more than one banner per section—especially of the same type (e.g., multiple critical banners)
+</Aside>
+
+## Actions and dismissal
+
+* Include an **action or an explanation** when the user must resolve the error
+* Typically, do **not** allow dismissal for critical errors or when an action is required; dismissal is appropriate only when the message is not critical and no action is needed
